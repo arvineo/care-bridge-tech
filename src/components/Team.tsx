@@ -1,6 +1,6 @@
 
 import { Card, CardContent } from "./ui/card";
-import { LinkedIn } from "lucide-react";
+import { Linkedin } from "lucide-react";
 
 const teamMembers = [
   {
@@ -54,7 +54,7 @@ const Team = () => {
                     rel="noopener noreferrer"
                     className="absolute top-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
                   >
-                    <LinkedIn className="h-5 w-5 text-primary" />
+                    <Linkedin className="h-5 w-5 text-primary" />
                   </a>
                 </div>
                 <div className="p-6 text-center">
