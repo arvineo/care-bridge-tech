@@ -4,8 +4,8 @@ import {
   Heart,
   Bell,
   PhoneCall,
-  Shield,
   Users,
+  Plane,
 } from "lucide-react";
 import { Card, CardContent } from "./ui/card";
 
@@ -29,7 +29,7 @@ const features = [
     icon: Users,
   },
   {
-    title: "Predictive Care",
+    title: "Preemptive Care",
     description:
       "AI-powered health analytics to prevent potential health issues",
     icon: Heart,
@@ -41,10 +41,16 @@ const features = [
     icon: PhoneCall,
   },
   {
-    title: "Safe & Secure",
+    title: "Travel Companion",
     description:
-      "Advanced security measures to protect health data and privacy",
-    icon: Shield,
+      "The travel buddy accompanies seniors on short visits, ensuring comfort and safety",
+    icon: Plane,
+  },
+  {
+    title: "Community",
+    description:
+      "Join a supportive network of seniors and caregivers who share experiences",
+    icon: Users,
   },
 ];
 
