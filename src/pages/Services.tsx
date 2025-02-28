@@ -6,7 +6,9 @@ import {
   UserCheck, 
   Bell, 
   Watch, 
-  ShoppingBag 
+  ShoppingBag,
+  Users,
+  Plane 
 } from "lucide-react";
 
 const services = [
@@ -35,6 +37,16 @@ const services = [
     description: "Grocery shopping, travel arrangements, lifestyle support",
     icon: ShoppingBag,
   },
+  {
+    title: "Community Support",
+    description: "Join a network of seniors and caregivers who share experiences",
+    icon: Users,
+  },
+  {
+    title: "Travel Companion",
+    description: "Assistance for seniors during travel and short visits",
+    icon: Plane,
+  },
 ];
 
 const Services = () => {
@@ -53,6 +65,28 @@ const Services = () => {
                 family peace of mind
               </p>
             </div>
+
+            <div className="mb-16">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
+                <img 
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&w=800" 
+                  alt="Caring for seniors" 
+                  className="rounded-xl shadow-lg object-cover h-[400px]"
+                />
+                <div className="flex flex-col justify-center">
+                  <h2 className="text-3xl font-bold text-primary mb-6">
+                    Personalized Senior Care
+                  </h2>
+                  <p className="text-gray-600 mb-4">
+                    At CareSanctum, we understand that each senior has unique needs. Our services are tailored to provide personalized care that respects individual preferences while ensuring safety and well-being.
+                  </p>
+                  <p className="text-gray-600">
+                    From health monitoring to companionship, our comprehensive approach addresses all aspects of senior care, allowing families to feel confident that their loved ones are receiving the best possible support.
+                  </p>
+                </div>
+              </div>
+            </div>
+
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
               {services.map((service) => (
                 <Card
@@ -92,8 +126,8 @@ const Services = () => {
                 },
                 {
                   step: "2",
-                  title: "Connect Devices",
-                  description: "Smart wearables and home sensors for real-time monitoring",
+                  title: "Onboarding",
+                  description: "Complete assessment and personalized care plan",
                 },
                 {
                   step: "3",

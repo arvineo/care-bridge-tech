@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin } from "lucide-react";
+import { MapPin, Mail, Phone, MessageSquare } from "lucide-react";
 
 const locations = [
   { city: "Mumbai", status: "Current" },
@@ -35,19 +35,26 @@ const Contact = () => {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-6xl mx-auto">
               <Card>
-                <CardContent className="p-6">
+                <CardContent className="p-8">
+                  <h2 className="text-2xl font-bold text-primary mb-6">
+                    Send Us a Message
+                  </h2>
                   <form className="space-y-6">
-                    <div>
-                      <Input placeholder="Name" />
+                    <div className="space-y-2">
+                      <label htmlFor="name" className="text-sm font-medium text-gray-700">Name</label>
+                      <Input id="name" placeholder="Your name" />
                     </div>
-                    <div>
-                      <Input type="email" placeholder="Email" />
+                    <div className="space-y-2">
+                      <label htmlFor="email" className="text-sm font-medium text-gray-700">Email</label>
+                      <Input id="email" type="email" placeholder="Your email address" />
                     </div>
-                    <div>
-                      <Input type="tel" placeholder="Phone Number" />
+                    <div className="space-y-2">
+                      <label htmlFor="phone" className="text-sm font-medium text-gray-700">Phone Number</label>
+                      <Input id="phone" type="tel" placeholder="Your phone number" />
                     </div>
-                    <div>
-                      <Textarea placeholder="Your Message" />
+                    <div className="space-y-2">
+                      <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
+                      <Textarea id="message" placeholder="How can we help you?" />
                     </div>
                     <Button className="w-full">Request Callback</Button>
                   </form>
@@ -55,20 +62,66 @@ const Contact = () => {
               </Card>
 
               <div className="space-y-8">
-                <div>
-                  <h3 className="text-xl font-semibold text-primary mb-4">
-                    Write to us
-                  </h3>
-                  <a
-                    href="mailto:connect@caresanctum.com"
-                    className="text-secondary hover:underline"
-                  >
-                    connect@caresanctum.com
-                  </a>
-                </div>
+                <Card className="overflow-hidden">
+                  <img 
+                    src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800" 
+                    alt="Contact us" 
+                    className="w-full h-48 object-cover"
+                  />
+                  <CardContent className="p-8">
+                    <div className="space-y-6">
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-secondary/10 p-3 rounded-full">
+                          <Mail className="h-6 w-6 text-secondary" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-primary">Email</h3>
+                          <a
+                            href="mailto:connect@caresanctum.com"
+                            className="text-secondary hover:underline"
+                          >
+                            connect@caresanctum.com
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-secondary/10 p-3 rounded-full">
+                          <Phone className="h-6 w-6 text-secondary" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-primary">Phone</h3>
+                          <a
+                            href="tel:8591350250"
+                            className="text-secondary hover:underline"
+                          >
+                            +91 859 135 0250
+                          </a>
+                        </div>
+                      </div>
+                      
+                      <div className="flex items-start space-x-4">
+                        <div className="bg-secondary/10 p-3 rounded-full">
+                          <MessageSquare className="h-6 w-6 text-secondary" />
+                        </div>
+                        <div>
+                          <h3 className="font-semibold text-primary">WhatsApp</h3>
+                          <a
+                            href="https://wa.me/918591350250"
+                            className="text-secondary hover:underline"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                          >
+                            Connect on WhatsApp
+                          </a>
+                        </div>
+                      </div>
+                    </div>
+                  </CardContent>
+                </Card>
 
                 <div>
-                  <h3 className="text-xl font-semibold text-primary mb-4">
+                  <h3 className="text-xl font-semibold text-primary mb-6">
                     Our Locations
                   </h3>
                   <div className="grid grid-cols-2 gap-4">

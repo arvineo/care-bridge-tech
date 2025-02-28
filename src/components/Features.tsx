@@ -3,7 +3,6 @@ import {
   Activity,
   Heart,
   Bell,
-  PhoneCall,
   Users,
   Plane,
 } from "lucide-react";
@@ -11,9 +10,9 @@ import { Card, CardContent } from "./ui/card";
 
 const features = [
   {
-    title: "24/7 Health Monitoring",
+    title: "24/7 Health Monitoring & Support",
     description:
-      "Real-time tracking of vital signs through smart wearables and IoT devices",
+      "Round-the-clock tracking of vital signs and access to our dedicated care team",
     icon: Activity,
   },
   {
@@ -33,12 +32,6 @@ const features = [
     description:
       "AI-powered health analytics to prevent potential health issues",
     icon: Heart,
-  },
-  {
-    title: "24/7 Support",
-    description:
-      "Round-the-clock access to our dedicated care team",
-    icon: PhoneCall,
   },
   {
     title: "Travel Companion",

@@ -18,14 +18,14 @@ const Navbar = () => {
   ];
 
   return (
-    <nav className="fixed w-full bg-[#191970] z-50 shadow-sm">
+    <nav className="fixed w-full bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
           <Link to="/" className="flex items-center space-x-2">
             <img 
               src="/lovable-uploads/1db71012-aaa3-4d8e-b3ee-5a955eadb071.png" 
               alt="CareSanctum Logo" 
-              className="h-16 brightness-0 invert" // Double size and make it white
+              className="h-16" 
             />
           </Link>
 
@@ -35,7 +35,7 @@ const Navbar = () => {
               <Link
                 key={item.name}
                 to={item.path}
-                className="text-white hover:text-gray-300 transition-colors duration-200"
+                className="text-primary hover:text-secondary transition-colors duration-200"
               >
                 {item.name}
               </Link>
@@ -45,7 +45,7 @@ const Navbar = () => {
           {/* Mobile Navigation Button */}
           <button
             onClick={() => setIsOpen(!isOpen)}
-            className="md:hidden p-2 rounded-md text-white hover:bg-[#232387]"
+            className="md:hidden p-2 rounded-md hover:bg-gray-100"
           >
             {isOpen ? <X size={24} /> : <Menu size={24} />}
           </button>
@@ -53,13 +53,13 @@ const Navbar = () => {
 
         {/* Mobile Navigation Menu */}
         {isOpen && (
-          <div className="md:hidden absolute top-16 left-0 w-full bg-[#191970]/95 backdrop-blur-md shadow-lg animate-fade-in">
+          <div className="md:hidden absolute top-16 left-0 w-full bg-white/95 backdrop-blur-md shadow-lg animate-fade-in">
             <div className="px-2 pt-2 pb-3 space-y-1">
               {navItems.map((item) => (
                 <Link
                   key={item.name}
                   to={item.path}
-                  className="block px-3 py-2 rounded-md text-white hover:bg-[#232387]"
+                  className="block px-3 py-2 rounded-md text-primary hover:bg-gray-50"
                   onClick={() => setIsOpen(false)}
                 >
                   {item.name}
