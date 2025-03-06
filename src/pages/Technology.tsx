@@ -88,7 +88,7 @@ const Technology = () => {
                 
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img alt="Smart wearables and IoT devices" className="w-full h-full object-cover" src="/lovable-uploads/fdbaf9b0-d2ca-45f9-90e1-875563374166.jpg" />
+                <img alt="Smart wearables and IoT devices" className="w-full h-full object-cover" src="/lovable-uploads/51fffb3d-2922-49c8-96a6-40d24de9796f.jpg" />
               </div>
             </div>
 
