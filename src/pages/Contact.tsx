@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Mail, Phone, MessageSquare } from "lucide-react";
+import { MapPin, Mail, Phone } from "lucide-react";
 
 const locations = [
   { city: "Mumbai", status: "Current" },
@@ -88,10 +88,10 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-primary">Email</h3>
                           <a
-                            href="mailto:connect@caresanctum.com"
+                            href="mailto:shivaashi@caresanctum.com"
                             className="text-secondary hover:underline"
                           >
-                            connect@caresanctum.com
+                            shivaashi@caresanctum.com
                           </a>
                         </div>
                       </div>
@@ -107,23 +107,6 @@ const Contact = () => {
                             className="text-secondary hover:underline"
                           >
                             +91 859 135 0250
-                          </a>
-                        </div>
-                      </div>
-                      
-                      <div className="flex items-start space-x-4">
-                        <div className="bg-secondary/10 p-3 rounded-full">
-                          <MessageSquare className="h-6 w-6 text-secondary" />
-                        </div>
-                        <div>
-                          <h3 className="font-semibold text-primary">WhatsApp</h3>
-                          <a
-                            href="https://wa.me/918591350250"
-                            className="text-secondary hover:underline"
-                            target="_blank"
-                            rel="noopener noreferrer"
-                          >
-                            Connect on WhatsApp
                           </a>
                         </div>
                       </div>
