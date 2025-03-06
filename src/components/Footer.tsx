@@ -54,7 +54,7 @@ const Footer = () => {
         <Separator className="bg-gray-700" />
         
         <div className="mt-8 text-center text-sm text-gray-300">
-          <p>&copy; {new Date().getFullYear()} CareSanctum. All rights reserved.</p>
+          <p>&copy; 2025 CareSanctum. All rights reserved.</p>
         </div>
       </div>
     </footer>
