@@ -1,7 +1,9 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileMedical } from "lucide-react";
+import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileCheck } from "lucide-react";
+
 const Technology = () => {
   return <>
       <Navbar />
@@ -203,7 +205,7 @@ const Technology = () => {
                   </div>
                   
                   <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
-                    <FileMedical className="h-5 w-5 text-secondary mt-0.5" />
+                    <FileCheck className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Prescription & Lab Report Management</h4>
                       <p className="text-sm text-gray-500">Digital storage and organization of medical records</p>
