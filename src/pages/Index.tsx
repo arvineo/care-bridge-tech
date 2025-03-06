@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
@@ -32,7 +31,7 @@ const Index = () => {
   const [isJourneyExpanded, setIsJourneyExpanded] = useState(false);
 
   return (
-    <div>
+    <div className="min-h-screen">
       <Navbar />
       <main className="overflow-hidden">
         <Hero />
