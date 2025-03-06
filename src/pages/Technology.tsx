@@ -88,7 +88,7 @@ const Technology = () => {
                 
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img src="https://images.unsplash.com/photo-1557595721-d285905afeba?auto=format&fit=crop&q=80" alt="Smart wearables and IoT devices" className="w-full h-full object-cover" />
+                <img alt="Smart wearables and IoT devices" className="w-full h-full object-cover" src="/lovable-uploads/fdbaf9b0-d2ca-45f9-90e1-875563374166.jpg" />
               </div>
             </div>
 
@@ -209,9 +209,7 @@ const Technology = () => {
                   </div>
                 </div>
 
-                <Button className="mt-4 w-fit" variant="secondary">
-                  Learn More
-                </Button>
+                
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
                 <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80" alt="Medication and reports management system" className="w-full h-full object-cover" />
@@ -219,55 +217,7 @@ const Technology = () => {
             </div>
 
             {/* Features Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="rounded-full bg-secondary/10 p-4">
-                      <Activity className="h-8 w-8 text-secondary" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-primary">
-                      Smart Wearables & IoT
-                    </h3>
-                    <p className="text-gray-600">
-                      Real-time vitals tracking through smart rings & watches
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="rounded-full bg-secondary/10 p-4">
-                      <Bot className="h-8 w-8 text-secondary" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-primary">
-                      Emergency SOS & Motion Sensors
-                    </h3>
-                    <p className="text-gray-600">
-                      In-home monitoring to detect falls, inactivity, and emergencies
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-6">
-                  <div className="flex flex-col items-center text-center space-y-4">
-                    <div className="rounded-full bg-secondary/10 p-4">
-                      <Brain className="h-8 w-8 text-secondary" />
-                    </div>
-                    <h3 className="text-xl font-semibold text-primary">
-                      AI & Predictive Analytics
-                    </h3>
-                    <p className="text-gray-600">
-                      Data-driven risk assessment for early intervention
-                    </p>
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
+            
 
             {/* Intelligent Health Monitoring Section */}
             <section className="py-20 bg-white">
