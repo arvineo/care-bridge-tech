@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -114,12 +113,12 @@ const Technology = () => {
               </div>
             </div>
 
-            {/* Emergency SOS Section */}
+            {/* Doctor & Specialist Care Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-32 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <img 
-                  src="https://images.unsplash.com/photo-1563920517766-acdfffeadf42?auto=format&fit=crop&q=80" 
-                  alt="Emergency response system"
+                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80" 
+                  alt="Doctor and specialist care services"
                   className="w-full h-full object-cover"
                 />
               </div>
@@ -129,26 +128,51 @@ const Technology = () => {
                     <Shield className="h-6 w-6 text-secondary" />
                   </div>
                   <h2 className="text-3xl font-bold text-primary">
-                    Emergency SOS & Motion Sensors
+                    Doctor & Specialist Care
                   </h2>
                 </div>
-                <p className="text-gray-600 mb-4">
-                  Our advanced motion detection system and emergency response infrastructure ensure immediate assistance when needed. With fall detection, irregular movement patterns, and one-touch SOS capabilities, help is always at hand.
+                <p className="text-gray-600 mb-6">
+                  Our comprehensive healthcare approach connects seniors with qualified medical professionals for personalized care. Whether for urgent consultations or routine checkups, we ensure access to quality healthcare services whenever needed.
                 </p>
-                <div className="flex gap-4 mt-4">
-                  <div className="flex items-center gap-2">
-                    <HeartPulse className="h-5 w-5 text-secondary" />
-                    <span>Fall detection</span>
+                
+                {/* Healthcare Services Features */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Activity className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">On-Demand Specialist Consultation</h4>
+                      <p className="text-sm text-gray-500">Connect with specialists via video calls when needed</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Activity className="h-5 w-5 text-secondary" />
-                    <span>Motion tracking</span>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <HeartPulse className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Scheduled Doctor Visits</h4>
+                      <p className="text-sm text-gray-500">Regular appointments with primary care physicians</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Bot className="h-5 w-5 text-secondary" />
-                    <span>24/7 monitoring</span>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Thermometer className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Routine Health Checkups</h4>
+                      <p className="text-sm text-gray-500">Preventive screenings and regular assessments</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Heart className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Home Visits</h4>
+                      <p className="text-sm text-gray-500">Healthcare professionals and nurses visit at home</p>
+                    </div>
                   </div>
                 </div>
+                
+                <Button className="mt-4 w-fit" variant="secondary">
+                  Learn More
+                </Button>
               </div>
             </div>
 
