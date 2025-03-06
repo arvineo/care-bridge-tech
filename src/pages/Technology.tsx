@@ -2,6 +2,7 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileCheck } from "lucide-react";
+
 const Technology = () => {
   return <>
       <Navbar />
@@ -160,23 +161,48 @@ const Technology = () => {
                     AI & Predictive Analytics
                   </h2>
                 </div>
-                <p className="text-gray-600 mb-4">
+                <p className="text-gray-600 mb-6">
                   Our AI-powered system analyzes patterns in health data and daily activities to predict and prevent potential health issues before they become serious. This proactive approach allows for early intervention and better health outcomes.
                 </p>
-                <div className="flex gap-4 mt-4">
-                  <div className="flex items-center gap-2">
-                    <Search className="h-5 w-5 text-secondary" />
-                    <span>Pattern analysis</span>
+                
+                {/* Expanded AI Features */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <Search className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Pattern Analysis</h4>
+                      <p className="text-sm text-gray-500">Advanced algorithms detect subtle changes in daily routines and health metrics that might indicate emerging issues</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    <Network className="h-5 w-5 text-secondary" />
-                    <span>Health predictions</span>
+                  
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <Network className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Health Predictions</h4>
+                      <p className="text-sm text-gray-500">Machine learning models forecast potential health concerns based on historical data and current trends</p>
+                    </div>
                   </div>
-                  <div className="flex items-center gap-2">
-                    
-                    <span>Smart alerts</span>
+                  
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <Bell className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Smart Alerts</h4>
+                      <p className="text-sm text-gray-500">Customized notifications for caregivers and healthcare providers when significant changes are detected</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <Bot className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Cognitive Assessment</h4>
+                      <p className="text-sm text-gray-500">Regular cognitive tests and speech analysis to monitor mental health and cognitive function</p>
+                    </div>
                   </div>
                 </div>
+                
+                <p className="text-gray-600 text-sm italic">
+                  Our AI system continuously learns and improves, adapting to each senior's unique health profile and lifestyle patterns to provide increasingly accurate predictions and personalized care recommendations.
+                </p>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
                 <img alt="AI and predictive analytics" className="w-full h-full object-contain" src="/lovable-uploads/e158d1ff-49b8-4a04-a8b2-7adcb8b0b6e8.png" />
