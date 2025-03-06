@@ -95,7 +95,7 @@ const Technology = () => {
             {/* Doctor & Specialist Care Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-32 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80" alt="Doctor and specialist care services" className="w-full h-full object-cover" />
+                <img alt="Doctor and specialist care services" className="w-full h-full object-cover" src="/lovable-uploads/d2e03337-a080-4d8e-8da7-09f49092e306.jpg" />
               </div>
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
