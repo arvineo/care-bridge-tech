@@ -170,7 +170,7 @@ const Technology = () => {
                     <span>Health predictions</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    <Brain className="h-5 w-5 text-secondary" />
+                    
                     <span>Smart alerts</span>
                   </div>
                 </div>
