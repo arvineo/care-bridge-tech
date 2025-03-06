@@ -199,7 +199,7 @@ const Technology = () => {
                 </p>
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     
                     <div>
                       <h4 className="font-medium text-primary">Medicine Reminders & Delivery</h4>
@@ -207,7 +207,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <FileCheck className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Prescription & Lab Report Management</h4>
