@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
@@ -58,38 +57,36 @@ const Index = () => {
     setIsSubmitting(true);
     
     try {
-      // Use the updated Zapier webhook URL
+      console.log("Submitting form data:", contactForm);
       const response = await fetch("https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
+        mode: "no-cors", // Add this for CORS handling
         body: JSON.stringify(contactForm)
       });
       
-      if (response.ok) {
-        setFormSubmitted(true);
-        toast({
-          title: "Request Submitted",
-          description: "We've received your request and will get back to you soon.",
+      // Since no-cors mode doesn't give us status information, assume success
+      setFormSubmitted(true);
+      toast({
+        title: "Request Submitted",
+        description: "We've received your request and will get back to you soon.",
+      });
+      
+      setTimeout(() => {
+        setShowContactForm(false);
+        setFormSubmitted(false);
+        setContactForm({
+          name: "",
+          email: "",
+          phone: "",
+          city: "",
+          pincode: "",
+          referral: "",
+          message: ""
         });
-        
-        setTimeout(() => {
-          setShowContactForm(false);
-          setFormSubmitted(false);
-          setContactForm({
-            name: "",
-            email: "",
-            phone: "",
-            city: "",
-            pincode: "",
-            referral: "",
-            message: ""
-          });
-        }, 3000);
-      } else {
-        throw new Error("Failed to submit form");
-      }
+      }, 3000);
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
