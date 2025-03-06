@@ -25,7 +25,7 @@ const Navbar = () => {
             <img 
               src="/lovable-uploads/1db71012-aaa3-4d8e-b3ee-5a955eadb071.png" 
               alt="CareSanctum Logo" 
-              className="h-16" 
+              className="h-16 py-2" 
             />
           </Link>
 
