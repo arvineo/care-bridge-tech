@@ -1,6 +1,8 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
-import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle } from "lucide-react";
 
 const Technology = () => {
   return (
@@ -32,7 +34,59 @@ const Technology = () => {
                 <p className="text-gray-600 mb-4">
                   Our advanced wearable devices continuously monitor vital signs and activity levels, providing real-time health insights. Combined with IoT sensors throughout the living space, we create a comprehensive monitoring system that ensures safety while maintaining independence.
                 </p>
-                <div className="flex gap-4 mt-4">
+                
+                {/* Health Monitoring Features */}
+                <div className="grid grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Heart className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Heart Rate</h4>
+                      <p className="text-sm text-gray-500">Continuous monitoring with alerts for irregularities</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Activity className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">BP Monitoring</h4>
+                      <p className="text-sm text-gray-500">Regular blood pressure checks with trend analysis</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Thermometer className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Temperature</h4>
+                      <p className="text-sm text-gray-500">Body temperature analysis for infection detection</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <HeartPulse className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">SPO2 Sensor</h4>
+                      <p className="text-sm text-gray-500">Blood oxygen level monitoring 24/7</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Locate className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">GPS Tracking</h4>
+                      <p className="text-sm text-gray-500">Location monitoring and GeoFencing technology</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <AlertTriangle className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Fall Detection</h4>
+                      <p className="text-sm text-gray-500">Immediate alerts for falls or unusual patterns</p>
+                    </div>
+                  </div>
+                </div>
+                
+                <div className="flex gap-4 mt-2">
                   <div className="flex items-center gap-2">
                     <Bluetooth className="h-5 w-5 text-secondary" />
                     <span>Real-time tracking</span>
@@ -46,6 +100,10 @@ const Technology = () => {
                     <span>Mobile alerts</span>
                   </div>
                 </div>
+                
+                <Button className="mt-6 w-fit" variant="secondary">
+                  Learn More
+                </Button>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
                 <img 
