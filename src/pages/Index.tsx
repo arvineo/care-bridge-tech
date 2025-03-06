@@ -185,24 +185,35 @@ const Index = () => {
         <section className="py-20 bg-gradient-to-b from-white to-purple-50">
           <div className="container mx-auto px-4">
             <div className="max-w-4xl mx-auto">
-              <Card className="hover:shadow-lg transition-shadow duration-300">
-                <CardContent className="p-8">
-                  <div className="text-center space-y-6">
-                    <h2 className="text-3xl font-bold text-primary">
-                      Join Our Free Community!
-                    </h2>
-                    <p className="text-gray-600">
-                      Get expert tips and tricks for healthy aging. Stay updated
-                      with insights on elder care.
-                    </p>
-                    <div className="flex justify-center">
-                      <Button 
-                        onClick={() => window.open("https://forms.gle/s1mBQYRbPwb2Dbsy6", "_blank")}
-                        className="px-8"
-                      >
-                        Join Community
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Button>
+              <Card className="hover:shadow-lg transition-shadow duration-300 overflow-hidden">
+                <CardContent className="p-0">
+                  <div className="grid grid-cols-1 md:grid-cols-2">
+                    <div className="p-8">
+                      <div className="text-center md:text-left space-y-6">
+                        <h2 className="text-3xl font-bold text-primary">
+                          Join Our Free Community!
+                        </h2>
+                        <p className="text-gray-600">
+                          Get expert tips and tricks for healthy aging. Stay updated
+                          with insights on elder care.
+                        </p>
+                        <div className="flex justify-center md:justify-start">
+                          <Button 
+                            onClick={() => window.open("https://forms.gle/s1mBQYRbPwb2Dbsy6", "_blank")}
+                            className="px-8"
+                          >
+                            Join Community
+                            <ArrowRight className="ml-2 h-5 w-5" />
+                          </Button>
+                        </div>
+                      </div>
+                    </div>
+                    <div className="bg-purple-100 flex items-center justify-center">
+                      <img 
+                        src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?auto=format&fit=crop&w=800&q=80" 
+                        alt="Seniors community" 
+                        className="object-cover w-full h-full" 
+                      />
                     </div>
                   </div>
                 </CardContent>
