@@ -219,7 +219,7 @@ const Technology = () => {
                 
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80" alt="Medication and reports management system" className="w-full h-full object-cover" />
+                <img alt="Medication and reports management system" className="w-full h-full object-cover" src="/lovable-uploads/b6ba1f1a-506b-4e58-9dff-57be8769a6c8.jpg" />
               </div>
             </div>
 
