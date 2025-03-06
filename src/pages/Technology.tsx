@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -98,7 +99,14 @@ const Technology = () => {
                 <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80" alt="Doctor and specialist care services" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col justify-center">
-                
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="rounded-full bg-secondary/10 p-3">
+                    <Shield className="h-6 w-6 text-secondary" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-primary">
+                    Doctor & Specialist Care
+                  </h2>
+                </div>
                 <p className="text-gray-600 mb-6">
                   Our comprehensive healthcare approach connects seniors with qualified medical professionals for personalized care. Whether for urgent consultations or routine checkups, we ensure access to quality healthcare services whenever needed.
                 </p>
