@@ -1,9 +1,7 @@
-
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileCheck } from "lucide-react";
-
 const Technology = () => {
   return <>
       <Navbar />
@@ -140,9 +138,7 @@ const Technology = () => {
                   </div>
                 </div>
                 
-                <Button className="mt-4 w-fit" variant="secondary">
-                  Learn More
-                </Button>
+                
               </div>
             </div>
 
