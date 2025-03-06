@@ -290,7 +290,7 @@ const Index = () => {
                             Whether you have questions about our services, need assistance
                             with care options, or want to join our mission, we're here to help.
                           </p>
-                          <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?auto=format&fit=crop&w=500" alt="Contact Care Sanctum" className="rounded-lg mx-auto shadow-md mb-6" />
+                          
                         </div>
                       </CardContent>
                     </Card>}
