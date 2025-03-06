@@ -228,10 +228,10 @@ const Index = () => {
                     <div>
                       <h3 className="text-lg font-semibold text-primary mb-2">Email Us</h3>
                       <a 
-                        href="mailto:connect@caresanctum.com" 
+                        href="mailto:shivaashi@caresanctum.com" 
                         className="text-secondary hover:underline"
                       >
-                        connect@caresanctum.com
+                        shivaashi@caresanctum.com
                       </a>
                       <p className="text-gray-500 mt-2 text-sm">
                         We'll respond to your inquiry within 24 hours
