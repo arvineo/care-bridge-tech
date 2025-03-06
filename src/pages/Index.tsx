@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
@@ -31,7 +32,7 @@ const Index = () => {
   const [isJourneyExpanded, setIsJourneyExpanded] = useState(false);
 
   return (
-    <>
+    <div>
       <Navbar />
       <main className="overflow-hidden">
         <Hero />
@@ -86,7 +87,11 @@ const Index = () => {
                   ) : null}
                   
                   <div className="text-center mt-6">
-                    <Button variant="outline" onClick={() => setIsJourneyExpanded(!isJourneyExpanded)} className="px-8">
+                    <Button 
+                      variant="outline" 
+                      onClick={() => setIsJourneyExpanded(!isJourneyExpanded)} 
+                      className="px-8"
+                    >
                       {isJourneyExpanded ? "Read Less" : "Read More"}
                     </Button>
                   </div>
@@ -250,7 +255,7 @@ const Index = () => {
           </div>
         </section>
       </main>
-    </>
+    </div>
   );
 };
 
