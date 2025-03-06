@@ -11,9 +11,7 @@ const Hero = () => {
               Revolutionizing Senior Care with Technology
             </h1>
             <div className="text-lg md:text-xl text-gray-600 animate-slide-up">
-              <p>
-                Welcome to Care Sanctum, where we bridge the gap between you and your parents through cutting-edge technology and compassionate care. Our mission is to lead the senior care revolution with a tech-first, responsive, and anticipatory approach, ensuring the safety, independence, and wellness of seniors while providing peace of mind to their families.
-              </p>
+              <p className="text-base">Welcome to Care Sanctum, where technology meets compassionate care to keep you connected with your parents. We lead the senior care revolution with a tech-first, responsive approach, ensuring seniors' safety, independence, and wellness while giving families peace of mind.</p>
               
               {isExpanded && <>
                   <p className="mt-4">
