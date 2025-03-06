@@ -16,11 +16,11 @@ const teamMembers = [{
 }, {
   name: "Sarang Dutta",
   role: "Software Engineer",
-  image: ""
+  image: "/lovable-uploads/4496320f-0d11-4572-9131-e251d52f705c.png"
 }, {
   name: "Rounak Lakhani",
   role: "Sales & Marketing",
-  image: ""
+  image: "/lovable-uploads/7275f6a7-2f45-48a3-b6b0-0f5f29d1ca7c.png"
 }];
 
 const Index = () => {
@@ -180,7 +180,10 @@ const Index = () => {
                           with insights on elder care.
                         </p>
                         <div className="flex justify-center md:justify-start">
-                          <Button onClick={() => window.open("https://forms.gle/s1mBQYRbPwb2Dbsy6", "_blank")} className="px-8">
+                          <Button 
+                            onClick={() => window.open("https://chat.whatsapp.com/IMVCZjM0rVJCkmR4cs3nl4", "_blank")} 
+                            className="px-8"
+                          >
                             Join Community
                             <ArrowRight className="ml-2 h-5 w-5" />
                           </Button>
