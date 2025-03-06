@@ -7,6 +7,8 @@ import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { ArrowRight, Send, Mail, Phone } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
+
 const teamMembers = [{
   name: "Sai Ram Pasupuleti",
   role: "Senior Software Engineer",
@@ -20,6 +22,7 @@ const teamMembers = [{
   role: "Sales & Marketing",
   image: ""
 }];
+
 const Index = () => {
   const [contactForm, setContactForm] = useState({
     name: "",
@@ -30,6 +33,7 @@ const Index = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isJourneyExpanded, setIsJourneyExpanded] = useState(false);
+
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
       name,
@@ -40,6 +44,7 @@ const Index = () => {
       [name]: value
     }));
   };
+
   const handleContactSubmit = (e: React.FormEvent) => {
     e.preventDefault();
     // Send to dummy webhook for now
@@ -63,6 +68,7 @@ const Index = () => {
       }, 3000);
     });
   };
+
   return <>
       <Navbar />
       <main className="overflow-hidden">
@@ -232,8 +238,15 @@ const Index = () => {
                   </div>
                   
                   <div className="mt-8">
-                    <Button onClick={() => setShowContactForm(true)} className="w-full" variant="outline">
-                      Send Us a Message
+                    <Button 
+                      asChild
+                      className="w-full" 
+                      variant="outline"
+                    >
+                      <Link to="/contact">
+                        Show your interest
+                        <ArrowRight className="ml-2 h-5 w-5" />
+                      </Link>
                     </Button>
                   </div>
                 </div>
