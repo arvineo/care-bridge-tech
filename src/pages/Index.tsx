@@ -1,4 +1,3 @@
-
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
@@ -6,7 +5,7 @@ import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
-import { ArrowRight, Send, Mail, Phone } from "lucide-react";
+import { ArrowRight, Send, Mail, Phone, Tag } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
@@ -32,18 +31,18 @@ const Index = () => {
     name: "",
     email: "",
     phone: "",
-    pincode: ""
+    city: "",
+    pincode: "",
+    referral: "",
+    message: ""
   });
   const [showContactForm, setShowContactForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isJourneyExpanded, setIsJourneyExpanded] = useState(false);
   const [isSubmitting, setIsSubmitting] = useState(false);
 
-  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    const {
-      name,
-      value
-    } = e.target;
+  const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
+    const { name, value } = e.target;
     setContactForm(prev => ({
       ...prev,
       [name]: value
@@ -56,29 +55,19 @@ const Index = () => {
     
     try {
       // Use the IFTTT webhook URL
-      const webhookUrl = "https://maker.ifttt.com/trigger/Form_fill_from_caresanctum_website/json/with/key/3Kzll6v5NOWEhpdn_KVVq";
-      
-      // Send data to the webhook
-      const response = await fetch(webhookUrl, {
+      const response = await fetch("https://maker.ifttt.com/trigger/Form fill from caresanctum website/json/with/key/3Kzll6v5NOWEhpdn_KVVq", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
         },
-        body: JSON.stringify({
-          value1: contactForm.name,
-          value2: contactForm.email,
-          value3: contactForm.phone,
-          value4: contactForm.pincode
-        })
+        body: JSON.stringify(contactForm)
       });
-      
-      console.log("Webhook response:", response);
       
       if (response.ok) {
         setFormSubmitted(true);
         toast({
-          title: "Success!",
-          description: "Your message has been received. Our team will get back to you shortly.",
+          title: "Request Submitted",
+          description: "We've received your request and will get back to you soon.",
         });
         
         setTimeout(() => {
@@ -88,7 +77,10 @@ const Index = () => {
             name: "",
             email: "",
             phone: "",
-            pincode: ""
+            city: "",
+            pincode: "",
+            referral: "",
+            message: ""
           });
         }, 3000);
       } else {
@@ -97,7 +89,7 @@ const Index = () => {
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
-        title: "Error",
+        title: "Failed to submit",
         description: "There was a problem submitting your request. Please try again.",
         variant: "destructive",
       });
@@ -308,8 +300,38 @@ const Index = () => {
                                 <Input id="phone" type="tel" placeholder="Your phone number" name="phone" value={contactForm.phone} onChange={handleInputChange} required />
                               </div>
                               <div className="space-y-2">
-                                <label htmlFor="pincode" className="text-sm font-medium text-gray-700">Pincode</label>
-                                <Input id="pincode" placeholder="Your pincode" name="pincode" value={contactForm.pincode} onChange={handleInputChange} required />
+                                <label htmlFor="city" className="text-sm font-medium text-gray-700">City</label>
+                                <Input id="city" placeholder="Your city" name="city" value={contactForm.city} onChange={handleInputChange} required />
+                              </div>
+                              <div className="space-y-2">
+                                <label htmlFor="pincode" className="text-sm font-medium text-gray-700">Pin Code</label>
+                                <Input id="pincode" placeholder="Enter your 6-digit pin code" name="pincode" maxLength={6} pattern="[0-9]{6}" value={contactForm.pincode} onChange={handleInputChange} required />
+                              </div>
+                              <div className="space-y-2">
+                                <label htmlFor="referral" className="text-sm font-medium text-gray-700">
+                                  Referral Code <span className="text-gray-400 text-xs">(optional)</span>
+                                </label>
+                                <div className="relative">
+                                  <Input 
+                                    id="referral" 
+                                    placeholder="Enter referral code if you have one" 
+                                    name="referral" 
+                                    value={contactForm.referral} 
+                                    onChange={handleInputChange}
+                                    className="pl-9"
+                                  />
+                                  <Tag className="absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary h-4 w-4" />
+                                </div>
+                              </div>
+                              <div className="space-y-2">
+                                <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
+                                <Textarea 
+                                  id="message" 
+                                  placeholder="How can we help you?" 
+                                  name="message" 
+                                  value={contactForm.message} 
+                                  onChange={handleInputChange}
+                                />
                               </div>
                               <div className="flex space-x-4 pt-2">
                                 <Button type="submit" className="w-full" disabled={isSubmitting}>
