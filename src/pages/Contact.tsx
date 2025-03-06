@@ -46,21 +46,32 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        mode: "no-cors", // Add this for CORS handling
-        body: JSON.stringify(formData)
-      });
-
-      // Since no-cors mode doesn't give us status information, assume success
-      setIsSubmitted(true);
-      toast({
-        title: "Request Submitted",
-        description: "We've received your request and will get back to you soon.",
-      });
+      console.log("Submitting form data:", formData);
+      
+      // Using XMLHttpRequest instead of fetch for better CORS handling
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
+      
+      xhr.onload = function() {
+        // Zapier webhooks generally don't return meaningful responses, so we assume success
+        setIsSubmitted(true);
+        toast({
+          title: "Request Submitted",
+          description: "We've received your request and will get back to you soon.",
+        });
+      };
+      
+      xhr.onerror = function() {
+        console.error("XHR Error occurred");
+        toast({
+          title: "Failed to submit",
+          description: "There was an error submitting your request. Please try again.",
+          variant: "destructive"
+        });
+      };
+      
+      xhr.send(JSON.stringify(formData));
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({

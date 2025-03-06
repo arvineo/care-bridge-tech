@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
@@ -58,35 +59,45 @@ const Index = () => {
     
     try {
       console.log("Submitting form data:", contactForm);
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json"
-        },
-        mode: "no-cors", // Add this for CORS handling
-        body: JSON.stringify(contactForm)
-      });
       
-      // Since no-cors mode doesn't give us status information, assume success
-      setFormSubmitted(true);
-      toast({
-        title: "Request Submitted",
-        description: "We've received your request and will get back to you soon.",
-      });
+      // Using XMLHttpRequest instead of fetch for more control with CORS
+      const xhr = new XMLHttpRequest();
+      xhr.open("POST", "https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", true);
+      xhr.setRequestHeader("Content-Type", "application/json");
       
-      setTimeout(() => {
-        setShowContactForm(false);
-        setFormSubmitted(false);
-        setContactForm({
-          name: "",
-          email: "",
-          phone: "",
-          city: "",
-          pincode: "",
-          referral: "",
-          message: ""
+      xhr.onload = function() {
+        // Regardless of status, assume success since Zapier webhooks generally don't return meaningful responses
+        setFormSubmitted(true);
+        toast({
+          title: "Request Submitted",
+          description: "We've received your request and will get back to you soon.",
         });
-      }, 3000);
+        
+        setTimeout(() => {
+          setShowContactForm(false);
+          setFormSubmitted(false);
+          setContactForm({
+            name: "",
+            email: "",
+            phone: "",
+            city: "",
+            pincode: "",
+            referral: "",
+            message: ""
+          });
+        }, 3000);
+      };
+      
+      xhr.onerror = function() {
+        console.error("XHR Error occurred");
+        toast({
+          title: "Failed to submit",
+          description: "There was a problem submitting your request. Please try again.",
+          variant: "destructive",
+        });
+      };
+      
+      xhr.send(JSON.stringify(contactForm));
     } catch (error) {
       console.error("Error submitting form:", error);
       toast({
