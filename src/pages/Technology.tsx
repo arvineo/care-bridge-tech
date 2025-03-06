@@ -2,10 +2,8 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileMedical } from "lucide-react";
-
 const Technology = () => {
-  return (
-    <>
+  return <>
       <Navbar />
       <main className="pt-20">
         <section className="py-20 bg-gradient-to-b from-white to-purple-50">
@@ -85,42 +83,21 @@ const Technology = () => {
                   </div>
                 </div>
                 
-                <div className="flex gap-4 mt-2">
-                  <div className="flex items-center gap-2">
-                    <Bluetooth className="h-5 w-5 text-secondary" />
-                    <span>Real-time tracking</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <WifiIcon className="h-5 w-5 text-secondary" />
-                    <span>Connected home</span>
-                  </div>
-                  <div className="flex items-center gap-2">
-                    <Smartphone className="h-5 w-5 text-secondary" />
-                    <span>Mobile alerts</span>
-                  </div>
-                </div>
+                
                 
                 <Button className="mt-6 w-fit" variant="secondary">
                   Learn More
                 </Button>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img 
-                  src="https://images.unsplash.com/photo-1557595721-d285905afeba?auto=format&fit=crop&q=80" 
-                  alt="Smart wearables and IoT devices"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1557595721-d285905afeba?auto=format&fit=crop&q=80" alt="Smart wearables and IoT devices" className="w-full h-full object-cover" />
               </div>
             </div>
 
             {/* Doctor & Specialist Care Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-32 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <img 
-                  src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80" 
-                  alt="Doctor and specialist care services"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1605810230434-7631ac76ec81?auto=format&fit=crop&q=80" alt="Doctor and specialist care services" className="w-full h-full object-cover" />
               </div>
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
@@ -206,11 +183,7 @@ const Technology = () => {
                 </div>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img 
-                  src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80" 
-                  alt="AI and predictive analytics"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80" alt="AI and predictive analytics" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -252,11 +225,7 @@ const Technology = () => {
                 </Button>
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img 
-                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80" 
-                  alt="Medication and reports management system"
-                  className="w-full h-full object-cover"
-                />
+                <img src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80" alt="Medication and reports management system" className="w-full h-full object-cover" />
               </div>
             </div>
 
@@ -326,19 +295,13 @@ const Technology = () => {
                       The seamless integration between wearable devices, home sensors, and our central monitoring platform ensures that care is both comprehensive and unobtrusive, allowing seniors to maintain their independence while staying safe.
                     </p>
                   </div>
-                  <img 
-                    src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800" 
-                    alt="Advanced technology" 
-                    className="rounded-xl shadow-lg object-cover h-[400px] order-1 lg:order-2"
-                  />
+                  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800" alt="Advanced technology" className="rounded-xl shadow-lg object-cover h-[400px] order-1 lg:order-2" />
                 </div>
               </div>
             </section>
           </div>
         </section>
       </main>
-    </>
-  );
+    </>;
 };
-
 export default Technology;
