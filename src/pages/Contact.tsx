@@ -53,6 +53,10 @@ const Contact = () => {
                       <Input id="phone" type="tel" placeholder="Your phone number" />
                     </div>
                     <div className="space-y-2">
+                      <label htmlFor="city" className="text-sm font-medium text-gray-700">City</label>
+                      <Input id="city" type="text" placeholder="Your city" />
+                    </div>
+                    <div className="space-y-2">
                       <label htmlFor="pincode" className="text-sm font-medium text-gray-700">Pin Code</label>
                       <Input 
                         id="pincode" 
