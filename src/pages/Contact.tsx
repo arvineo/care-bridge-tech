@@ -53,6 +53,17 @@ const Contact = () => {
                       <Input id="phone" type="tel" placeholder="Your phone number" />
                     </div>
                     <div className="space-y-2">
+                      <label htmlFor="pincode" className="text-sm font-medium text-gray-700">Pin Code</label>
+                      <Input 
+                        id="pincode" 
+                        type="text" 
+                        placeholder="Enter your 6-digit pin code" 
+                        maxLength={6}
+                        pattern="[0-9]{6}"
+                        className="font-medium tracking-wider"
+                      />
+                    </div>
+                    <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
                       <Textarea id="message" placeholder="How can we help you?" />
                     </div>
