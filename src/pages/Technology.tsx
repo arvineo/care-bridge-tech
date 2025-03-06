@@ -85,9 +85,7 @@ const Technology = () => {
                 
                 
                 
-                <Button className="mt-6 w-fit" variant="secondary">
-                  Learn More
-                </Button>
+                
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
                 <img src="https://images.unsplash.com/photo-1557595721-d285905afeba?auto=format&fit=crop&q=80" alt="Smart wearables and IoT devices" className="w-full h-full object-cover" />
