@@ -1,3 +1,4 @@
+
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
@@ -8,6 +9,8 @@ import { Input } from "@/components/ui/input";
 import { ArrowRight, Send, Mail, Phone } from "lucide-react";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import { useToast } from "@/hooks/use-toast";
+import { Textarea } from "@/components/ui/textarea";
 
 const teamMembers = [{
   name: "Sai Ram Pasupuleti",
@@ -24,6 +27,7 @@ const teamMembers = [{
 }];
 
 const Index = () => {
+  const { toast } = useToast();
   const [contactForm, setContactForm] = useState({
     name: "",
     email: "",
@@ -33,6 +37,7 @@ const Index = () => {
   const [showContactForm, setShowContactForm] = useState(false);
   const [formSubmitted, setFormSubmitted] = useState(false);
   const [isJourneyExpanded, setIsJourneyExpanded] = useState(false);
+  const [isSubmitting, setIsSubmitting] = useState(false);
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const {
@@ -45,28 +50,60 @@ const Index = () => {
     }));
   };
 
-  const handleContactSubmit = (e: React.FormEvent) => {
+  const handleContactSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Send to dummy webhook for now
-    fetch("https://webhook.example.com/contact", {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(contactForm)
-    }).then(() => {
-      setFormSubmitted(true);
-      setTimeout(() => {
-        setShowContactForm(false);
-        setFormSubmitted(false);
-        setContactForm({
-          name: "",
-          email: "",
-          phone: "",
-          pincode: ""
+    setIsSubmitting(true);
+    
+    try {
+      // Use the IFTTT webhook URL
+      const webhookUrl = "https://maker.ifttt.com/trigger/Form_fill_from_caresanctum_website/json/with/key/3Kzll6v5NOWEhpdn_KVVq";
+      
+      // Send data to the webhook
+      const response = await fetch(webhookUrl, {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+          value1: contactForm.name,
+          value2: contactForm.email,
+          value3: contactForm.phone,
+          value4: contactForm.pincode
+        })
+      });
+      
+      console.log("Webhook response:", response);
+      
+      if (response.ok) {
+        setFormSubmitted(true);
+        toast({
+          title: "Success!",
+          description: "Your message has been received. Our team will get back to you shortly.",
         });
-      }, 3000);
-    });
+        
+        setTimeout(() => {
+          setShowContactForm(false);
+          setFormSubmitted(false);
+          setContactForm({
+            name: "",
+            email: "",
+            phone: "",
+            pincode: ""
+          });
+        }, 3000);
+      } else {
+        throw new Error("Failed to submit form");
+      }
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast({
+        title: "Error",
+        description: "There was a problem submitting your request. Please try again.",
+        variant: "destructive",
+      });
+    } finally {
+      setIsSubmitting(false);
+    }
   };
 
   return <>
@@ -242,14 +279,12 @@ const Index = () => {
                   
                   <div className="mt-8">
                     <Button 
-                      asChild
+                      onClick={() => setShowContactForm(true)}
                       className="w-full" 
                       variant="outline"
                     >
-                      <Link to="/contact">
-                        Show your interest
-                        <ArrowRight className="ml-2 h-5 w-5" />
-                      </Link>
+                      Show your interest
+                      <ArrowRight className="ml-2 h-5 w-5" />
                     </Button>
                   </div>
                 </div>
@@ -277,7 +312,9 @@ const Index = () => {
                                 <Input id="pincode" placeholder="Your pincode" name="pincode" value={contactForm.pincode} onChange={handleInputChange} required />
                               </div>
                               <div className="flex space-x-4 pt-2">
-                                <Button type="submit" className="w-full">Submit</Button>
+                                <Button type="submit" className="w-full" disabled={isSubmitting}>
+                                  {isSubmitting ? "Submitting..." : "Request Callback"}
+                                </Button>
                                 <Button type="button" variant="outline" onClick={() => setShowContactForm(false)} className="w-full">
                                   Cancel
                                 </Button>
