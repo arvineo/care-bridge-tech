@@ -1,7 +1,7 @@
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle } from "lucide-react";
+import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileMedical } from "lucide-react";
 
 const Technology = () => {
   return (
@@ -209,6 +209,52 @@ const Technology = () => {
                 <img 
                   src="https://images.unsplash.com/photo-1488590528505-98d2b5aba04b?auto=format&fit=crop&q=80" 
                   alt="AI and predictive analytics"
+                  className="w-full h-full object-cover"
+                />
+              </div>
+            </div>
+
+            {/* Medication & Reports Management Section */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-32 items-center">
+              <div className="flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="rounded-full bg-secondary/10 p-3">
+                    <FileText className="h-6 w-6 text-secondary" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-primary">
+                    Medication & Reports Management
+                  </h2>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Stay on top of medication schedules and health records with our comprehensive management system. From timely medicine reminders to organized health reports, we ensure all important medical information is easily accessible and well-managed.
+                </p>
+                
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <Bell className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Medicine Reminders & Delivery</h4>
+                      <p className="text-sm text-gray-500">Timely medication alerts and convenient delivery service</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                    <FileMedical className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Prescription & Lab Report Management</h4>
+                      <p className="text-sm text-gray-500">Digital storage and organization of medical records</p>
+                    </div>
+                  </div>
+                </div>
+
+                <Button className="mt-4 w-fit" variant="secondary">
+                  Learn More
+                </Button>
+              </div>
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
+                <img 
+                  src="https://images.unsplash.com/photo-1649972904349-6e44c42644a7?auto=format&fit=crop&q=80" 
+                  alt="Medication and reports management system"
                   className="w-full h-full object-cover"
                 />
               </div>
