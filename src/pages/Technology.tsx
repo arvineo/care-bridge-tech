@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -228,24 +227,7 @@ const Technology = () => {
             
 
             {/* Intelligent Health Monitoring Section */}
-            <section className="py-20 bg-white">
-              <div className="container mx-auto px-4">
-                <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
-                  <div className="flex flex-col justify-center order-2 lg:order-1">
-                    <h2 className="text-3xl font-bold text-primary mb-6">
-                      Intelligent Health Monitoring
-                    </h2>
-                    <p className="text-gray-600 mb-4">
-                      Our advanced monitoring systems continuously collect and analyze health data to identify patterns and detect potential issues before they become serious. This proactive approach allows for timely interventions and peace of mind for families.
-                    </p>
-                    <p className="text-gray-600">
-                      The seamless integration between wearable devices, home sensors, and our central monitoring platform ensures that care is both comprehensive and unobtrusive, allowing seniors to maintain their independence while staying safe.
-                    </p>
-                  </div>
-                  <img src="https://images.unsplash.com/photo-1518770660439-4636190af475?auto=format&fit=crop&w=800" alt="Advanced technology" className="rounded-xl shadow-lg object-cover h-[400px] order-1 lg:order-2" />
-                </div>
-              </div>
-            </section>
+            
           </div>
         </section>
       </main>
