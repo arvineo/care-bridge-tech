@@ -34,7 +34,7 @@ const Technology = () => {
                 
                 {/* Health Monitoring Features */}
                 <div className="grid grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Heart className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Heart Rate</h4>
@@ -42,7 +42,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Activity className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">BP Monitoring</h4>
@@ -50,7 +50,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Thermometer className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Temperature</h4>
@@ -58,7 +58,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <HeartPulse className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">SPO2 Sensor</h4>
@@ -66,7 +66,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Locate className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">GPS Tracking</h4>
@@ -74,7 +74,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <AlertTriangle className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Fall Detection</h4>
@@ -112,7 +112,7 @@ const Technology = () => {
                 
                 {/* Healthcare Services Features */}
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Activity className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">On-Demand Specialist Consultation</h4>
@@ -120,7 +120,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <HeartPulse className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Scheduled Doctor Visits</h4>
@@ -128,7 +128,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Thermometer className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Routine Health Checkups</h4>
@@ -136,7 +136,7 @@ const Technology = () => {
                     </div>
                   </div>
                   
-                  <div className="flex items-start gap-3 p-3 bg-white rounded-lg shadow-sm">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
                     <Heart className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Home Visits</h4>
