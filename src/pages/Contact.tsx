@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
-import { MapPin, Mail, Phone } from "lucide-react";
+import { MapPin, Mail, Phone, Tag } from "lucide-react";
 
 const locations = [
   { city: "Mumbai", status: "Current" },
@@ -62,6 +62,20 @@ const Contact = () => {
                         pattern="[0-9]{6}"
                         className="font-medium tracking-wider"
                       />
+                    </div>
+                    <div className="space-y-2">
+                      <label htmlFor="referral" className="text-sm font-medium text-gray-700">
+                        Referral Code <span className="text-gray-400 text-xs">(optional)</span>
+                      </label>
+                      <div className="relative">
+                        <Input 
+                          id="referral" 
+                          type="text" 
+                          placeholder="Enter referral code if you have one"
+                          className="pl-9" 
+                        />
+                        <Tag className="absolute left-3 top-1/2 transform -translate-y-1/2 text-secondary h-4 w-4" />
+                      </div>
                     </div>
                     <div className="space-y-2">
                       <label htmlFor="message" className="text-sm font-medium text-gray-700">Message</label>
