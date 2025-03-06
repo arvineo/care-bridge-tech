@@ -6,19 +6,19 @@ import { Calendar } from "@/components/ui/calendar";
 const upcomingEvents = [
   {
     title: "Healthy Aging Webinar",
-    date: "April 15, 2024",
+    date: "April 15, 2025",
     time: "11:00 AM IST",
     description: "Join our expert panel for insights on maintaining health in senior years.",
   },
   {
     title: "Tech & Seniors Workshop",
-    date: "April 20, 2024",
+    date: "April 20, 2025",
     time: "3:00 PM IST",
     description: "Learn how to use smart devices for better health monitoring.",
   },
   {
     title: "Community Wellness Session",
-    date: "April 25, 2024",
+    date: "April 25, 2025",
     time: "10:00 AM IST",
     description: "Group session focusing on mental wellness and social connection.",
   },
