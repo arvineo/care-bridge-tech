@@ -1,29 +1,33 @@
+
 import Hero from "@/components/Hero";
 import Features from "@/components/Features";
 import Team from "@/components/Team";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
-import { Input } from "@/components/ui/input";
-import { ArrowRight, Send, Mail, Phone, Tag } from "lucide-react";
+import { ArrowRight, Mail, Phone, Tag, CheckCircle } from "lucide-react";
 import { useState } from "react";
-import { Link } from "react-router-dom";
 import { useToast } from "@/hooks/use-toast";
+import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 
-const teamMembers = [{
-  name: "Sai Ram Pasupuleti",
-  role: "Senior Software Engineer",
-  image: ""
-}, {
-  name: "Sarang Dutta",
-  role: "Software Engineer",
-  image: "/lovable-uploads/4496320f-0d11-4572-9131-e251d52f705c.png"
-}, {
-  name: "Rounak Lakhani",
-  role: "Sales & Marketing",
-  image: "/lovable-uploads/7275f6a7-2f45-48a3-b6b0-0f5f29d1ca7c.png"
-}];
+const teamMembers = [
+  {
+    name: "Sai Ram Pasupuleti",
+    role: "Senior Software Engineer",
+    image: ""
+  }, 
+  {
+    name: "Sarang Dutta",
+    role: "Software Engineer",
+    image: "/lovable-uploads/4496320f-0d11-4572-9131-e251d52f705c.png"
+  }, 
+  {
+    name: "Rounak Lakhani",
+    role: "Sales & Marketing",
+    image: "/lovable-uploads/7275f6a7-2f45-48a3-b6b0-0f5f29d1ca7c.png"
+  }
+];
 
 const Index = () => {
   const { toast } = useToast();
@@ -54,8 +58,8 @@ const Index = () => {
     setIsSubmitting(true);
     
     try {
-      // Use the IFTTT webhook URL
-      const response = await fetch("https://maker.ifttt.com/trigger/Form fill from caresanctum website/json/with/key/3Kzll6v5NOWEhpdn_KVVq", {
+      // Use the updated Zapier webhook URL
+      const response = await fetch("https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
@@ -98,7 +102,8 @@ const Index = () => {
     }
   };
 
-  return <>
+  return (
+    <div>
       <Navbar />
       <main className="overflow-hidden">
         <Hero />
@@ -122,7 +127,8 @@ const Index = () => {
                     The journey of Care Sanctum is one rooted in a deep passion for redefining senior care in India. It all began with two visionaries—<strong>Chandrima Mehra</strong> and <strong>Arvind Karna</strong>—who were brought together by shared values and a commitment to making a difference in the lives of seniors.
                   </p>
                   
-                  {isJourneyExpanded ? <>
+                  {isJourneyExpanded ? (
+                    <div>
                       <p className="text-gray-600 mb-4">
                         <strong>What truly brought these two dynamic leaders together wasn't just their professional skills, but a deeply personal journey.</strong> Both Arvind and Chandrima, balancing demanding careers, found themselves living away from their hometowns, constantly worried about their aging parents. Their quest for reliable, tech-driven solutions to provide their parents with the best care ignited their passion to create a better future for seniors in India. This personal experience became the foundation for Care Sanctum.
                       </p>
@@ -150,7 +156,8 @@ const Index = () => {
                       <p className="text-gray-600 mb-4">
                         Care Sanctum is not just a company; it's a mission to empower families and improve the lives of seniors. With a leadership team dedicated to turning this vision into reality, Care Sanctum stands as a promise—a promise to ensure that every senior can live their golden years with independence, dignity, and joy.
                       </p>
-                    </> : null}
+                    </div>
+                  ) : null}
                   
                   <div className="text-center mt-6">
                     <Button variant="outline" onClick={() => setIsJourneyExpanded(!isJourneyExpanded)} className="px-8">
@@ -175,10 +182,15 @@ const Index = () => {
               </p>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-              {teamMembers.map(member => <Card key={member.name} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+              {teamMembers.map(member => (
+                <Card key={member.name} className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
                   <CardContent className="p-0">
                     <div className="bg-gray-200 w-full aspect-square flex items-center justify-center">
-                      {member.image ? <img src={member.image} alt={member.name} className="w-full aspect-square object-cover" /> : <span className="text-gray-400 text-5xl">👤</span>}
+                      {member.image ? (
+                        <img src={member.image} alt={member.name} className="w-full aspect-square object-cover" />
+                      ) : (
+                        <span className="text-gray-400 text-5xl">👤</span>
+                      )}
                     </div>
                     <div className="p-6 text-center">
                       <h3 className="font-semibold text-primary text-lg">
@@ -187,7 +199,8 @@ const Index = () => {
                       <p className="text-gray-600 mt-1">{member.role}</p>
                     </div>
                   </CardContent>
-                </Card>)}
+                </Card>
+              ))}
             </div>
           </div>
         </section>
@@ -282,9 +295,11 @@ const Index = () => {
                 </div>
                 
                 <div>
-                  {showContactForm ? <Card className="shadow-md">
+                  {showContactForm ? (
+                    <Card className="shadow-md">
                       <CardContent className="p-6">
-                        {!formSubmitted ? <>
+                        {!formSubmitted ? (
+                          <>
                             <h3 className="text-xl font-semibold text-primary mb-6">Get in Touch</h3>
                             <form onSubmit={handleContactSubmit} className="space-y-4">
                               <div className="space-y-2">
@@ -342,12 +357,11 @@ const Index = () => {
                                 </Button>
                               </div>
                             </form>
-                          </> : <div className="text-center py-12">
+                          </>
+                        ) : (
+                          <div className="text-center py-12">
                             <div className="bg-green-100 text-green-700 p-4 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round" className="h-8 w-8">
-                                <path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"></path>
-                                <polyline points="22 4 12 14.01 9 11.01"></polyline>
-                              </svg>
+                              <CheckCircle className="h-8 w-8" />
                             </div>
                             <h3 className="text-xl font-semibold text-primary mb-2">
                               Thank You!
@@ -355,9 +369,12 @@ const Index = () => {
                             <p className="text-gray-600">
                               Your message has been received. Our team will get back to you shortly.
                             </p>
-                          </div>}
+                          </div>
+                        )}
                       </CardContent>
-                    </Card> : <Card className="shadow-md bg-gradient-to-r from-purple-50 to-white">
+                    </Card>
+                  ) : (
+                    <Card className="shadow-md bg-gradient-to-r from-purple-50 to-white">
                       <CardContent className="p-8">
                         <div className="text-center">
                           <h3 className="text-xl font-semibold text-primary mb-4">We'd Love to Hear from You</h3>
@@ -368,13 +385,16 @@ const Index = () => {
                           
                         </div>
                       </CardContent>
-                    </Card>}
+                    </Card>
+                  )}
                 </div>
               </div>
             </div>
           </div>
         </section>
       </main>
-    </>;
+    </div>
+  );
 };
+
 export default Index;

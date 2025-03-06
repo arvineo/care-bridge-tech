@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -46,7 +45,7 @@ const Contact = () => {
     setIsSubmitting(true);
 
     try {
-      const response = await fetch("https://maker.ifttt.com/trigger/Form fill from caresanctum website/json/with/key/3Kzll6v5NOWEhpdn_KVVq", {
+      const response = await fetch("https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", {
         method: "POST",
         headers: {
           "Content-Type": "application/json"
