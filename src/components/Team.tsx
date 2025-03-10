@@ -17,7 +17,7 @@ const teamMembers = [
   },
   {
     name: "Dr. Shwet Sabnis",
-    role: "CMO, Medical Partner",
+    role: "Medical Innovations, M.B.B.S, M.D Geriatrics, FGIE",
     image: "/lovable-uploads/69165008-873b-4a06-900c-83f10a11d07d.png",
     linkedin: "#",
   },
