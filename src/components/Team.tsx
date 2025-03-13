@@ -1,6 +1,8 @@
 
 import { Card, CardContent } from "./ui/card";
 import { Linkedin } from "lucide-react";
+import { useState } from "react";
+import { Button } from "./ui/button";
 
 const teamMembers = [
   {
@@ -23,28 +25,9 @@ const teamMembers = [
   },
 ];
 
-const extendedTeam = [
-  {
-    name: "Sarang Kadam",
-    role: "Engineering Lead",
-    image: "https://randomuser.me/api/portraits/men/32.jpg",
-    linkedin: "#",
-  },
-  {
-    name: "Sai Kumar",
-    role: "Customer Success Manager",
-    image: "https://randomuser.me/api/portraits/men/41.jpg",
-    linkedin: "#",
-  },
-  {
-    name: "Rounak Agarwal",
-    role: "Operations Manager",
-    image: "https://randomuser.me/api/portraits/men/67.jpg",
-    linkedin: "#",
-  },
-];
-
 const Team = () => {
+  const [isExpanded, setIsExpanded] = useState(false);
+  
   return (
     <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
       <div className="container mx-auto px-4">
@@ -89,45 +72,41 @@ const Team = () => {
           ))}
         </div>
 
-        <div className="text-center mb-12">
-          <h3 className="text-2xl font-bold text-primary mb-4">
-            Our Extended Team
-          </h3>
-          <p className="text-gray-600 max-w-2xl mx-auto">
-            The talented individuals who help bring our vision to life
-          </p>
-        </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
-          {extendedTeam.map((member) => (
-            <Card
-              key={member.name}
-              className="overflow-hidden group hover:shadow-lg transition-shadow duration-300"
-            >
-              <CardContent className="p-0">
-                <div className="relative">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full aspect-square object-cover"
-                  />
-                  <a
-                    href={member.linkedin}
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="absolute top-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
-                  >
-                    <Linkedin className="h-5 w-5 text-primary" />
-                  </a>
-                </div>
-                <div className="p-6 text-center">
-                  <h3 className="font-semibold text-primary text-lg">
-                    {member.name}
-                  </h3>
-                  <p className="text-gray-600 mt-1">{member.role}</p>
-                </div>
-              </CardContent>
-            </Card>
-          ))}
+        {/* Founders Story Section */}
+        <div className="container mx-auto px-4 mb-16">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center mb-12">
+              <h2 className="text-3xl font-bold text-primary mb-4">Our Founders' Story</h2>
+              <p className="text-gray-600">How CareSanctum was born from personal experience</p>
+            </div>
+            
+            <div className="bg-white p-8 rounded-xl shadow-md">
+              <p className="text-gray-700 mb-4">
+                Behind CareSanctum, India's pioneering tech-first senior care solution, is the heartfelt story of two visionaries—Chandrima Mehra and Arvind Karna—bound by shared values and a deep-seated passion for reimagining senior living.
+              </p>
+              
+              {isExpanded && (
+                <>
+                  <p className="text-gray-700 mb-4">
+                    Arvind, an engineer by profession and a product visionary, possesses an innate ability to identify customer pain points and transform them into impactful solutions. His expertise in blending technology with empathy makes him the cornerstone of CareSanctum's innovative approach.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    On the other hand, Chandrima, a seasoned L&D veteran with a flair for art and literature, is a powerhouse of creativity and strategic thought. Her career has been defined by a constant quest to explore new methodologies, embrace cutting-edge technologies, and push boundaries in her domain.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    What truly brought these two dynamic leaders together was a shared mission to create a safety net for seniors—one that is proactive, intelligent, and deeply compassionate. CareSanctum is more than just a venture for them; it's a personal commitment to improving the lives of seniors and bringing peace of mind to their families.
+                  </p>
+                  <p className="text-gray-700">
+                    With their complementary strengths and a relentless drive to make a difference, Chandrima and Arvind are shaping CareSanctum into India's most trusted eldercare solution, where technology meets humanity to create a future where every senior feels safe, cared for, and valued.
+                  </p>
+                </>
+              )}
+              
+              <Button variant="link" onClick={() => setIsExpanded(!isExpanded)} className="mt-4 font-medium">
+                {isExpanded ? "Read Less" : "Read More"}
+              </Button>
+            </div>
+          </div>
         </div>
       </div>
     </section>

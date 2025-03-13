@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
-import { Check, HelpCircle, X, ChevronDown, ChevronUp } from "lucide-react";
+import { Check, HelpCircle, X, ChevronDown, ChevronUp, Plus } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -18,6 +18,12 @@ import {
 } from "./ui/tooltip";
 import { Separator } from "./ui/separator";
 import { cn } from "@/lib/utils";
+import { 
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger
+} from "./ui/accordion";
 
 type PlanFeature = {
   name: string;
@@ -255,11 +261,6 @@ const FeatureCheck = ({ included }: { included: boolean | string }) => {
 
 const Plans = () => {
   const [activeTab, setActiveTab] = useState<"table" | "cards">("cards");
-  const [openFaqId, setOpenFaqId] = useState<number | null>(null);
-
-  const toggleFaq = (id: number) => {
-    setOpenFaqId(openFaqId === id ? null : id);
-  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-purple-50 to-white" id="plans">
@@ -456,33 +457,23 @@ const Plans = () => {
           </Button>
         </div>
 
-        {/* FAQ Section */}
-        <div className="max-w-3xl mx-auto">
+        {/* FAQ Section with Accordion */}
+        <div className="max-w-3xl mx-auto mt-16">
           <h3 className="text-2xl font-bold text-primary mb-6 text-center">
             Frequently Asked Questions
           </h3>
-          <div className="space-y-4">
+          <Accordion type="single" collapsible className="w-full">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white rounded-lg shadow-sm">
-                <button 
-                  className="flex justify-between items-center w-full p-6 text-left font-semibold text-lg"
-                  onClick={() => toggleFaq(index)}
-                >
+              <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg mb-3 px-2 bg-white shadow-sm">
+                <AccordionTrigger className="py-4 text-left font-semibold text-lg hover:no-underline">
                   {faq.question}
-                  {openFaqId === index ? (
-                    <ChevronUp className="h-5 w-5 text-gray-500" />
-                  ) : (
-                    <ChevronDown className="h-5 w-5 text-gray-500" />
-                  )}
-                </button>
-                {openFaqId === index && (
-                  <div className="p-6 pt-0 text-gray-600 border-t">
-                    {faq.answer}
-                  </div>
-                )}
-              </div>
+                </AccordionTrigger>
+                <AccordionContent className="pb-4 text-gray-600">
+                  {faq.answer}
+                </AccordionContent>
+              </AccordionItem>
             ))}
-          </div>
+          </Accordion>
         </div>
       </div>
     </section>

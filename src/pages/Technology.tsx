@@ -92,6 +92,9 @@ const Technology = () => {
 
             {/* AI & Predictive Analytics Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-32 items-center">
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <img alt="AI and predictive analytics" className="w-full h-full object-contain" src="/lovable-uploads/e158d1ff-49b8-4a04-a8b2-7adcb8b0b6e8.png" />
+              </div>
               <div className="flex flex-col justify-center">
                 <div className="flex items-center gap-3 mb-4">
                   <div className="rounded-full bg-secondary/10 p-3">
@@ -118,9 +121,6 @@ const Technology = () => {
                     <span>Smart alerts</span>
                   </div>
                 </div>
-              </div>
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
-                <img alt="AI and predictive analytics" className="w-full h-full object-contain" src="/lovable-uploads/e158d1ff-49b8-4a04-a8b2-7adcb8b0b6e8.png" />
               </div>
             </div>
 

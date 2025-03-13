@@ -49,24 +49,7 @@ const Services = () => {
               </p>
             </div>
 
-            <div className="mb-16">
-              <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
-                <img alt="Caring for seniors" className="rounded-xl shadow-lg object-cover h-[400px]" src="/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg" />
-                <div className="flex flex-col justify-center">
-                  <h2 className="text-3xl font-bold text-primary mb-6">
-                    Personalized Senior Care
-                  </h2>
-                  <p className="text-gray-600 mb-4">
-                    At CareSanctum, we understand that each senior has unique needs. Our services are tailored to provide personalized care that respects individual preferences while ensuring safety and well-being.
-                  </p>
-                  <p className="text-gray-600">
-                    From health monitoring to companionship, our comprehensive approach addresses all aspects of senior care, allowing families to feel confident that their loved ones are receiving the best possible support.
-                  </p>
-                </div>
-              </div>
-            </div>
-
-            {/* Doctor & Specialist Care Section (Moved from Technology) */}
+            {/* Doctor & Specialist Care Section */}
             <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16 items-center">
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
                 <img alt="Doctor and specialist care services" className="w-full h-full object-cover" src="/lovable-uploads/d2e03337-a080-4d8e-8da7-09f49092e306.jpg" />
