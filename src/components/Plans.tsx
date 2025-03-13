@@ -1,4 +1,3 @@
-
 import React, { useState } from "react";
 import {
   Card,
@@ -24,6 +23,11 @@ import {
   AccordionItem,
   AccordionTrigger
 } from "./ui/accordion";
+import {
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger
+} from "./ui/collapsible";
 
 type PlanFeature = {
   name: string;
@@ -261,6 +265,7 @@ const FeatureCheck = ({ included }: { included: boolean | string }) => {
 
 const Plans = () => {
   const [activeTab, setActiveTab] = useState<"table" | "cards">("cards");
+  const [faqsVisible, setFaqsVisible] = useState(false);
 
   return (
     <section className="py-20 bg-gradient-to-b from-purple-50 to-white" id="plans">
@@ -330,7 +335,7 @@ const Plans = () => {
                 <CardContent className={cn("space-y-4", plan.color)}>
                   <div className="text-xl font-bold flex items-baseline gap-2">
                     <div className="flex flex-col">
-                      <span className="text-sm font-normal text-gray-500 line-through">{plan.originalPrice}</span>
+                      <span className="text-xl font-normal text-gray-500 line-through">{plan.originalPrice}</span>
                       <span>{plan.monthly}</span>
                     </div>
                     <span className="text-sm font-normal text-gray-500">/ month</span>
@@ -371,7 +376,7 @@ const Plans = () => {
                   >
                     <h3 className="font-bold text-lg">{plan.name}</h3>
                     <div className="mt-2">
-                      <p className="text-sm text-gray-500 line-through">{plan.originalPrice}</p>
+                      <p className="text-xl font-normal text-gray-500 line-through">{plan.originalPrice}</p>
                       <p className="text-2xl font-bold">
                         {plan.monthly}
                         <span className="text-sm font-normal text-gray-500"> / month</span>
@@ -457,23 +462,39 @@ const Plans = () => {
           </Button>
         </div>
 
-        {/* FAQ Section with Accordion */}
+        {/* FAQ Section with Collapsible */}
         <div className="max-w-3xl mx-auto mt-16">
-          <h3 className="text-2xl font-bold text-primary mb-6 text-center">
-            Frequently Asked Questions
-          </h3>
-          <Accordion type="single" collapsible className="w-full">
-            {faqs.map((faq, index) => (
-              <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg mb-3 px-2 bg-white shadow-sm">
-                <AccordionTrigger className="py-4 text-left font-semibold text-lg hover:no-underline">
-                  {faq.question}
-                </AccordionTrigger>
-                <AccordionContent className="pb-4 text-gray-600">
-                  {faq.answer}
-                </AccordionContent>
-              </AccordionItem>
-            ))}
-          </Accordion>
+          <Collapsible
+            open={faqsVisible}
+            onOpenChange={setFaqsVisible}
+            className="w-full"
+          >
+            <CollapsibleTrigger asChild>
+              <Button variant="ghost" className="w-full flex justify-between items-center mb-6 bg-white hover:bg-gray-50 rounded-lg border shadow-sm py-6">
+                <h3 className="text-2xl font-bold text-primary">
+                  Frequently Asked Questions
+                </h3>
+                {faqsVisible ? 
+                  <ChevronUp className="h-5 w-5 text-gray-500" /> : 
+                  <ChevronDown className="h-5 w-5 text-gray-500" />
+                }
+              </Button>
+            </CollapsibleTrigger>
+            <CollapsibleContent>
+              <Accordion type="single" collapsible className="w-full">
+                {faqs.map((faq, index) => (
+                  <AccordionItem key={index} value={`item-${index}`} className="border rounded-lg mb-3 px-2 bg-white shadow-sm">
+                    <AccordionTrigger className="py-4 text-left font-semibold text-lg hover:no-underline">
+                      {faq.question}
+                    </AccordionTrigger>
+                    <AccordionContent className="pb-4 text-gray-600">
+                      {faq.answer}
+                    </AccordionContent>
+                  </AccordionItem>
+                ))}
+              </Accordion>
+            </CollapsibleContent>
+          </Collapsible>
         </div>
       </div>
     </section>
