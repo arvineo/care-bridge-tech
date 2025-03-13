@@ -82,7 +82,7 @@ const Team = () => {
             
             <div className="bg-white p-8 rounded-xl shadow-md">
               <p className="text-gray-700 mb-4">
-                Behind CareSanctum, India's pioneering tech-first senior care solution, is the heartfelt story of two visionaries—Chandrima Mehra and Arvind Karna—bound by shared values and a deep-seated passion for reimagining senior living.
+                Behind CareSanctum, India's pioneering tech-first senior care solution, is the heartfelt story of three visionaries—Chandrima Mehra, Arvind Karna, and Dr. Shwet V. Sabnis—bound by shared values and a deep-seated passion for reimagining senior living.
               </p>
               
               {isExpanded && (
@@ -91,13 +91,16 @@ const Team = () => {
                     Arvind, an engineer by profession and a product visionary, possesses an innate ability to identify customer pain points and transform them into impactful solutions. His expertise in blending technology with empathy makes him the cornerstone of CareSanctum's innovative approach.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    On the other hand, Chandrima, a seasoned L&D veteran with a flair for art and literature, is a powerhouse of creativity and strategic thought. Her career has been defined by a constant quest to explore new methodologies, embrace cutting-edge technologies, and push boundaries in her domain.
+                    Chandrima, a seasoned L&D veteran with a flair for art and literature, is a powerhouse of creativity and strategic thought. Her career has been defined by a constant quest to explore new methodologies, embrace cutting-edge technologies, and push boundaries in her domain. Her leadership drives the vision and expansion of CareSanctum, ensuring it remains at the forefront of innovation in eldercare.
                   </p>
                   <p className="text-gray-700 mb-4">
-                    What truly brought these two dynamic leaders together was a shared mission to create a safety net for seniors—one that is proactive, intelligent, and deeply compassionate. CareSanctum is more than just a venture for them; it's a personal commitment to improving the lives of seniors and bringing peace of mind to their families.
+                    Dr. Shwet V. Sabnis, M.B.B.S, M.D Geriatrics, joined CareSanctum after an insightful discussion with Chandrima and Arvind, realizing the immense potential of a tech-driven approach to senior care. As Chief Medical Advisor, he spearheads medical innovation and research for the preemptive response system. With a strong lineage in the medical field, his expertise ensures that CareSanctum's healthcare solutions are robust, proactive, and aligned with the highest standards of geriatric care.
+                  </p>
+                  <p className="text-gray-700 mb-4">
+                    What truly unites these three dynamic leaders is a shared mission to create a safety net for seniors—one that is proactive, intelligent, and deeply compassionate. CareSanctum is more than just a venture for them; it's a personal commitment to improving the lives of seniors and bringing peace of mind to their families.
                   </p>
                   <p className="text-gray-700">
-                    With their complementary strengths and a relentless drive to make a difference, Chandrima and Arvind are shaping CareSanctum into India's most trusted eldercare solution, where technology meets humanity to create a future where every senior feels safe, cared for, and valued.
+                    Together, Chandrima, Arvind, and Dr. Shwet are working relentlessly to shape a tech-first initiative, a revolution in the senior care space. Their mission is to harness technology to enhance health monitoring and simplify eldercare, especially for children living in different cities away from their parents. With their complementary strengths and unwavering dedication, they are positioning CareSanctum as India's most trusted eldercare solution, where technology meets humanity to create a future where every senior feels safe, cared for, and valued.
                   </p>
                 </>
               )}

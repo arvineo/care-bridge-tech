@@ -39,31 +39,6 @@ const Hero = () => {
           </div>
         </div>
       </div>
-
-      {/* Founders Story Section */}
-      <div className="container mx-auto px-4 pt-32">
-        <div className="max-w-4xl mx-auto">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl font-bold text-primary mb-4">Our Founders' Story</h2>
-            <p className="text-gray-600">How CareSanctum was born from personal experience</p>
-          </div>
-          
-          <div className="bg-white p-8 rounded-xl shadow-md">
-            <p className="text-gray-700 mb-4">
-              CareSanctum began when Chandrima struggled with caring for her elderly parents living in a different city. The constant worry and challenges of coordination led her to reimagine senior care.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Together with co-founder Arvind, who brought his technology expertise, they created a platform that addresses the unique needs of seniors and their families by bridging technology and compassionate care.
-            </p>
-            <p className="text-gray-700 mb-4">
-              Dr. Shwet Sabnis joined the team, adding extensive medical expertise in geriatrics. His knowledge ensured that our solutions were not just technologically advanced but also medically sound for senior health and wellness.
-            </p>
-            <p className="text-gray-700">
-              Today, CareSanctum is revolutionizing senior care by making it accessible, responsive, and personalized while giving families the peace of mind they deserve.
-            </p>
-          </div>
-        </div>
-      </div>
     </div>
   );
 };
