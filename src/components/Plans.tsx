@@ -336,17 +336,19 @@ const Plans = () => {
                 <CardContent className={cn("space-y-4", plan.color)}>
                   <div className="text-xl font-bold flex items-baseline gap-2">
                     <div className="flex flex-col">
-                      <span className="text-xl font-normal text-gray-500 line-through">{plan.originalPrice}</span>
-                      <span>{plan.monthly}</span>
+                      <span className="text-xl text-gray-500 line-through">{plan.originalPrice}</span>
+                      <span className="flex items-center gap-2">
+                        {plan.monthly}
+                        <span className="text-sm font-normal text-gray-500">/ month</span>
+                        <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
+                          Limited Offer
+                        </span>
+                      </span>
                     </div>
-                    <span className="text-sm font-normal text-gray-500">/ month</span>
-                    <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
-                      Limited Offer
-                    </span>
                   </div>
                   <p className="text-sm mb-6">{plan.description}</p>
                   <div className="text-sm text-gray-600">
-                    Refundable deposit: <span className="font-semibold">{plan.deposit}</span>
+                    Refundable deposit (one time): <span className="font-semibold">{plan.deposit}</span>
                   </div>
                 </CardContent>
                 <CardFooter className={cn("pt-0 pb-6 flex justify-center", plan.color)}>
@@ -377,7 +379,7 @@ const Plans = () => {
                   >
                     <h3 className="font-bold text-lg">{plan.name}</h3>
                     <div className="mt-2">
-                      <p className="text-xl font-normal text-gray-500 line-through">{plan.originalPrice}</p>
+                      <p className="text-xl text-gray-500 line-through">{plan.originalPrice}</p>
                       <p className="text-2xl font-bold">
                         {plan.monthly}
                         <span className="text-sm font-normal text-gray-500"> / month</span>
@@ -387,7 +389,7 @@ const Plans = () => {
                       </span>
                     </div>
                     <p className="text-sm mt-1">
-                      Refundable deposit: <span className="font-semibold">{plan.deposit}</span>
+                      Refundable deposit (one time): <span className="font-semibold">{plan.deposit}</span>
                     </p>
                   </div>
                 ))}
