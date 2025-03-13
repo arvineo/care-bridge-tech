@@ -22,12 +22,19 @@ import { cn } from "@/lib/utils";
 type PlanFeature = {
   name: string;
   description: string;
-  watchtower: boolean;
-  trident: boolean;
-  quantum: boolean;
+  watchtower: boolean | string;
+  trident: boolean | string;
+  quantum: boolean | string;
 };
 
 const planFeatures: PlanFeature[] = [
+  {
+    name: "Device Provided",
+    description: "Smart devices provided with the plan for health tracking",
+    watchtower: "Smartwatch",
+    trident: "Smartwatch & Essential Medical Devices",
+    quantum: "Smartwatch, Smart Ring & Medical Devices",
+  },
   {
     name: "Fall Detection & Support",
     description: "Automatic detection of falls with immediate response protocols",
@@ -45,23 +52,23 @@ const planFeatures: PlanFeature[] = [
   {
     name: "Geo-fencing & Wandering Response",
     description: "Alerts when senior leaves predefined safe areas",
-    watchtower: true,
+    watchtower: false,
     trident: true,
     quantum: true,
   },
   {
     name: "Emergency SOS Button",
     description: "One-touch emergency assistance",
-    watchtower: true,
-    trident: true,
-    quantum: true,
+    watchtower: "Single Button",
+    trident: "Single Button",
+    quantum: "Multiple Buttons",
   },
   {
     name: "Caregiver Health & Safety Checks",
-    description: "Virtual health checks by care professionals",
-    watchtower: true,
-    trident: true,
-    quantum: true,
+    description: "Health checks by care professionals",
+    watchtower: "1 Virtual Check Monthly",
+    trident: "2 Virtual Checks Monthly",
+    quantum: "4 Physical Checks Monthly",
   },
   {
     name: "Activity Monitoring",
@@ -80,13 +87,6 @@ const planFeatures: PlanFeature[] = [
   {
     name: "Low Battery Alerts",
     description: "Notifications when device battery is low",
-    watchtower: true,
-    trident: true,
-    quantum: true,
-  },
-  {
-    name: "Device Wear Notifications",
-    description: "Alerts when smartwatch is not being worn",
     watchtower: true,
     trident: true,
     quantum: true,
@@ -113,18 +113,11 @@ const planFeatures: PlanFeature[] = [
     quantum: true,
   },
   {
-    name: "Weekly Care Manager Calls",
-    description: "Regular check-ins with dedicated care managers",
-    watchtower: false,
-    trident: true,
-    quantum: true,
-  },
-  {
     name: "Doctor Teleconsultation",
     description: "Remote consultations with healthcare professionals",
     watchtower: false,
-    trident: true,
-    quantum: true,
+    trident: "1 per month",
+    quantum: "2 per month",
   },
   {
     name: "Concierge Service",
@@ -137,8 +130,8 @@ const planFeatures: PlanFeature[] = [
     name: "Community Events",
     description: "Social activities and engagement opportunities",
     watchtower: false,
-    trident: true,
-    quantum: true,
+    trident: "Virtual Events Only",
+    quantum: "Both Virtual & Physical Events",
   },
   {
     name: "Medical Record Management",
@@ -152,27 +145,6 @@ const planFeatures: PlanFeature[] = [
     description: "Tracking and organization of medications",
     watchtower: false,
     trident: true,
-    quantum: true,
-  },
-  {
-    name: "Multiple Doctor Teleconsultations",
-    description: "Additional remote consultations with specialists",
-    watchtower: false,
-    trident: false,
-    quantum: true,
-  },
-  {
-    name: "Physical Care Manager Visits",
-    description: "In-person visits from dedicated care professionals",
-    watchtower: false,
-    trident: false,
-    quantum: true,
-  },
-  {
-    name: "In-person Community Events",
-    description: "Physical social gatherings and activities",
-    watchtower: false,
-    trident: false,
     quantum: true,
   },
   {
@@ -261,7 +233,11 @@ const faqs = [
   },
 ];
 
-const FeatureCheck = ({ included }: { included: boolean }) => {
+const FeatureCheck = ({ included }: { included: boolean | string }) => {
+  if (typeof included === "string") {
+    return <span className="text-sm">{included}</span>;
+  }
+  
   return included ? (
     <Check className="h-5 w-5 text-green-600" />
   ) : (
