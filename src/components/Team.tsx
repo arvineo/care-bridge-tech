@@ -23,6 +23,27 @@ const teamMembers = [
   },
 ];
 
+const extendedTeam = [
+  {
+    name: "Sarang Kadam",
+    role: "Engineering Lead",
+    image: "https://randomuser.me/api/portraits/men/32.jpg",
+    linkedin: "#",
+  },
+  {
+    name: "Sai Kumar",
+    role: "Customer Success Manager",
+    image: "https://randomuser.me/api/portraits/men/41.jpg",
+    linkedin: "#",
+  },
+  {
+    name: "Rounak Agarwal",
+    role: "Operations Manager",
+    image: "https://randomuser.me/api/portraits/men/67.jpg",
+    linkedin: "#",
+  },
+];
+
 const Team = () => {
   return (
     <section className="py-20 bg-gradient-to-b from-purple-50 to-white">
@@ -35,8 +56,49 @@ const Team = () => {
             Dedicated professionals committed to revolutionizing senior care
           </p>
         </div>
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto mb-16">
           {teamMembers.map((member) => (
+            <Card
+              key={member.name}
+              className="overflow-hidden group hover:shadow-lg transition-shadow duration-300"
+            >
+              <CardContent className="p-0">
+                <div className="relative">
+                  <img
+                    src={member.image}
+                    alt={member.name}
+                    className="w-full aspect-square object-cover"
+                  />
+                  <a
+                    href={member.linkedin}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="absolute top-4 right-4 bg-white/90 p-2 rounded-full opacity-0 group-hover:opacity-100 transition-opacity duration-300"
+                  >
+                    <Linkedin className="h-5 w-5 text-primary" />
+                  </a>
+                </div>
+                <div className="p-6 text-center">
+                  <h3 className="font-semibold text-primary text-lg">
+                    {member.name}
+                  </h3>
+                  <p className="text-gray-600 mt-1">{member.role}</p>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="text-center mb-12">
+          <h3 className="text-2xl font-bold text-primary mb-4">
+            Our Extended Team
+          </h3>
+          <p className="text-gray-600 max-w-2xl mx-auto">
+            The talented individuals who help bring our vision to life
+          </p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {extendedTeam.map((member) => (
             <Card
               key={member.name}
               className="overflow-hidden group hover:shadow-lg transition-shadow duration-300"

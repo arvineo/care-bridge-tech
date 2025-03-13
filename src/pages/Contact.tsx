@@ -1,3 +1,4 @@
+
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -8,7 +9,7 @@ import { MapPin, Mail, Phone, Tag, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
 
 const locations = [
-  { city: "Mumbai", status: "Current" },
+  { city: "Mumbai", status: "" },
   { city: "Goa", status: "Upcoming" },
   { city: "Bengaluru", status: "Upcoming" },
   { city: "Hyderabad", status: "Upcoming" },
@@ -231,10 +232,10 @@ const Contact = () => {
                         <div>
                           <h3 className="font-semibold text-primary">Email</h3>
                           <a
-                            href="mailto:shivaashi@caresanctum.com"
+                            href="mailto:info@caresanctum.com"
                             className="text-secondary hover:underline"
                           >
-                            shivaashi@caresanctum.com
+                            info@caresanctum.com
                           </a>
                         </div>
                       </div>
@@ -279,6 +280,9 @@ const Contact = () => {
                       </div>
                     ))}
                   </div>
+                  <p className="mt-4 text-center text-sm text-gray-600 italic">
+                    And many more coming up soon, please signup to get your city prioritised!
+                  </p>
                 </div>
               </div>
             </div>

@@ -1,7 +1,9 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileCheck } from "lucide-react";
+
 const Technology = () => {
   return <>
       <Navbar />
@@ -82,70 +84,9 @@ const Technology = () => {
                     </div>
                   </div>
                 </div>
-                
-                
-                
-                
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
                 <img alt="Smart wearables and IoT devices" className="w-full h-full object-cover" src="/lovable-uploads/51fffb3d-2922-49c8-96a6-40d24de9796f.jpg" />
-              </div>
-            </div>
-
-            {/* Doctor & Specialist Care Section */}
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-32 items-center">
-              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-                <img alt="Doctor and specialist care services" className="w-full h-full object-cover" src="/lovable-uploads/d2e03337-a080-4d8e-8da7-09f49092e306.jpg" />
-              </div>
-              <div className="flex flex-col justify-center">
-                <div className="flex items-center gap-3 mb-4">
-                  <div className="rounded-full bg-secondary/10 p-3">
-                    <Shield className="h-6 w-6 text-secondary" />
-                  </div>
-                  <h2 className="text-3xl font-bold text-primary">
-                    Doctor & Specialist Care
-                  </h2>
-                </div>
-                <p className="text-gray-600 mb-6">
-                  Our comprehensive healthcare approach connects seniors with qualified medical professionals for personalized care. Whether for urgent consultations or routine checkups, we ensure access to quality healthcare services whenever needed.
-                </p>
-                
-                {/* Healthcare Services Features */}
-                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
-                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
-                    <Activity className="h-5 w-5 text-secondary mt-0.5" />
-                    <div>
-                      <h4 className="font-medium text-primary">On-Demand Specialist Consultation</h4>
-                      <p className="text-sm text-gray-500">Connect with specialists via video calls when needed</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
-                    <HeartPulse className="h-5 w-5 text-secondary mt-0.5" />
-                    <div>
-                      <h4 className="font-medium text-primary">Scheduled Doctor Visits</h4>
-                      <p className="text-sm text-gray-500">Regular appointments with primary care physicians</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
-                    <Thermometer className="h-5 w-5 text-secondary mt-0.5" />
-                    <div>
-                      <h4 className="font-medium text-primary">Routine Health Checkups</h4>
-                      <p className="text-sm text-gray-500">Preventive screenings and regular assessments</p>
-                    </div>
-                  </div>
-                  
-                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
-                    <Heart className="h-5 w-5 text-secondary mt-0.5" />
-                    <div>
-                      <h4 className="font-medium text-primary">Home Visits</h4>
-                      <p className="text-sm text-gray-500">Healthcare professionals and nurses visit at home</p>
-                    </div>
-                  </div>
-                </div>
-                
-                
               </div>
             </div>
 
@@ -173,7 +114,7 @@ const Technology = () => {
                     <span>Health predictions</span>
                   </div>
                   <div className="flex items-center gap-2">
-                    
+                    <Bell className="h-5 w-5 text-secondary" />
                     <span>Smart alerts</span>
                   </div>
                 </div>
@@ -200,7 +141,7 @@ const Technology = () => {
                 
                 <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
                   <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
-                    
+                    <Bell className="h-5 w-5 text-secondary mt-0.5" />
                     <div>
                       <h4 className="font-medium text-primary">Medicine Reminders & Delivery</h4>
                       <p className="text-sm text-gray-500">Timely medication alerts and convenient delivery service</p>
@@ -215,22 +156,15 @@ const Technology = () => {
                     </div>
                   </div>
                 </div>
-
-                
               </div>
               <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl order-first lg:order-last">
                 <img alt="Medication and reports management system" className="w-full h-full object-cover" src="/lovable-uploads/b6ba1f1a-506b-4e58-9dff-57be8769a6c8.jpg" />
               </div>
             </div>
-
-            {/* Features Grid */}
-            
-
-            {/* Intelligent Health Monitoring Section */}
-            
           </div>
         </section>
       </main>
     </>;
 };
+
 export default Technology;

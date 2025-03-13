@@ -1,6 +1,8 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
-import { PhoneCall, UserCheck, Bell, Watch, ShoppingBag, Users, Plane } from "lucide-react";
+import { PhoneCall, UserCheck, Bell, Watch, ShoppingBag, Users, Plane, Shield, HeartPulse, Thermometer, Heart } from "lucide-react";
+
 const services = [{
   title: "Teleconsultations",
   description: "Remote doctor support for timely medical advice",
@@ -30,6 +32,7 @@ const services = [{
   description: "Assistance for seniors during travel and short visits",
   icon: Plane
 }];
+
 const Services = () => {
   return <>
       <Navbar />
@@ -59,6 +62,61 @@ const Services = () => {
                   <p className="text-gray-600">
                     From health monitoring to companionship, our comprehensive approach addresses all aspects of senior care, allowing families to feel confident that their loved ones are receiving the best possible support.
                   </p>
+                </div>
+              </div>
+            </div>
+
+            {/* Doctor & Specialist Care Section (Moved from Technology) */}
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 max-w-6xl mx-auto mb-16 items-center">
+              <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
+                <img alt="Doctor and specialist care services" className="w-full h-full object-cover" src="/lovable-uploads/d2e03337-a080-4d8e-8da7-09f49092e306.jpg" />
+              </div>
+              <div className="flex flex-col justify-center">
+                <div className="flex items-center gap-3 mb-4">
+                  <div className="rounded-full bg-secondary/10 p-3">
+                    <Shield className="h-6 w-6 text-secondary" />
+                  </div>
+                  <h2 className="text-3xl font-bold text-primary">
+                    Doctor & Specialist Care
+                  </h2>
+                </div>
+                <p className="text-gray-600 mb-6">
+                  Our comprehensive healthcare approach connects seniors with qualified medical professionals for personalized care. Whether for urgent consultations or routine checkups, we ensure access to quality healthcare services whenever needed.
+                </p>
+                
+                {/* Healthcare Services Features */}
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-6">
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <PhoneCall className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">On-Demand Specialist Consultation</h4>
+                      <p className="text-sm text-gray-500">Connect with specialists via video calls when needed</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <HeartPulse className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Scheduled Doctor Visits</h4>
+                      <p className="text-sm text-gray-500">Regular appointments with primary care physicians</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <Thermometer className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Routine Health Checkups</h4>
+                      <p className="text-sm text-gray-500">Preventive screenings and regular assessments</p>
+                    </div>
+                  </div>
+                  
+                  <div className="flex items-start gap-3 p-3 rounded-lg shadow-sm bg-purple-100">
+                    <Heart className="h-5 w-5 text-secondary mt-0.5" />
+                    <div>
+                      <h4 className="font-medium text-primary">Home Visits</h4>
+                      <p className="text-sm text-gray-500">Healthcare professionals and nurses visit at home</p>
+                    </div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -117,7 +175,29 @@ const Services = () => {
             </div>
           </div>
         </section>
+
+        <section className="py-12 bg-gradient-to-b from-purple-50 to-white">
+          <div className="container mx-auto px-4">
+            <div className="text-center">
+              <h2 className="text-2xl font-bold text-primary mb-4">
+                Explore Our Offerings
+              </h2>
+              <div className="flex flex-wrap justify-center gap-4">
+                <a href="/tech" className="px-6 py-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-primary">
+                  Technology Solutions
+                </a>
+                <a href="/plans" className="px-6 py-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-primary">
+                  Care Plans
+                </a>
+                <a href="/services" className="px-6 py-2 bg-white rounded-full shadow-sm hover:shadow-md transition-shadow text-primary">
+                  Care Services
+                </a>
+              </div>
+            </div>
+          </div>
+        </section>
       </main>
     </>;
 };
+
 export default Services;

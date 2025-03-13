@@ -9,7 +9,7 @@ import {
   CardTitle,
 } from "./ui/card";
 import { Button } from "./ui/button";
-import { Check, HelpCircle, X } from "lucide-react";
+import { Check, HelpCircle, X, ChevronDown, ChevronUp } from "lucide-react";
 import {
   Tooltip,
   TooltipContent,
@@ -150,7 +150,7 @@ const planFeatures: PlanFeature[] = [
   {
     name: "On-ground Emergency Support",
     description: "Physical assistance during emergencies",
-    watchtower: false,
+    watchtower: "Remote assistance",
     trident: "Remote assistance",
     quantum: "Remote plus in-person support",
   },
@@ -172,7 +172,8 @@ const plans = [
     bestFor:
       "Designed for seniors who need peace of mind with real-time health monitoring and emergency intervention only when necessary.",
     deposit: "₹4,500",
-    monthly: "₹1,500",
+    originalPrice: "₹1,999",
+    monthly: "₹1,499",
     color: "bg-blue-50",
     accentColor: "bg-blue-600",
     buttonColor: "bg-blue-600 hover:bg-blue-700",
@@ -185,7 +186,8 @@ const plans = [
     bestFor:
       "Best for families seeking a more proactive approach to senior care, with health tracking, virtual care support, and regular doctor check-ins.",
     deposit: "₹7,000",
-    monthly: "₹5,000",
+    originalPrice: "₹9,999",
+    monthly: "₹4,999",
     color: "bg-purple-50",
     accentColor: "bg-purple-600",
     buttonColor: "bg-purple-600 hover:bg-purple-700",
@@ -198,7 +200,8 @@ const plans = [
     bestFor:
       "For seniors who require the highest level of care and full-time health tracking, including physical care visits and in-person wellness events.",
     deposit: "₹12,000",
-    monthly: "₹15,000",
+    originalPrice: "₹19,999",
+    monthly: "₹14,999",
     color: "bg-secondary/20",
     accentColor: "bg-secondary",
     buttonColor: "bg-secondary hover:bg-secondary/90",
@@ -231,6 +234,11 @@ const faqs = [
     answer:
       "Our systems monitor for emergencies 24/7. When detected, we immediately contact the senior, then their emergency contacts, and dispatch local emergency services if necessary.",
   },
+  {
+    question: "How can I get more information about the plans?",
+    answer:
+      "For more detailed information about our plans or to discuss specific requirements, please email us at info@caresanctum.com.",
+  },
 ];
 
 const FeatureCheck = ({ included }: { included: boolean | string }) => {
@@ -247,6 +255,11 @@ const FeatureCheck = ({ included }: { included: boolean | string }) => {
 
 const Plans = () => {
   const [activeTab, setActiveTab] = useState<"table" | "cards">("cards");
+  const [openFaqId, setOpenFaqId] = useState<number | null>(null);
+
+  const toggleFaq = (id: number) => {
+    setOpenFaqId(openFaqId === id ? null : id);
+  };
 
   return (
     <section className="py-20 bg-gradient-to-b from-purple-50 to-white" id="plans">
@@ -315,8 +328,14 @@ const Plans = () => {
                 </CardHeader>
                 <CardContent className={cn("space-y-4", plan.color)}>
                   <div className="text-xl font-bold flex items-baseline gap-2">
-                    {plan.monthly}
+                    <div className="flex flex-col">
+                      <span className="text-sm font-normal text-gray-500 line-through">{plan.originalPrice}</span>
+                      <span>{plan.monthly}</span>
+                    </div>
                     <span className="text-sm font-normal text-gray-500">/ month</span>
+                    <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
+                      Limited Offer
+                    </span>
                   </div>
                   <p className="text-sm mb-6">{plan.description}</p>
                   <div className="text-sm text-gray-600">
@@ -350,10 +369,16 @@ const Plans = () => {
                     )}
                   >
                     <h3 className="font-bold text-lg">{plan.name}</h3>
-                    <p className="text-2xl font-bold mt-2">
-                      {plan.monthly}
-                      <span className="text-sm font-normal text-gray-500"> / month</span>
-                    </p>
+                    <div className="mt-2">
+                      <p className="text-sm text-gray-500 line-through">{plan.originalPrice}</p>
+                      <p className="text-2xl font-bold">
+                        {plan.monthly}
+                        <span className="text-sm font-normal text-gray-500"> / month</span>
+                      </p>
+                      <span className="text-xs bg-green-100 text-green-800 px-2 py-0.5 rounded-full">
+                        Limited Offer
+                      </span>
+                    </div>
                     <p className="text-sm mt-1">
                       Refundable deposit: <span className="font-semibold">{plan.deposit}</span>
                     </p>
@@ -436,11 +461,25 @@ const Plans = () => {
           <h3 className="text-2xl font-bold text-primary mb-6 text-center">
             Frequently Asked Questions
           </h3>
-          <div className="space-y-6">
+          <div className="space-y-4">
             {faqs.map((faq, index) => (
-              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
-                <h4 className="font-semibold text-lg mb-2">{faq.question}</h4>
-                <p className="text-gray-600">{faq.answer}</p>
+              <div key={index} className="bg-white rounded-lg shadow-sm">
+                <button 
+                  className="flex justify-between items-center w-full p-6 text-left font-semibold text-lg"
+                  onClick={() => toggleFaq(index)}
+                >
+                  {faq.question}
+                  {openFaqId === index ? (
+                    <ChevronUp className="h-5 w-5 text-gray-500" />
+                  ) : (
+                    <ChevronDown className="h-5 w-5 text-gray-500" />
+                  )}
+                </button>
+                {openFaqId === index && (
+                  <div className="p-6 pt-0 text-gray-600 border-t">
+                    {faq.answer}
+                  </div>
+                )}
               </div>
             ))}
           </div>
