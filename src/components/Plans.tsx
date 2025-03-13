@@ -1,3 +1,4 @@
+
 import React, { useState } from "react";
 import {
   Card,
@@ -74,7 +75,7 @@ const planFeatures: PlanFeature[] = [
     quantum: "Smart watch, mobile app and physical buttons installed in bedroom, living room, washroom, kitchen",
   },
   {
-    name: "Caregiver Health & Safety Checks",
+    name: "Care Manager / Trained Nurse Check-in",
     description: "Health checks by care professionals",
     watchtower: "1 Virtual Check Monthly",
     trident: "2 Virtual Checks Monthly",
@@ -175,10 +176,10 @@ const planFeatures: PlanFeature[] = [
 
 const plans = [
   {
-    name: "Watchtower Plan",
+    name: "Watch Tower Plan",
     highlighted: false,
     description:
-      "Get peace of mind with our Watchtower Plan. This plan provides real-time health monitoring via a smartwatch, with our backend team keeping an eye on your vitals and intervening only when necessary.",
+      "Get peace of mind with our Watch Tower Plan. This plan provides real-time health monitoring via a smartwatch, with our backend team keeping an eye on your vitals and intervening only when necessary.",
     bestFor:
       "Designed for seniors who need peace of mind with real-time health monitoring and emergency intervention only when necessary.",
     deposit: "₹4,500",
