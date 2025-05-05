@@ -4,6 +4,7 @@ import { Linkedin } from "lucide-react";
 import { useState } from "react";
 import { Button } from "./ui/button";
 
+// Define team members array with only two members
 const teamMembers = [
   {
     name: "Chandrima Mehra",
@@ -33,6 +34,7 @@ const Team = () => {
             Dedicated professionals committed to revolutionizing senior care
           </p>
         </div>
+        {/* Changed grid columns from 3 to 2 */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto mb-16">
           {teamMembers.map((member) => (
             <Card
@@ -66,7 +68,7 @@ const Team = () => {
           ))}
         </div>
 
-        {/* Founders Story Section */}
+        {/* Founders Story Section with updated text */}
         <div className="container mx-auto px-4 mb-16">
           <div className="max-w-4xl mx-auto">
             <div className="text-center mb-12">
