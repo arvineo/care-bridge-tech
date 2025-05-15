@@ -1,4 +1,3 @@
-
 import { useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -7,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { MapPin, Mail, Phone, Tag, CheckCircle } from "lucide-react";
 import { useToast } from "@/hooks/use-toast";
+import { useFormSubmission } from "@/hooks/useFormSubmission";
 
 const locations = [
   { city: "Mumbai", status: "" },
@@ -30,8 +30,8 @@ const Contact = () => {
     referral: "",
     message: ""
   });
-  const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSubmitted, setIsSubmitted] = useState(false);
+  const { submitForm, isSubmitting } = useFormSubmission();
 
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     const { id, value } = e.target;
@@ -43,42 +43,21 @@ const Contact = () => {
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    setIsSubmitting(true);
 
-    try {
-      console.log("Submitting form data:", formData);
-      
-      // Using fetch with specific CORS settings
-      const response = await fetch("https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/", {
-        method: "POST",
-        headers: {
-          "Accept": "application/json",
-          "Content-Type": "application/json"
-        },
-        mode: "no-cors",
-        body: JSON.stringify({
-          ...formData,
-          source: "contact_page",
-          timestamp: new Date().toISOString()
-        })
-      });
+    const result = await submitForm({
+      form_type: "contact",
+      name: formData.name,
+      email: formData.email,
+      phone: formData.phone,
+      city: formData.city,
+      pincode: formData.pincode,
+      referral_code: formData.referral,
+      message: formData.message,
+      source: "contact_page",
+    }, "https://hooks.zapier.com/hooks/catch/21963646/2q8vxf8/");
 
-      // Since we're using no-cors, assume success if no error is thrown
+    if (result.success) {
       setIsSubmitted(true);
-      toast({
-        title: "Request Submitted",
-        description: "We've received your request and will get back to you soon.",
-      });
-      
-    } catch (error) {
-      console.error("Error submitting form:", error);
-      toast({
-        title: "Failed to submit",
-        description: "There was an error submitting your request. Please try again.",
-        variant: "destructive"
-      });
-    } finally {
-      setIsSubmitting(false);
     }
   };
 
