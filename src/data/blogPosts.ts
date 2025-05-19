@@ -14,16 +14,6 @@ export type BlogPost = {
 // Blog posts data
 export const blogPosts: BlogPost[] = [
   {
-    id: "1",
-    title: "Health & Wellness Tips",
-    category: "Health",
-    date: "March 25, 2024",
-    description: "Essential tips for maintaining health and wellness in senior years including diet, exercise, and preventive care.",
-    image: "/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png",
-    icon: "health",
-    slug: "health-wellness-tips"
-  },
-  {
     id: "2",
     title: "NRI Guide to Long-Distance Senior Care",
     category: "Wellness",

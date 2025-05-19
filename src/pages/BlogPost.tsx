@@ -57,24 +57,6 @@ const BlogPost = () => {
     <p>Are you ready to care for your parents, no matter the distance? Explore the services offered by Care Sanctum today and take the first step towards ensuring your loved ones receive the best care possible!</p>
   `;
 
-  // Default content for health tips post
-  const healthTipsContent = `
-    <h2>Essential Health & Wellness Tips for Seniors</h2>
-    <p>Maintaining good health in your senior years is essential for quality of life. Here are some key tips to help seniors stay healthy and active.</p>
-    
-    <h3>Regular Exercise</h3>
-    <p>Even light activity like walking or swimming can make a significant difference in overall health and mobility.</p>
-    
-    <h3>Balanced Diet</h3>
-    <p>Focus on nutrient-rich foods, adequate hydration, and appropriate portion sizes.</p>
-    
-    <h3>Preventive Care</h3>
-    <p>Regular check-ups and screenings can catch potential health issues before they become serious problems.</p>
-    
-    <h3>Mental Wellness</h3>
-    <p>Staying socially active and engaging in mentally stimulating activities helps maintain cognitive function.</p>
-  `;
-
   // If post not found, display error message
   if (!post) {
     return (
@@ -93,12 +75,10 @@ const BlogPost = () => {
     );
   }
 
-  // Determine which content to display based on post ID
+  // Determine which content to display based on post slug
   let postContent = "";
   if (post.slug === "nri-guide-senior-care") {
     postContent = nriGuideContent;
-  } else if (post.slug === "health-wellness-tips") {
-    postContent = healthTipsContent;
   } else {
     postContent = "<p>Content coming soon...</p>";
   }

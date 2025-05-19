@@ -8,42 +8,8 @@ import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
 import { Link } from "react-router-dom";
 
-// Blog post data structure
-type BlogPost = {
-  id: string;
-  title: string;
-  category: string;
-  date: string;
-  description: string;
-  image: string;
-  icon: "health" | "wellness" | "stories" | "updates";
-  content?: string;
-  slug: string;
-};
-
-// Blog posts data
-const blogPosts: BlogPost[] = [
-  {
-    id: "1",
-    title: "Health & Wellness Tips",
-    category: "Health",
-    date: "March 25, 2024",
-    description: "Essential tips for maintaining health and wellness in senior years including diet, exercise, and preventive care.",
-    image: "/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png",
-    icon: "health",
-    slug: "health-wellness-tips"
-  },
-  {
-    id: "2",
-    title: "NRI Guide to Long-Distance Senior Care",
-    category: "Wellness",
-    date: "May 18, 2024",
-    description: "Practical solutions for NRIs to manage elderly care for parents in India, from health monitoring to emergency assistance.",
-    image: "/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg",
-    icon: "wellness",
-    slug: "nri-guide-senior-care"
-  },
-];
+// Import blog posts from the data file
+import { blogPosts } from "@/data/blogPosts";
 
 // Category filter options
 const categories = [
@@ -101,6 +67,9 @@ const Blog = () => {
     setEmail("");
   };
 
+  // Check if we have any blog posts to display
+  const hasNoBlogPosts = blogPosts.length === 0;
+
   return (
     <>
       <Navbar />
@@ -119,90 +88,101 @@ const Blog = () => {
             </div>
 
             {/* Featured Post */}
-            <div className="max-w-6xl mx-auto mb-16">
-              <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
-                <div className="md:flex">
-                  <div className="md:w-1/2">
-                    <img
-                      src="/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg"
-                      alt="NRI Guide to Long-Distance Senior Care"
-                      className="w-full h-full object-cover"
-                    />
+            {!hasNoBlogPosts && (
+              <div className="max-w-6xl mx-auto mb-16">
+                <Card className="overflow-hidden hover:shadow-lg transition-shadow duration-300">
+                  <div className="md:flex">
+                    <div className="md:w-1/2">
+                      <img
+                        src={blogPosts[0].image}
+                        alt={blogPosts[0].title}
+                        className="w-full h-full object-cover"
+                      />
+                    </div>
+                    <div className="md:w-1/2">
+                      <CardContent className="p-8">
+                        <div className="flex items-center mb-4">
+                          <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">
+                            Featured
+                          </span>
+                          <span className="text-sm text-gray-500 ml-4">{blogPosts[0].date}</span>
+                        </div>
+                        <h2 className="text-3xl font-semibold text-primary mb-4">
+                          {blogPosts[0].title}
+                        </h2>
+                        <p className="text-gray-600 mb-6">
+                          {blogPosts[0].description}
+                        </p>
+                        <Button asChild>
+                          <Link to={`/blog/${blogPosts[0].slug}`}>Read Full Article</Link>
+                        </Button>
+                      </CardContent>
+                    </div>
                   </div>
-                  <div className="md:w-1/2">
-                    <CardContent className="p-8">
-                      <div className="flex items-center mb-4">
-                        <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">
-                          Featured
-                        </span>
-                        <span className="text-sm text-gray-500 ml-4">May 18, 2024</span>
-                      </div>
-                      <h2 className="text-3xl font-semibold text-primary mb-4">
-                        NRI Guide to Long-Distance Senior Care
-                      </h2>
-                      <p className="text-gray-600 mb-6">
-                        Discover practical solutions for NRIs to provide effective care for aging parents in India despite the distance. Learn about health monitoring, emergency assistance, and daily support services.
-                      </p>
-                      <Button asChild>
-                        <Link to="/blog/nri-guide-senior-care">Read Full Article</Link>
-                      </Button>
-                    </CardContent>
-                  </div>
-                </div>
-              </Card>
-            </div>
+                </Card>
+              </div>
+            )}
 
             {/* Category Filters */}
-            <div className="max-w-6xl mx-auto mb-8">
-              <div className="flex flex-wrap gap-2 justify-center">
-                {categories.map((category) => (
-                  <button
-                    key={category.value}
-                    onClick={() => setSelectedCategory(category.value)}
-                    className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
-                      selectedCategory === category.value
-                        ? "bg-secondary text-white"
-                        : "bg-gray-100 text-gray-800 hover:bg-gray-200"
-                    }`}
-                  >
-                    {category.name}
-                  </button>
-                ))}
+            {!hasNoBlogPosts && (
+              <div className="max-w-6xl mx-auto mb-8">
+                <div className="flex flex-wrap gap-2 justify-center">
+                  {categories.map((category) => (
+                    <button
+                      key={category.value}
+                      onClick={() => setSelectedCategory(category.value)}
+                      className={`px-4 py-2 rounded-full text-sm font-medium transition-colors ${
+                        selectedCategory === category.value
+                          ? "bg-secondary text-white"
+                          : "bg-gray-100 text-gray-800 hover:bg-gray-200"
+                      }`}
+                    >
+                      {category.name}
+                    </button>
+                  ))}
+                </div>
               </div>
-            </div>
+            )}
 
             {/* Blog Posts Grid */}
-            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
-              {filteredPosts.map((post) => (
-                <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
-                  <div className="relative h-48">
-                    <img
-                      src={post.image}
-                      alt={post.title}
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <CardContent className="p-6 flex-grow flex flex-col">
-                    <div className="flex justify-between items-center mb-4">
-                      <div className="flex items-center">
-                        {getPostIcon(post.icon)}
-                        <span className="text-sm text-secondary font-medium ml-2">
-                          {post.category}
-                        </span>
-                      </div>
-                      <span className="text-sm text-gray-500">{post.date}</span>
+            {filteredPosts.length > 0 ? (
+              <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
+                {filteredPosts.map((post) => (
+                  <Card key={post.id} className="overflow-hidden hover:shadow-lg transition-shadow duration-300 flex flex-col">
+                    <div className="relative h-48">
+                      <img
+                        src={post.image}
+                        alt={post.title}
+                        className="w-full h-full object-cover"
+                      />
                     </div>
-                    <h3 className="text-xl font-semibold text-primary mb-2">
-                      {post.title}
-                    </h3>
-                    <p className="text-gray-600 mb-4 flex-grow">{post.description}</p>
-                    <Button variant="outline" className="mt-auto self-start" asChild>
-                      <Link to={`/blog/${post.slug}`}>Read More</Link>
-                    </Button>
-                  </CardContent>
-                </Card>
-              ))}
-            </div>
+                    <CardContent className="p-6 flex-grow flex flex-col">
+                      <div className="flex justify-between items-center mb-4">
+                        <div className="flex items-center">
+                          {getPostIcon(post.icon)}
+                          <span className="text-sm text-secondary font-medium ml-2">
+                            {post.category}
+                          </span>
+                        </div>
+                        <span className="text-sm text-gray-500">{post.date}</span>
+                      </div>
+                      <h3 className="text-xl font-semibold text-primary mb-2">
+                        {post.title}
+                      </h3>
+                      <p className="text-gray-600 mb-4 flex-grow">{post.description}</p>
+                      <Button variant="outline" className="mt-auto self-start" asChild>
+                        <Link to={`/blog/${post.slug}`}>Read More</Link>
+                      </Button>
+                    </CardContent>
+                  </Card>
+                ))}
+              </div>
+            ) : (
+              <div className="text-center py-16">
+                <h2 className="text-2xl font-semibold text-gray-700 mb-4">No blog posts found</h2>
+                <p className="text-gray-600 mb-4">Check back soon for new content!</p>
+              </div>
+            )}
           </div>
         </section>
 
