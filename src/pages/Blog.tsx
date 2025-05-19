@@ -1,3 +1,4 @@
+
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -28,7 +29,15 @@ const blogPosts: BlogPost[] = [
     image: "/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png",
     icon: "health"
   },
-
+  {
+    id: "2",
+    title: "NRI Guide to Long-Distance Senior Care",
+    category: "Wellness",
+    date: "May 18, 2024",
+    description: "Practical solutions for NRIs to manage elderly care for parents in India, from health monitoring to emergency assistance.",
+    image: "/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg",
+    icon: "wellness"
+  },
 ];
 
 // Category filter options
@@ -110,8 +119,8 @@ const Blog = () => {
                 <div className="md:flex">
                   <div className="md:w-1/2">
                     <img
-                      src="/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png"
-                      alt="Featured Post"
+                      src="/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg"
+                      alt="NRI Guide to Long-Distance Senior Care"
                       className="w-full h-full object-cover"
                     />
                   </div>
@@ -121,14 +130,13 @@ const Blog = () => {
                         <span className="bg-secondary/10 text-secondary px-3 py-1 rounded-full text-sm font-medium">
                           Featured
                         </span>
-                        <span className="text-sm text-gray-500 ml-4">April 2, 2024</span>
+                        <span className="text-sm text-gray-500 ml-4">May 18, 2024</span>
                       </div>
                       <h2 className="text-3xl font-semibold text-primary mb-4">
-                        Holistic Care Approach for Seniors: Mind, Body & Spirit
+                        NRI Guide to Long-Distance Senior Care
                       </h2>
                       <p className="text-gray-600 mb-6">
-                        Explore how a holistic approach to senior care can dramatically improve quality of life, 
-                        addressing physical health, emotional well-being, and social connections simultaneously.
+                        Discover practical solutions for NRIs to provide effective care for aging parents in India despite the distance. Learn about health monitoring, emergency assistance, and daily support services.
                       </p>
                       <Button>Read Full Article</Button>
                     </CardContent>
