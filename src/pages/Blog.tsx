@@ -1,4 +1,3 @@
-
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -33,7 +32,14 @@ const blogPosts: BlogPost[] = [
 ];
 
 // Category filter options
-
+const categories = [
+  { name: "All", value: "all" },
+  { name: "Health", value: "Health" },
+  { name: "Wellness", value: "Wellness" },
+  { name: "Technology", value: "Technology" },
+  { name: "Stories", value: "Stories" },
+  { name: "Updates", value: "Updates" },
+];
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
