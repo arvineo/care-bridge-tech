@@ -6,6 +6,7 @@ import { Input } from "@/components/ui/input";
 import { BookOpen, Heart, MessageSquare, CalendarDays } from "lucide-react";
 import { useState } from "react";
 import { useToast } from "@/hooks/use-toast";
+import { Link } from "react-router-dom";
 
 // Blog post data structure
 type BlogPost = {
@@ -16,6 +17,8 @@ type BlogPost = {
   description: string;
   image: string;
   icon: "health" | "wellness" | "stories" | "updates";
+  content?: string;
+  slug: string;
 };
 
 // Blog posts data
@@ -27,7 +30,8 @@ const blogPosts: BlogPost[] = [
     date: "March 25, 2024",
     description: "Essential tips for maintaining health and wellness in senior years including diet, exercise, and preventive care.",
     image: "/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png",
-    icon: "health"
+    icon: "health",
+    slug: "health-wellness-tips"
   },
   {
     id: "2",
@@ -36,7 +40,8 @@ const blogPosts: BlogPost[] = [
     date: "May 18, 2024",
     description: "Practical solutions for NRIs to manage elderly care for parents in India, from health monitoring to emergency assistance.",
     image: "/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg",
-    icon: "wellness"
+    icon: "wellness",
+    slug: "nri-guide-senior-care"
   },
 ];
 
@@ -138,7 +143,9 @@ const Blog = () => {
                       <p className="text-gray-600 mb-6">
                         Discover practical solutions for NRIs to provide effective care for aging parents in India despite the distance. Learn about health monitoring, emergency assistance, and daily support services.
                       </p>
-                      <Button>Read Full Article</Button>
+                      <Button asChild>
+                        <Link to="/blog/nri-guide-senior-care">Read Full Article</Link>
+                      </Button>
                     </CardContent>
                   </div>
                 </div>
@@ -189,7 +196,9 @@ const Blog = () => {
                       {post.title}
                     </h3>
                     <p className="text-gray-600 mb-4 flex-grow">{post.description}</p>
-                    <Button variant="outline" className="mt-auto self-start">Read More</Button>
+                    <Button variant="outline" className="mt-auto self-start" asChild>
+                      <Link to={`/blog/${post.slug}`}>Read More</Link>
+                    </Button>
                   </CardContent>
                 </Card>
               ))}
