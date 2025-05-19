@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -11,50 +10,50 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find(post => post.slug === slug);
 
-  // Fallback content for the NRI Guide post
+  // Fallback content for the NRI Guide post with updated heading levels and interlinks
   const nriGuideContent = `
-    <h2>Introduction</h2>
+    <h1>Introduction</h1>
     <p>If you're an NRI, you know how tough it can be to care for your family back in India. You want to be there for them, but distance makes it difficult. You worry about their health and overall well-being.</p>
     
     <p>As your parents age, it's natural to worry about their safety, especially when you live far away in another country. Senior citizens in India, particularly in busy cities, face various risks, from health emergencies to social isolation and even theft. It can feel stressful to think about how to protect them from a distance.</p>
     
     <p>You want to make sure your parents are safe, healthy, and happy, but how can you do that when you're thousands of miles away?</p>
     
-    <p>The good news is that you can still care for your family, even from afar. With services like Care Sanctum, where technology meets compassionate care, you can stay connected with your parents and ensure they get the support they need.</p>
+    <p>The good news is that you can still care for your family, even from afar. With services like <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, where technology meets compassionate care, you can stay connected with your parents and ensure they get the support they need.</p>
     
     <p>In this blog, we'll let you know about the right support so you can make a real difference in their lives, no matter how far away you are.</p>
     
     <h2>1. Around-the-Clock Health Monitoring</h2>
     <p>Imagine having peace of mind knowing that your parents' health is being monitored 24/7. You can set up regular check-ins or use health tracking devices that alert you to any changes in their vital signs.</p>
     
-    <p>This way, you can stay informed and ensure they receive help if needed. With Care Sanctum, you can access continuous health monitoring services that keep you connected to your parents' well-being. Consider using a health monitor watch or other health devices for seniors to facilitate this process.</p>
+    <p>This way, you can stay informed and ensure they receive help if needed. With <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, you can access continuous health monitoring services that keep you connected to your parents' well-being. Consider using a <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health device for seniors</a> to facilitate this process.</p>
     
     <h2>2. Swift Emergency Assistance</h2>
     <p>Emergencies can happen at any time, and it's natural to worry about how your parents would handle them. Make sure they have access to emergency services or a local contact who can respond quickly if something goes wrong.</p>
     
-    <p>Having a plan in place can help ease your worries. Care Sanctum has trained emergency response teams ready to act when your parents need help the most—from responding instantly to SOS alarms for the elderly to coordinating ambulances and ensuring smooth hospital admissions. We're there every step of the way.</p>
+    <p>Having a plan in place can help ease your worries. <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> has trained emergency response teams ready to act when your parents need help the most—from responding instantly to SOS alarms for the elderly to coordinating ambulances and ensuring smooth hospital admissions. We're there every step of the way.</p>
     
-    <h2>3. Everyday Concierge Support</h2>
+    <h3>3. Everyday Concierge Support</h3>
     <p>Daily tasks can become challenging for seniors. Consider arranging for local services that can assist your parents with everyday activities, such as grocery shopping, doctor appointments, and running errands.</p>
     
-    <p>This support helps them maintain their independence while ensuring they have help when they need it. Additionally, incorporating health devices for seniors can further change their daily living experience, providing them with tools to monitor their health and stay connected.</p>
+    <p>This support helps them maintain their independence while ensuring they have help when they need it. Additionally, incorporating <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a> can further change their daily living experience, providing them with tools to monitor their health and stay connected.</p>
     
-    <h2>4. Proactive Health Care</h2>
+    <h3>4. Proactive Health Care</h3>
     <p>Encourage your parents to have regular health checkups and screenings. Staying on top of their health can help catch potential issues early. You can also share resources or apps that provide health tips and reminders for medication or appointments.</p>
     
-    <p>With our AI-powered health analytics, you can help your parents stay proactive about their health and prevent potential issues before they arise. Utilizing a health monitoring device can also aid in this effort.</p>
+    <p>With our AI-powered health analytics, you can help your parents stay proactive about their health and prevent potential issues before they arise. Utilizing a <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> can also aid in this effort.</p>
     
-    <h2>5. Safe Travel Companionship</h2>
+    <h3>5. Safe Travel Companionship</h3>
     <p>If your parents need to travel, it can be stressful for both them and you. Consider arranging for a trusted friend or family member to accompany them on trips.</p>
     
     <p>This ensures they feel comfortable and safe during their journey, making travel easier for everyone involved. You might also want to provide them with an SOS alarm for emergencies, giving you peace of mind while they are on the go.</p>
     
-    <h2>Final Thoughts</h2>
+    <h4>Final Thoughts</h4>
     <p>Caring for your parents from afar doesn't have to be difficult. By taking proactive steps and utilizing available resources, you can ensure they receive the support they need to stay safe and healthy.</p>
     
     <p>You can have peace of mind knowing that your loved ones are well taken care of, allowing you to focus on your life while still being there for them in meaningful ways.</p>
     
-    <p>Are you ready to care for your parents, no matter the distance? Explore the services offered by Care Sanctum today and take the first step towards ensuring your loved ones receive the best care possible!</p>
+    <p>Are you ready to care for your parents, no matter the distance? Explore the services offered by <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> today and take the first step towards ensuring your loved ones receive the best care possible!</p>
   `;
 
   // If post not found, display error message
@@ -117,7 +116,7 @@ const BlogPost = () => {
               </div>
               
               <div 
-                className="prose max-w-none text-gray-700 mb-8 space-y-6"
+                className="prose max-w-none prose-headings:text-primary prose-h1:text-3xl prose-h2:text-2xl prose-h3:text-xl prose-h4:text-lg prose-h1:font-bold prose-h2:font-semibold prose-h3:font-semibold prose-h4:font-medium prose-a:text-secondary prose-a:no-underline hover:prose-a:underline text-gray-700 mb-8 space-y-6"
                 dangerouslySetInnerHTML={{ __html: postContent }}
               />
               
