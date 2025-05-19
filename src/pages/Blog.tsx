@@ -29,62 +29,11 @@ const blogPosts: BlogPost[] = [
     image: "/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png",
     icon: "health"
   },
-  {
-    id: "2",
-    title: "The Future of Tech-Enabled Elder Care",
-    category: "Technology",
-    date: "March 20, 2024",
-    description: "How technology is transforming senior care services with innovations in remote monitoring and virtual companionship.",
-    image: "/lovable-uploads/65bc6a87-0813-4dce-be19-c35df23cf73f.png",
-    icon: "updates"
-  },
-  {
-    id: "3",
-    title: "Success Stories: Living Independently",
-    category: "Stories",
-    date: "March 15, 2024",
-    description: "Real stories of seniors thriving with CareSanctum support and maintaining their independence and dignity.",
-    image: "/lovable-uploads/69165008-873b-4a06-900c-83f10a11d07d.png",
-    icon: "stories"
-  },
-  {
-    id: "4",
-    title: "Mental Health Considerations for Seniors",
-    category: "Wellness",
-    date: "March 10, 2024",
-    description: "Understanding the importance of mental health in the aging process and strategies for emotional wellbeing.",
-    image: "/lovable-uploads/7275f6a7-2f45-48a3-b6b0-0f5f29d1ca7c.png",
-    icon: "wellness"
-  },
-  {
-    id: "5",
-    title: "Nutrition for Healthy Aging",
-    category: "Health",
-    date: "March 5, 2024",
-    description: "Expert advice on dietary needs that change with age and how proper nutrition supports overall health.",
-    image: "/lovable-uploads/4496320f-0d11-4572-9131-e251d52f705c.png",
-    icon: "health"
-  },
-  {
-    id: "6",
-    title: "CareSanctum Community Events Calendar",
-    category: "Updates",
-    date: "March 1, 2024",
-    description: "Upcoming virtual and in-person events designed to engage seniors and provide valuable health information.",
-    image: "/lovable-uploads/e158d1ff-49b8-4a04-90e1-875563374166.png",
-    icon: "updates"
-  },
+
 ];
 
 // Category filter options
-const categories = [
-  { name: "All", value: "all" },
-  { name: "Health", value: "Health" },
-  { name: "Wellness", value: "Wellness" },
-  { name: "Technology", value: "Technology" },
-  { name: "Stories", value: "Stories" },
-  { name: "Updates", value: "Updates" },
-];
+
 
 const Blog = () => {
   const [selectedCategory, setSelectedCategory] = useState("all");
