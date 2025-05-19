@@ -22,7 +22,7 @@ type BlogPost = {
 const blogPosts: BlogPost[] = [
   {
     id: "1",
-    title: "Senior Health & Wellness Tips",
+    title: "Health & Wellness Tips",
     category: "Health",
     date: "March 25, 2024",
     description: "Essential tips for maintaining health and wellness in senior years including diet, exercise, and preventive care.",
