@@ -27,12 +27,12 @@ const BlogPost = () => {
     <h2>1. Around-the-Clock Health Monitoring</h2>
     <p>Imagine having peace of mind knowing that your parents' health is being monitored 24/7. You can set up regular check-ins or use health tracking devices that alert you to any changes in their vital signs.</p>
     
-    <p>This way, you can stay informed and ensure they receive help if needed. With <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, you can access continuous health monitoring services that keep you connected to your parents' well-being. Consider using a <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health device for seniors</a> to facilitate this process.</p>
+    <p>This way, you can stay informed and ensure they receive help if needed. With Care Sanctum, you can access continuous health monitoring services that keep you connected to your parents' well-being. Consider using a <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> to facilitate this process.</p>
     
     <h2>2. Swift Emergency Assistance</h2>
     <p>Emergencies can happen at any time, and it's natural to worry about how your parents would handle them. Make sure they have access to emergency services or a local contact who can respond quickly if something goes wrong.</p>
     
-    <p>Having a plan in place can help ease your worries. <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> has trained emergency response teams ready to act when your parents need help the most—from responding instantly to SOS alarms for the elderly to coordinating ambulances and ensuring smooth hospital admissions. We're there every step of the way.</p>
+    <p>Having a plan in place can help ease your worries. Care Sanctum has trained emergency response teams ready to act when your parents need help the most—from responding instantly to SOS alarms for the elderly to coordinating ambulances and ensuring smooth hospital admissions. We're there every step of the way.</p>
     
     <h3>3. Everyday Concierge Support</h3>
     <p>Daily tasks can become challenging for seniors. Consider arranging for local services that can assist your parents with everyday activities, such as grocery shopping, doctor appointments, and running errands.</p>
@@ -42,7 +42,7 @@ const BlogPost = () => {
     <h3>4. Proactive Health Care</h3>
     <p>Encourage your parents to have regular health checkups and screenings. Staying on top of their health can help catch potential issues early. You can also share resources or apps that provide health tips and reminders for medication or appointments.</p>
     
-    <p>With our AI-powered health analytics, you can help your parents stay proactive about their health and prevent potential issues before they arise. Utilizing a <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> can also aid in this effort.</p>
+    <p>With our AI-powered health analytics, you can help your parents stay proactive about their health and prevent potential issues before they arise. Utilizing a health monitoring device can also aid in this effort.</p>
     
     <h3>5. Safe Travel Companionship</h3>
     <p>If your parents need to travel, it can be stressful for both them and you. Consider arranging for a trusted friend or family member to accompany them on trips.</p>
@@ -54,7 +54,7 @@ const BlogPost = () => {
     
     <p>You can have peace of mind knowing that your loved ones are well taken care of, allowing you to focus on your life while still being there for them in meaningful ways.</p>
     
-    <p>Are you ready to care for your parents, no matter the distance? Explore the services offered by <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> today and take the first step towards ensuring your loved ones receive the best care possible!</p>
+    <p>Are you ready to care for your parents, no matter the distance? Explore the services offered by Care Sanctum today and take the first step towards ensuring your loved ones receive the best care possible!</p>
   `;
 
   // Content for the "How We Designed Care Sanctum for NRIs" post
@@ -73,7 +73,7 @@ const BlogPost = () => {
     <p>To better understand experiences, we held surveys and interviews and spoke to many NRI families, where they shared their main concerns, including reliable healthcare management, clear updates, and meaningful human connections. By understanding key challenges faced by them, we became clear about their mindset and concerns.</p>
     
     <h2>Creating a Trustworthy Online Experience</h2>
-    <p>The next step we took was to build trust and reliability, as when you're taking care of someone from far away, trust is very important. That's why we made <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> easy to use and clear:</p>
+    <p>The next step we took was to build trust and reliability, as when you're taking care of someone from far away, trust is very important. That's why we made Care Sanctum easy to use and clear:</p>
     
     <p><strong>Clear Services:</strong> We explain our services in simple terms, whether it's managing ongoing health issues or providing companionship. There are no hidden details or confusing medical language.</p>
     
@@ -82,9 +82,9 @@ const BlogPost = () => {
     <p><strong>Transparent Communication:</strong> We prioritize open communication by providing regular updates and clear information about your loved ones' care. You can always reach out to us with questions or concerns, and we'll be here to help.</p>
     
     <h2>Bringing Care Sanctum to Life</h2>
-    <p>We concluded our design journey with a clear mission: to support Non-Resident Indians (NRIs) in caring for their senior loved ones, no matter the distance. We envisioned a community where seniors feel safe, supported, and connected by utilizing technologies like <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> and SOS alarm.</p>
+    <p>We concluded our design journey with a clear mission: to support Non-Resident Indians (NRIs) in caring for their senior loved ones, no matter the distance. We envisioned a community where seniors feel safe, supported, and connected by utilizing technologies like health monitoring device and SOS alarm.</p>
     
-    <p>To achieve this, we implemented 24/7 health monitoring, allowing us to track vital signs around the clock using <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a>. Our dedicated care team is always ready to assist, ensuring that seniors never feel alone. In emergencies, our trained response team is just a button press away, providing quick help when it's needed most, including the use of SOS alarm for elderly.</p>
+    <p>To achieve this, we implemented 24/7 health monitoring, allowing us to track vital signs around the clock using health monitoring device. Our dedicated care team is always ready to assist, ensuring that seniors never feel alone. In emergencies, our trained response team is just a button press away, providing quick help when it's needed most, including the use of SOS alarm for elderly.</p>
     
     <p>Recognizing that daily tasks can be tough, we introduced concierge services to assist with errands and appointments, helping seniors maintain their independence while enjoying friendly support. We also utilized smart technology for preemptive care, identifying potential health issues early on to promote healthier living. This includes the use of health monitor watch and other <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a>.</p>
     
@@ -92,14 +92,14 @@ const BlogPost = () => {
     
     <p>Finally, we built a supportive community where seniors and caregivers can share their experiences and connect, creating a sense of belonging and understanding.</p>
     
-    <p>With these thoughtful features, <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> is designed to bridge the gap for NRIs and their families using technology, ensuring that every senior feels valued, cared for, and connected.</p>
+    <p>With these thoughtful features, Care Sanctum is designed to bridge the gap for NRIs and their families using technology, ensuring that every senior feels valued, cared for, and connected.</p>
     
     <p>Together, we aim to create a brighter and healthier future for our loved ones, no matter where they are in the world.</p>
     
     <h4>Wrapping Up</h4>
-    <p>Summing up, our platform is a safe space for families who are far apart but still connected by love. We listen to the real experiences of Non-Resident Indians (NRIs) and design our services with honesty and kindness. By setting up strong care practices, including the use of SOS alarm and <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a>, we provide a service that gives you peace of mind.</p>
+    <p>Summing up, our platform is a safe space for families who are far apart but still connected by love. We listen to the real experiences of Non-Resident Indians (NRIs) and design our services with honesty and kindness. By setting up strong care practices, including the use of SOS alarm and health monitoring device, we provide a service that gives you peace of mind.</p>
     
-    <p>If you're an NRI searching for trustworthy healthcare management for your loved ones in India, check out <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> today, where care and commitment come together.</p>
+    <p>If you're an NRI searching for trustworthy healthcare management for your loved ones in India, check out Care Sanctum today, where care and commitment come together.</p>
   `;
 
   // If post not found, display error message
