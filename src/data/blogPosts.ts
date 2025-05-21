@@ -23,4 +23,14 @@ export const blogPosts: BlogPost[] = [
     icon: "wellness",
     slug: "nri-guide-senior-care"
   },
+  {
+    id: "3",
+    title: "How We Designed Care Sanctum for NRIs",
+    category: "Stories",
+    date: "May 21, 2024",
+    description: "Learn how we created a platform that bridges the gap for NRIs caring for their loved ones in India, leveraging technology and compassionate care.",
+    image: "/lovable-uploads/d2e03337-a080-4d8e-8da7-09f49092e306.jpg",
+    icon: "stories",
+    slug: "how-we-designed-care-sanctum-for-nris"
+  }
 ];

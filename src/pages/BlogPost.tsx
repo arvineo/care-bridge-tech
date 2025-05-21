@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -10,7 +11,7 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find(post => post.slug === slug);
 
-  // Fallback content for the NRI Guide post with updated heading levels and interlinks
+  // Content for the NRI Guide post
   const nriGuideContent = `
     <h1>Introduction</h1>
     <p>If you're an NRI, you know how tough it can be to care for your family back in India. You want to be there for them, but distance makes it difficult. You worry about their health and overall well-being.</p>
@@ -56,6 +57,51 @@ const BlogPost = () => {
     <p>Are you ready to care for your parents, no matter the distance? Explore the services offered by <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> today and take the first step towards ensuring your loved ones receive the best care possible!</p>
   `;
 
+  // Content for the "How We Designed Care Sanctum for NRIs" post
+  const careDesignContent = `
+    <p>Imagine living far away from your family and worrying about their health every day. For Non-Resident Indians (NRIs), this is a common struggle. Managing healthcare for loved ones in India can be stressful and confusing.</p>
+    
+    <p>At <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, we understand these challenges and aim to make healthcare and overall well-being for seniors easy. By using advanced technology, including <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> and health monitor watch, along with a simple, user-friendly design, we've created a platform that helps NRIs ensure their family members get the best care possible, no matter the distance.</p>
+    
+    <p>Let's take a look at how we designed Care Sanctum to meet the requirements of NRIs and give them peace of mind.</p>
+    
+    <h1>Understanding the Challenges Faced by NRIs</h1>
+    <p>At Care Sanctum, we started our project with the goal of understanding what it's like for Non-Resident Indians (NRIs) to take care of their loved ones back in India.</p>
+    
+    <p>We found that NRIs experience many common challenges, such as time zone changes, feelings of guilt for being away, unreliable healthcare, and the need for consistent updates on the health of their family.</p>
+    
+    <p>To better understand experiences, we held surveys and interviews and spoke to many NRI families, where they shared their main concerns, including reliable healthcare management, clear updates, and meaningful human connections. By understanding key challenges faced by them, we became clear about their mindset and concerns.</p>
+    
+    <h2>Creating a Trustworthy Online Experience</h2>
+    <p>The next step we took was to build trust and reliability, as when you're taking care of someone from far away, trust is very important. That's why we made <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> easy to use and clear:</p>
+    
+    <p><strong>Clear Services:</strong> We explain our services in simple terms, whether it's managing ongoing health issues or providing companionship. There are no hidden details or confusing medical language.</p>
+    
+    <p><strong>Easy Navigation:</strong> We understand that NRIs often look for information quickly, sometimes late at night. Our website is designed to be user-friendly, with simple menus and quick buttons to book appointments or get updates.</p>
+    
+    <p><strong>Transparent Communication:</strong> We prioritize open communication by providing regular updates and clear information about your loved ones' care. You can always reach out to us with questions or concerns, and we'll be here to help.</p>
+    
+    <h2>Bringing Care Sanctum to Life</h2>
+    <p>We concluded our design journey with a clear mission: to support Non-Resident Indians (NRIs) in caring for their senior loved ones, no matter the distance. We envisioned a community where seniors feel safe, supported, and connected by utilizing technologies like <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> and SOS alarm.</p>
+    
+    <p>To achieve this, we implemented 24/7 health monitoring, allowing us to track vital signs around the clock using <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a>. Our dedicated care team is always ready to assist, ensuring that seniors never feel alone. In emergencies, our trained response team is just a button press away, providing quick help when it's needed most, including the use of SOS alarm for elderly.</p>
+    
+    <p>Recognizing that daily tasks can be tough, we introduced concierge services to assist with errands and appointments, helping seniors maintain their independence while enjoying friendly support. We also utilized smart technology for preemptive care, identifying potential health issues early on to promote healthier living. This includes the use of health monitor watch and other <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a>.</p>
+    
+    <p>Further, we found out that traveling can be a nightmare for seniors, so we created a travel companion service, pairing them with caring buddies to ensure comfort and safety during outings.</p>
+    
+    <p>Finally, we built a supportive community where seniors and caregivers can share their experiences and connect, creating a sense of belonging and understanding.</p>
+    
+    <p>With these thoughtful features, <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> is designed to bridge the gap for NRIs and their families using technology, ensuring that every senior feels valued, cared for, and connected.</p>
+    
+    <p>Together, we aim to create a brighter and healthier future for our loved ones, no matter where they are in the world.</p>
+    
+    <h4>Wrapping Up</h4>
+    <p>Summing up, our platform is a safe space for families who are far apart but still connected by love. We listen to the real experiences of Non-Resident Indians (NRIs) and design our services with honesty and kindness. By setting up strong care practices, including the use of SOS alarm and <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a>, we provide a service that gives you peace of mind.</p>
+    
+    <p>If you're an NRI searching for trustworthy healthcare management for your loved ones in India, check out <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a> today, where care and commitment come together.</p>
+  `;
+
   // If post not found, display error message
   if (!post) {
     return (
@@ -78,6 +124,8 @@ const BlogPost = () => {
   let postContent = "";
   if (post.slug === "nri-guide-senior-care") {
     postContent = nriGuideContent;
+  } else if (post.slug === "how-we-designed-care-sanctum-for-nris") {
+    postContent = careDesignContent;
   } else {
     postContent = "<p>Content coming soon...</p>";
   }
