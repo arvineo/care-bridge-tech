@@ -1,12 +1,9 @@
 
 import { ArrowRight } from "lucide-react";
-import { useState } from "react";
 import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const Hero = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-  
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-white to-purple-50 pt-32 pb-20">
       <div className="container mx-auto px-4">
@@ -18,20 +15,12 @@ const Hero = () => {
             <div className="text-gray-600 animate-slide-up">
               <p className="text-base">Welcome to Care Sanctum, where technology meets compassionate care to keep you connected with your parents. We lead the senior care revolution with a tech-first, responsive approach, ensuring seniors' safety, independence, and wellness while giving families peace of mind.</p>
               
-              {isExpanded && (
-                <>
-                  <p className="mt-4 text-base">
-                    We combine advanced technology with personalized care to address seniors' needs and offer a seamless experience. Our solutions empower seniors to lead enriched lives while staying connected with their loved ones. By anticipating challenges and delivering proactive care, we ensure the well-being of those who matter most, earning us the title of "Advanced 911 Service."
-                  </p>
-                  <p className="mt-4 text-base">
-                    Driven by a dedicated team of doctors, care providers, and tech innovators, Care Sanctum is committed to making this vision a reality. We ensure that every senior feels safe, valued, and cherished, delivering care with both heart and innovation.
-                  </p>
-                </>
-              )}
-              
-              <Button variant="link" onClick={() => setIsExpanded(!isExpanded)} className="mt-4 font-medium">
-                {isExpanded ? "Read Less" : "Read More"}
-              </Button>
+              <p className="mt-4 text-base">
+                We combine advanced technology with personalized care to address seniors' needs and offer a seamless experience. Our solutions empower seniors to lead enriched lives while staying connected with their loved ones. By anticipating challenges and delivering proactive care, we ensure the well-being of those who matter most, earning us the title of "Advanced 911 Service."
+              </p>
+              <p className="mt-4 text-base">
+                Driven by a dedicated team of doctors, care providers, and tech innovators, Care Sanctum is committed to making this vision a reality. We ensure that every senior feels safe, valued, and cherished, delivering care with both heart and innovation.
+              </p>
             </div>
             
             <div className="flex flex-col sm:flex-row gap-4">
