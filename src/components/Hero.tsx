@@ -1,6 +1,7 @@
 
 import { ArrowRight } from "lucide-react";
 import { useState } from "react";
+import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
 
 const Hero = () => {
@@ -31,6 +32,20 @@ const Hero = () => {
               <Button variant="link" onClick={() => setIsExpanded(!isExpanded)} className="mt-4 font-medium">
                 {isExpanded ? "Read Less" : "Read More"}
               </Button>
+            </div>
+            
+            <div className="flex flex-col sm:flex-row gap-4">
+              <Link to="/contact">
+                <Button size="lg" className="w-full sm:w-auto">
+                  Book a Free Consultation Call
+                  <ArrowRight className="ml-2 h-4 w-4" />
+                </Button>
+              </Link>
+              <Link to="/content">
+                <Button variant="outline" size="lg" className="w-full sm:w-auto">
+                  Join Our Community
+                </Button>
+              </Link>
             </div>
           </div>
 

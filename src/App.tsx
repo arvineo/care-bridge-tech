@@ -13,6 +13,7 @@ import Blog from "./pages/Blog";
 import BlogPost from "./pages/BlogPost";
 import Partnership from "./pages/Partnership";
 import Contact from "./pages/Contact";
+import Content from "./pages/Content";
 import NotFound from "./pages/NotFound";
 import Plans from "./pages/Plans";
 import Sitemap from "./components/Sitemap";
@@ -36,6 +37,7 @@ const App = () => (
             <Route path="/blog/:slug" element={<BlogPost />} />
             <Route path="/partnership" element={<Partnership />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="/content" element={<Content />} />
             <Route path="/sitemap.xml" element={<Sitemap />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
