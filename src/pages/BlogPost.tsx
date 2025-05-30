@@ -11,6 +11,78 @@ const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find(post => post.slug === slug);
 
+  // Content for the Emergency Protocols post
+  const emergencyProtocolsContent = `
+    <p>Caring for aging parents who live far away can be tough, especially when emergencies arise. Seniors are more vulnerable to sudden health issues like falls, heart problems, or infections. These situations require quick attention, but being far away can make it difficult to help, causing stress for seniors and their families.</p>
+    
+    <h2>Common Emergencies for Seniors</h2>
+    <p><strong>Falls:</strong> Falls are one of the leading causes of injury among seniors. They can lead to serious issues like fractures or head injuries, requiring immediate assistance.</p>
+    
+    <p><strong>Heart Problems:</strong> Sudden changes in heart rate or blood pressure can lead to critical conditions such as heart attacks or strokes.</p>
+    
+    <p><strong>Breathing Issues:</strong> Low oxygen levels or difficulty breathing need prompt action to prevent complications.</p>
+    
+    <p><strong>Infections:</strong> A fever or sudden changes in body temperature can signal serious infections that require fast medical attention.</p>
+    
+    <p><strong>Wandering:</strong> Seniors with memory issues may wander off and get lost, which can be dangerous without proper tracking.</p>
+    
+    <p>For family members living far away, these emergencies can be especially stressful. They often can't monitor their loved ones' health daily or respond quickly when something goes wrong.</p>
+    
+    <p>This situation highlights the need for reliable remote care technologies that provide real-time health monitoring, quick alerts, and coordination of medical help when necessary. That's where we offer help!</p>
+    
+    <h2>How Care Sanctum Provides Peace of Mind</h2>
+    <p>Caring for aging parents from a distance can be tough, especially when emergencies arise. Thankfully, modern technology is changing the way we care for seniors, allowing families to stay connected and proactive, even from afar.</p>
+    
+    <p>At <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, we use smart wearables, IoT devices, an SOS alarm for elderly, and AI-powered analytics to create a complete system that continuously monitors seniors' health and safety. These health devices for seniors help bridge the gap between families and their loved ones, ensuring that help is always close by.</p>
+    
+    <h3>Smart Wearables and IoT: Keeping Track of Health</h3>
+    <p>Our advanced <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a> monitor vital signs like heart rate, blood pressure, and blood oxygen levels around the clock. Here's how they help:</p>
+    
+    <p><strong>Heart Rate Monitoring:</strong> These devices detect irregular heart rhythms and alert caregivers if there's a potential problem.</p>
+    
+    <p><strong>Blood Pressure Tracking:</strong> Regular checks help identify high or low blood pressure before it becomes serious.</p>
+    
+    <p><strong>Temperature Monitoring:</strong> Changes in body temperature can indicate infections, allowing for early detection.</p>
+    
+    <p><strong>24/7 SPO2 Monitoring:</strong> This ensures that oxygen levels remain safe for respiratory health.</p>
+    
+    <p><strong>GPS Tracking:</strong> We can locate seniors in real-time and set safe zones, alerting families if they wander outside these areas.</p>
+    
+    <p><strong>Fall Detection:</strong> If a fall occurs or unusual movement is detected, immediate alerts are sent out for a quick response.</p>
+    
+    <p>These smart devices, along with IoT sensors placed around the home, create a safe living environment that promotes independence while ensuring safety.</p>
+    
+    <h3>AI and Predictive Analytics: Preventing Problems Before They Happen</h3>
+    <p>Our AI system goes beyond just monitoring. It analyzes patterns in daily activities and health data to predict potential risks. This proactive approach allows caregivers to step in before small issues turn into emergencies.</p>
+    
+    <p><strong>Pattern Analysis:</strong> Helps identify what is normal versus abnormal behavior.</p>
+    
+    <p><strong>Health Predictions:</strong> Spotting possible health problems before they arise.</p>
+    
+    <p><strong>Smart Alerts:</strong> Notifying family members and medical professionals instantly if intervention is needed.</p>
+    
+    <p>This approach is especially helpful for families living far away, providing real-time reassurance and actionable insights through tools like a health monitor watch or a connected SOS alarm for elderly individuals.</p>
+    
+    <h3>Medication and Reports Management: Simplifying Care</h3>
+    <p>Keeping track of medications is crucial for seniors' health. Our system sends timely reminders for medication and can even arrange for delivery. We also provide digital storage for prescriptions and lab reports, making it easy to access important medical information whenever needed. This streamlines doctor visits and emergency care.</p>
+    
+    <h2>Why Choose Care Sanctum?</h2>
+    <p>For families separated by distance, we offer trusted technology that prioritizes safety, health, and peace of mind. Our integrated solution:</p>
+    
+    <ul>
+      <li>Provides continuous remote monitoring without interfering with seniors' independence.</li>
+      <li>Sends instant SOS alarm and emergency alerts to families, caregivers, and healthcare professionals.</li>
+      <li>Uses AI to predict health risks and reduce hospital visits.</li>
+      <li>Simplifies medication and health record management in one place.</li>
+      <li>Supports seniors living alone by creating a connected, safe environment.</li>
+    </ul>
+    
+    <h2>Conclusion</h2>
+    <p>Emergencies in senior care can be stressful, especially when you can't be there in person. Care Sanctum's innovative use of smart wearables, IoT technology, and AI analytics empowers families to stay connected and proactive. With reliable health monitoring, immediate alerts through a health monitor watch or SOS alarm, and easy medication management, you can ensure your loved ones are safe and healthy, no matter where you are.</p>
+    
+    <p>By implementing effective emergency protocols, we ensure that help is always available. Embrace the future of senior care with Care Sanctum and enjoy peace of mind knowing that your loved ones are protected and cared for, even from a distance.</p>
+  `;
+
   // Content for the NRI Guide post
   const nriGuideContent = `
     <h1>Introduction</h1>
@@ -20,7 +92,7 @@ const BlogPost = () => {
     
     <p>You want to make sure your parents are safe, healthy, and happy, but how can you do that when you're thousands of miles away?</p>
     
-    <p>The good news is that you can still care for your family, even from afar. With services like <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, where technology meets compassionate care, you can stay connected with your parents and ensure they get the support they need.</p>
+    <p>The good news is that you can still care for your family, even from afar. With services like Care Sanctum, where technology meets compassionate care, you can stay connected with your parents and ensure they get the support they need.</p>
     
     <p>In this blog, we'll let you know about the right support so you can make a real difference in their lives, no matter how far away you are.</p>
     
@@ -37,7 +109,7 @@ const BlogPost = () => {
     <h3>3. Everyday Concierge Support</h3>
     <p>Daily tasks can become challenging for seniors. Consider arranging for local services that can assist your parents with everyday activities, such as grocery shopping, doctor appointments, and running errands.</p>
     
-    <p>This support helps them maintain their independence while ensuring they have help when they need it. Additionally, incorporating <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a> can further change their daily living experience, providing them with tools to monitor their health and stay connected.</p>
+    <p>This support helps them maintain their independence while ensuring they have help when they need it. Additionally, incorporating health devices for seniors can further change their daily living experience, providing them with tools to monitor their health and stay connected.</p>
     
     <h3>4. Proactive Health Care</h3>
     <p>Encourage your parents to have regular health checkups and screenings. Staying on top of their health can help catch potential issues early. You can also share resources or apps that provide health tips and reminders for medication or appointments.</p>
@@ -61,7 +133,7 @@ const BlogPost = () => {
   const careDesignContent = `
     <p>Imagine living far away from your family and worrying about their health every day. For Non-Resident Indians (NRIs), this is a common struggle. Managing healthcare for loved ones in India can be stressful and confusing.</p>
     
-    <p>At <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Care Sanctum</a>, we understand these challenges and aim to make healthcare and overall well-being for seniors easy. By using advanced technology, including <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> and health monitor watch, along with a simple, user-friendly design, we've created a platform that helps NRIs ensure their family members get the best care possible, no matter the distance.</p>
+    <p>At Care Sanctum, we understand these challenges and aim to make healthcare and overall well-being for seniors easy. By using advanced technology, including health monitoring device and health monitor watch, along with a simple, user-friendly design, we've created a platform that helps NRIs ensure their family members get the best care possible, no matter the distance.</p>
     
     <p>Let's take a look at how we designed Care Sanctum to meet the requirements of NRIs and give them peace of mind.</p>
     
@@ -86,7 +158,7 @@ const BlogPost = () => {
     
     <p>To achieve this, we implemented 24/7 health monitoring, allowing us to track vital signs around the clock using health monitoring device. Our dedicated care team is always ready to assist, ensuring that seniors never feel alone. In emergencies, our trained response team is just a button press away, providing quick help when it's needed most, including the use of SOS alarm for elderly.</p>
     
-    <p>Recognizing that daily tasks can be tough, we introduced concierge services to assist with errands and appointments, helping seniors maintain their independence while enjoying friendly support. We also utilized smart technology for preemptive care, identifying potential health issues early on to promote healthier living. This includes the use of health monitor watch and other <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a>.</p>
+    <p>Recognizing that daily tasks can be tough, we introduced concierge services to assist with errands and appointments, helping seniors maintain their independence while enjoying friendly support. We also utilized smart technology for preemptive care, identifying potential health issues early on to promote healthier living. This includes the use of health monitor watch and other health devices for seniors.</p>
     
     <p>Further, we found out that traveling can be a nightmare for seniors, so we created a travel companion service, pairing them with caring buddies to ensure comfort and safety during outings.</p>
     
@@ -122,7 +194,9 @@ const BlogPost = () => {
 
   // Determine which content to display based on post slug
   let postContent = "";
-  if (post.slug === "nri-guide-senior-care") {
+  if (post.slug === "emergency-protocols-care-sanctum-reacts") {
+    postContent = emergencyProtocolsContent;
+  } else if (post.slug === "nri-guide-senior-care") {
     postContent = nriGuideContent;
   } else if (post.slug === "how-we-designed-care-sanctum-for-nris") {
     postContent = careDesignContent;

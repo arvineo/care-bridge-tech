@@ -14,6 +14,16 @@ export type BlogPost = {
 // Blog posts data
 export const blogPosts: BlogPost[] = [
   {
+    id: "1",
+    title: "Emergency Protocols: How Care Sanctum Reacts",
+    category: "Health",
+    date: "May 30, 2025",
+    description: "Learn how Care Sanctum's emergency response protocols and smart technology help protect seniors during critical situations, providing peace of mind for families living far away.",
+    image: "/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg",
+    icon: "health",
+    slug: "emergency-protocols-care-sanctum-reacts"
+  },
+  {
     id: "2",
     title: "NRI Guide to Long-Distance Senior Care",
     category: "Wellness",
