@@ -41,10 +41,10 @@ const Content = () => {
                   Contact us to learn more about joining our community and how Care Sanctum can help you provide the best care for your loved ones.
                 </p>
                 <a 
-                  href="/contact" 
+                  href="https://chat.whatsapp.com/IMVCZjM0rVJCkmR4cs3nl4" 
                   className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
                 >
-                  Get in Touch
+                  Join Free Community
                 </a>
               </div>
             </div>
