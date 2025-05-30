@@ -1,4 +1,3 @@
-
 // Blog post data structure
 export type BlogPost = {
   id: string;
@@ -19,7 +18,7 @@ export const blogPosts: BlogPost[] = [
     category: "Health",
     date: "May 30, 2025",
     description: "Learn how Care Sanctum's emergency response protocols and smart technology help protect seniors during critical situations, providing peace of mind for families living far away.",
-    image: "/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg",
+    image: "/lovable-uploads/51fffb3d-2922-49c8-96a6-40d24de9796f.jpg",
     icon: "health",
     slug: "emergency-protocols-care-sanctum-reacts"
   },
