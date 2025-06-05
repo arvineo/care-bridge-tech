@@ -1,3 +1,4 @@
+
 // Blog post data structure
 export type BlogPost = {
   id: string;
@@ -18,12 +19,22 @@ export const blogPosts: BlogPost[] = [
     category: "Health",
     date: "May 30, 2025",
     description: "Learn how Care Sanctum's emergency response protocols and smart technology help protect seniors during critical situations, providing peace of mind for families living far away.",
-    image: "/lovable-uploads/51fffb3d-2922-49c8-96a6-40d24de9796f.jpg",
+    image: "/lovable-uploads/a54c91e8-3b4a-4c80-93a6-f4bda30a06e6.jpg",
     icon: "health",
     slug: "emergency-protocols-care-sanctum-reacts"
   },
   {
     id: "2",
+    title: "Why Every Senior Needs an SOS Alarm and Health Monitoring Device",
+    category: "Health",
+    date: "June 5, 2025",
+    description: "Discover the importance of SOS alarms and health monitoring devices for seniors, and how these technologies can provide safety, independence, and peace of mind.",
+    image: "/lovable-uploads/d9984abb-90eb-4bfe-b1ca-59c06e8deba5.jpg",
+    icon: "health",
+    slug: "why-every-senior-needs-sos-alarm-health-monitoring"
+  },
+  {
+    id: "3",
     title: "NRI Guide to Long-Distance Senior Care",
     category: "Wellness",
     date: "May 18, 2024",
@@ -33,7 +44,7 @@ export const blogPosts: BlogPost[] = [
     slug: "nri-guide-senior-care"
   },
   {
-    id: "3",
+    id: "4",
     title: "How We Designed Care Sanctum for NRIs",
     category: "Stories",
     date: "May 21, 2024",

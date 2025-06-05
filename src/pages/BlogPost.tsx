@@ -83,6 +83,72 @@ const BlogPost = () => {
     <p>By implementing effective emergency protocols, we ensure that help is always available. Embrace the future of senior care with Care Sanctum and enjoy peace of mind knowing that your loved ones are protected and cared for, even from a distance.</p>
   `;
 
+  // Content for the SOS Alarm blog post with images
+  const sosAlarmContent = `
+    <p>As we age, the importance of safety and health monitoring becomes increasingly important. For seniors, having the right tools can make all the difference in maintaining independence while ensuring peace of mind for both them and their families.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/fdbaf9b0-d2ca-45f9-90e1-875563374166.jpg" alt="Senior using smart health monitoring device" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p>At Caresanctum, we understand these needs deeply, and we are committed to providing cutting-edge solutions for advanced senior care. In this blog, we'll explore why every senior should consider an SOS alarm and the benefits of health devices for seniors.</p>
+    
+    <h2>The Importance of an SOS Alarm for Elderly</h2>
+    <p>Imagine a scenario where a senior falls or experiences a medical emergency at home. In such moments, every second counts.</p>
+    
+    <p>An SOS alarm for elderly can be a lifesaver, providing immediate access to help. These devices are designed to be user-friendly, often featuring a simple button that, when pressed, alerts emergency services or designated family members.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/b6ba1f1a-506b-4e58-9dff-57be8769a6c8.jpg" alt="Emergency response system for seniors" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p>We believe that every senior deserves the ability to call for help without hesitation. Our health monitoring device is equipped with SOS alarm features, ensuring that seniors can maintain their independence while having a safety net in place.</p>
+    
+    <h2>Health Monitoring Devices: A Comprehensive Approach</h2>
+    <p>In addition to SOS alarms, health monitoring devices play a crucial role in the well-being of seniors. These devices continuously track vital signs and activity levels, providing real-time health insights.</p>
+    
+    <p>Here's how our technology works:</p>
+    
+    <p><strong>Heart Rate Monitoring:</strong> Continuous monitoring with alerts for irregularities ensures that any potential heart issues are detected early. This feature is particularly important for seniors who may have pre-existing heart conditions or are at risk for cardiovascular issues.</p>
+    
+    <p><strong>Blood Pressure Monitoring:</strong> Regular checks with trend analysis help manage hypertension and other cardiovascular concerns. Keeping track of blood pressure can prevent serious health complications and allow for timely medical intervention.</p>
+    
+    <p><strong>Temperature Monitoring:</strong> Body temperature analysis can detect infections early, allowing for prompt medical attention. This is especially crucial for seniors, as they may not always exhibit typical symptoms of illness.</p>
+    
+    <p><strong>SPO2 Sensor:</strong> Our devices monitor blood oxygen levels 24/7, which is essential for seniors with respiratory issues. Maintaining adequate oxygen levels is vital for overall health and well-being.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/6e367f26-4d44-4c31-b537-7010d8879134.jpg" alt="Advanced health monitoring technology for seniors" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p><strong>GPS Tracking:</strong> Location Monitoring and geo-fencing technology offer peace of mind to families by ensuring that seniors remain safe and can be quickly located in case of emergencies. This feature is especially critical for seniors who may wander or become disoriented due to age-related conditions. What makes this system truly dependable is its advanced GPS tracking capability, which operates with point-level accuracy in outdoor environments. ensures real-time location updates, even in large open areas or while in transit, allowing caregivers to pinpoint a senior's exact location with minimal delay. Whether a loved one is out for a walk in the park or traveling across town, families can rest assured that their movements are being monitored reliably and accurately, offering not just location data but peace of mind in every step.</p>
+    
+    <p><strong>Fall Detection:</strong> Immediate alerts for falls or unusual patterns can be life-saving, allowing for quick intervention. Knowing that help is just a button press away can significantly reduce anxiety for both seniors and their families.</p>
+    
+    <h2>Smart Wearables and IoT: A New Era of Senior Care</h2>
+    <p>We utilize smart wearables and IoT devices to create a comprehensive monitoring system. Our advanced wearable devices continuously monitor vital signs and activity levels, ensuring that seniors are safe while maintaining their independence.</p>
+    
+    <p>Imagine a health monitor watch that not only tracks your heart rate but also sends alerts if it detects an irregular pattern. This proactive approach allows for early intervention and better health outcomes. Our AI and predictive analytics system analyzes patterns in health data and daily activities, predicting potential health issues before they become serious.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg" alt="Smart wearable devices for health monitoring" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p>This technology is not just about monitoring; it's about empowering seniors to take control of their health. With real-time data at their fingertips, seniors can make informed decisions about their well-being.</p>
+    
+    <h2>Medication and Reports Management</h2>
+    <p>Managing medications can be challenging for seniors, especially when multiple prescriptions are involved. Our comprehensive management system ensures that seniors stay on top of their medication schedules. With timely medicine reminders and convenient delivery services, we make it easy for seniors to adhere to their treatment plans.</p>
+    
+    <h2>Conclusion: Empowering Seniors with Technology</h2>
+    <p>In conclusion, the combination of an SOS alarm for elderly and a health monitoring device is essential for promoting safety and independence among seniors.</p>
+    
+    <p>At Caresanctum, we are dedicated to providing advanced solutions that empower seniors to live their lives to the fullest while ensuring their health and safety.</p>
+    
+    <p>Visit <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Caresanctum</a> now to learn more about our innovative health devices for seniors and how we can help you create a safer, healthier environment for your loved ones.</p>
+    
+    <p>Together, we can ensure that every senior has the tools they need to thrive. Your loved ones deserve the best, and with the right technology, you can help them achieve a safe and fulfilling life.</p>
+  `;
+
   // Content for the NRI Guide post
   const nriGuideContent = `
     <h1>Introduction</h1>
@@ -196,6 +262,8 @@ const BlogPost = () => {
   let postContent = "";
   if (post.slug === "emergency-protocols-care-sanctum-reacts") {
     postContent = emergencyProtocolsContent;
+  } else if (post.slug === "why-every-senior-needs-sos-alarm-health-monitoring") {
+    postContent = sosAlarmContent;
   } else if (post.slug === "nri-guide-senior-care") {
     postContent = nriGuideContent;
   } else if (post.slug === "how-we-designed-care-sanctum-for-nris") {
