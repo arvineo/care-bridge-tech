@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -83,7 +82,7 @@ const BlogPost = () => {
     <p>By implementing effective emergency protocols, we ensure that help is always available. Embrace the future of senior care with Care Sanctum and enjoy peace of mind knowing that your loved ones are protected and cared for, even from a distance.</p>
   `;
 
-  // Content for the SOS Alarm blog post with images
+  // Content for the SOS Alarm blog post with images and internal links
   const sosAlarmContent = `
     <p>As we age, the importance of safety and health monitoring becomes increasingly important. For seniors, having the right tools can make all the difference in maintaining independence while ensuring peace of mind for both them and their families.</p>
     
@@ -91,7 +90,7 @@ const BlogPost = () => {
       <img src="/lovable-uploads/fdbaf9b0-d2ca-45f9-90e1-875563374166.jpg" alt="Senior using smart health monitoring device" class="w-full h-auto object-cover" />
     </div>
     
-    <p>At Caresanctum, we understand these needs deeply, and we are committed to providing cutting-edge solutions for advanced senior care. In this blog, we'll explore why every senior should consider an SOS alarm and the benefits of health devices for seniors.</p>
+    <p>At Caresanctum, we understand these needs deeply, and we are committed to providing cutting-edge solutions for advanced senior care. In this blog, we'll explore why every senior should consider an <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">SOS alarm for elderly</a> and the benefits of health devices for seniors.</p>
     
     <h2>The Importance of an SOS Alarm for Elderly</h2>
     <p>Imagine a scenario where a senior falls or experiences a medical emergency at home. In such moments, every second counts.</p>
@@ -105,7 +104,7 @@ const BlogPost = () => {
     <p>We believe that every senior deserves the ability to call for help without hesitation. Our health monitoring device is equipped with SOS alarm features, ensuring that seniors can maintain their independence while having a safety net in place.</p>
     
     <h2>Health Monitoring Devices: A Comprehensive Approach</h2>
-    <p>In addition to SOS alarms, health monitoring devices play a crucial role in the well-being of seniors. These devices continuously track vital signs and activity levels, providing real-time health insights.</p>
+    <p>In addition to SOS alarms, <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring devices</a> play a crucial role in the well-being of seniors. These devices continuously track vital signs and activity levels, providing real-time health insights.</p>
     
     <p>Here's how our technology works:</p>
     
@@ -144,7 +143,7 @@ const BlogPost = () => {
     
     <p>At Caresanctum, we are dedicated to providing advanced solutions that empower seniors to live their lives to the fullest while ensuring their health and safety.</p>
     
-    <p>Visit <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Caresanctum</a> now to learn more about our innovative health devices for seniors and how we can help you create a safer, healthier environment for your loved ones.</p>
+    <p>Visit <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Caresanctum</a> now to learn more about our innovative <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a> and how we can help you create a safer, healthier environment for your loved ones.</p>
     
     <p>Together, we can ensure that every senior has the tools they need to thrive. Your loved ones deserve the best, and with the right technology, you can help them achieve a safe and fulfilling life.</p>
   `;
