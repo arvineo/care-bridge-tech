@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { PhoneCall, UserCheck, Bell, Watch, ShoppingBag, Users, Plane, Shield, HeartPulse, Thermometer, Heart } from "lucide-react";
@@ -34,6 +35,16 @@ const services = [{
 }];
 
 const Services = () => {
+  useEffect(() => {
+    document.title = "Buy best Health Monitoring Device for elder parents | Care sanctum";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Compare Care sanctum plans featuring a health monitoring device and SOS alarm—ideal for senior safety, remote alerts, and NRI family support in India.');
+    }
+  }, []);
+
   return <>
       <Navbar />
       <main className="pt-20">

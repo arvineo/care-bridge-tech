@@ -1,10 +1,21 @@
 
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Activity, Brain, Bot, Bluetooth, WifiIcon, Smartphone, Watch, Shield, HeartPulse, Search, Network, Heart, Thermometer, Locate, AlertTriangle, FileText, Bell, FileCheck } from "lucide-react";
 
 const Technology = () => {
+  useEffect(() => {
+    document.title = "Buy best Health Monitor Watch for Seniors | Caresanctum";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Discover Care sanctum health monitor watch for seniors. Real-time health tracking to keep families informed and aging parents safe and connected.');
+    }
+  }, []);
+
   return <>
       <Navbar />
       <main className="pt-20">

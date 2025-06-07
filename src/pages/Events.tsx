@@ -1,4 +1,5 @@
 
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar } from "@/components/ui/calendar";
@@ -25,6 +26,16 @@ const upcomingEvents = [
 ];
 
 const Events = () => {
+  useEffect(() => {
+    document.title = "Best Senior Wellness Events for Elders | Care sanctum";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Join the best senior wellness events for elders by Care sanctum. Explore health tech, safety tips, and expert care solutions tailored for aging loved ones.');
+    }
+  }, []);
+
   return (
     <>
       <Navbar />

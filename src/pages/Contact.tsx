@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -20,6 +20,16 @@ const locations = [
 ];
 
 const Contact = () => {
+  useEffect(() => {
+    document.title = "Contact us for Senior Care Support & Services | Care sanctum";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Contact us for senior care support and services at Care Sanctum. We provide compassionate solutions and health monitoring devices to keep your parents safe.');
+    }
+  }, []);
+
   const { toast } = useToast();
   const [formData, setFormData] = useState({
     name: "",

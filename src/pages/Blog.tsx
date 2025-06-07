@@ -1,4 +1,4 @@
-
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
@@ -22,6 +22,16 @@ const categories = [
 ];
 
 const Blog = () => {
+  useEffect(() => {
+    document.title = "Senior Care Blog | Health Tips & Devices | Care sanctum";
+    
+    // Update meta description
+    const metaDescription = document.querySelector('meta[name="description"]');
+    if (metaDescription) {
+      metaDescription.setAttribute('content', 'Read Caresanctum\'s senior care blog for health tips, updates on health monitoring devices, and expert advice to support aging parents in India and abroad.');
+    }
+  }, []);
+
   const [selectedCategory, setSelectedCategory] = useState("all");
   const [email, setEmail] = useState("");
   const { toast } = useToast();
