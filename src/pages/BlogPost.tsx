@@ -1,3 +1,4 @@
+
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -148,6 +149,105 @@ const BlogPost = () => {
     <p>Together, we can ensure that every senior has the tools they need to thrive. Your loved ones deserve the best, and with the right technology, you can help them achieve a safe and fulfilling life.</p>
   `;
 
+  // Content for the ITR Filing blog post with images
+  const itrFilingContent = `
+    <p>Are you feeling intimidated by the thought of filing your Income Tax Return (ITR)? You're not alone! Many senior citizens find the process challenging, but it doesn't have to be. With a little knowledge about the benefits available to you, filing ITR for senior citizens can become straightforward.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/1db71012-aaa3-4d8e-b3ee-5a955eadb071.png" alt="Senior citizen reviewing tax documents" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p>In this blog, we'll simplify the ITR for senior citizens in India and show you how CareSanctum's services can improve your health and well-being during tax season.</p>
+    
+    <h2>Understanding ITR Filing</h2>
+    <p>Filing your ITR is crucial for reporting your income to the government and staying compliant with tax laws. For senior citizens aged 60 and above, there are specific tax benefits designed to lighten your financial load. Knowing these advantages can help you maximize your savings and make the filing process much smoother.</p>
+    
+    <h2>Benefits for Senior Citizens in Income Tax Filing</h2>
+    <p>Senior citizens enjoy several tax benefits designed to reduce their tax burden and simplify the filing process:</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/7275f6a7-2f45-48a3-b6b0-0f5f29d1ca7c.png" alt="Tax benefits calculation for seniors" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p><strong>Higher Income Tax Exemption Limits:</strong> For FY 2024-25, the exemption limit under the old regime for senior citizens is ₹300,000, compared to ₹250,000 for regular taxpayers. This means more of your income is tax-free.</p>
+    
+    <p>The income tax slab rates for senior and super senior citizens under the old regime for the FY 2025-26 (AY 2026-27) are as follows: Rs. 0 to Rs. 3 lakh – Nil, Rs. 3 lakh to Rs. 5 lakh – 5%, Rs. 5 lakh to Rs. 10 lakh – 20%, and income above Rs. 10 lakh will be taxed at 30%.</p>
+    
+    <p>For super senior citizens (80 years and above), the slab rates under the old regime are Rs. 0 to Rs. 5 lakh – Nil, Rs. 5 lakh to Rs. 10 lakh – 20%, and income above Rs. 10 lakh will be taxed at 30%.</p>
+    
+    <p>In comparison, the income tax slab rates under the new regime for the FY 2025-26 (AY 2026-27) are as follows: Rs. 0 to Rs. 4 lakh – Nil, Rs. 4 lakh to Rs. 8 lakh – 5%, Rs. 8 lakh to Rs. 12 lakh – 10%, Rs. 12 lakh to Rs. 16 lakh – 15%, Rs. 16 lakh to Rs. 20 lakh – 20%, Rs. 20 lakh to Rs. 24 lakh – 25%, and income above Rs. 24 lakh will be taxed at 30%.</p>
+    
+    <p><strong>Exemption from Advance Tax:</strong> Seniors without business income are exempt from advance tax payments, making financial planning easier.</p>
+    
+    <p><strong>Increased TDS Threshold on Interest Income:</strong> Starting FY 2025-26, the TDS threshold on interest income for seniors will increase from ₹50,000 to ₹100,000, allowing you to retain more of your earnings.</p>
+    
+    <p><strong>Simplified Filing for Super Senior Citizens (75+):</strong> To file ITR for pensioners, if your income is solely from a pension and interest from a specified bank, you can avoid filing by submitting Form 12BBA to your bank.</p>
+    
+    <p><strong>Paper Filing Option for Super Senior Citizens (80+):</strong> Those aged 80 and above can file their ITR using paper forms, providing a simpler method for those uncomfortable with online filing.</p>
+    
+    <p><strong>Tax-Free Withdrawals from National Savings Scheme (NSS):</strong> Starting August 29, 2024, withdrawals from NSS will be tax-free, providing additional financial relief.</p>
+    
+    <h2>Simple Steps to File Your ITR</h2>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/69165008-873b-4a06-900c-83f10a11d07d.png" alt="Step by step ITR filing process" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p><strong>Pick the right income tax form for senior citizens</strong></p>
+    <p>For most seniors, ITR-1 works if your income is from salary, pension, one house property, and interest.</p>
+    
+    <p><strong>Gather your documents</strong></p>
+    <p>Keep handy your PAN card, Aadhaar card, Form 16 (if applicable), bank statements, and interest certificates.</p>
+    
+    <p><strong>File online or offline</strong></p>
+    <p>If you're online-savvy, the Income Tax e-filing portal guides you step-by-step. If not, paper filing is a friendly option for super seniors.</p>
+    
+    <p><strong>Submit before the deadline</strong></p>
+    <p>Remember to follow the ITR deadline. The last date to file ITR for FY 2024-25 (AY 2025-26) has been extended to 15th September 2025 from the original date of 31st July 2025 for non-audit taxpayers. However, if you miss filing on this deadline, you can file a belated return by 31st December 2025 with penalties and interest.</p>
+    
+    <h2>How CareSanctum Can Support You</h2>
+    <p>At CareSanctum, we recognize that managing health and finances can be challenging for seniors. Our comprehensive care solutions are designed to improve your well-being and provide peace of mind. Here's how we can assist you:</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/e158d1ff-49b8-4a04-a8b2-7adcb8b0b6e8.png" alt="CareSanctum health monitoring services for seniors" class="w-full h-auto object-cover" />
+    </div>
+    
+    <p><strong>Doctor & Specialist Care:</strong> We connect you with qualified medical professionals for personalized care, ensuring you have access to quality healthcare services when needed.</p>
+    
+    <p><strong>On-Demand Specialist Consultation:</strong> Get immediate advice from specialists via video calls, so you never have to wait long for medical support.</p>
+    
+    <p><strong>Scheduled Doctor Visits:</strong> Regular appointments with primary care physicians help you manage your health effectively.</p>
+    
+    <p><strong>Routine Health Checkups:</strong> Preventive screenings and assessments are crucial for early detection of health issues.</p>
+    
+    <p><strong>Home Visits:</strong> Our healthcare professionals can visit you at home, providing care in a comfortable environment.</p>
+    
+    <p><strong>Teleconsultations:</strong> Receive timely medical advice without the hassle of traveling.</p>
+    
+    <p><strong>Care Manager Visits:</strong> Regular checkups and personalized care plans keep you organized and informed about your health.</p>
+    
+    <p><strong>Emergency Response System:</strong> With our SOS alarm for elderly, you can get medical assistance within minutes, ensuring your safety.</p>
+    
+    <p><strong>Health Monitoring Wearables:</strong> Our health devices for seniors, including a health monitor watch, help you track your vitals and prevent crises.</p>
+    
+    <p><strong>Concierge Assistance:</strong> We offer support for grocery shopping, travel arrangements, and lifestyle needs to make your daily life easier.</p>
+    
+    <p><strong>Community Support:</strong> Join a network of seniors and caregivers who share experiences, providing a sense of belonging.</p>
+    
+    <p><strong>Travel Companion:</strong> Our travel companions assist seniors during travel, ensuring safety and comfort.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png" alt="Senior citizens using health technology and support services" class="w-full h-auto object-cover" />
+    </div>
+    
+    <h2>Conclusion</h2>
+    <p>Filing your ITR as a senior citizen doesn't have to be stressful. By understanding the benefits available to you and following a few simple steps, you can follow the process with ease. Remember, we are here to support you with comprehensive care solutions that prioritize your well-being.</p>
+    
+    <p>We hope we were able to simplify the steps of tax filing. CareSactum is ready to support your well-being, focusing primarily on health, relaying correct and relevant information, and keeping you at ease.</p>
+    
+    <p>Contact us today to learn more about our services and how we can support you in achieving a healthier, happier life!</p>
+  `;
+
   // Content for the NRI Guide post
   const nriGuideContent = `
     <h1>Introduction</h1>
@@ -263,6 +363,8 @@ const BlogPost = () => {
     postContent = emergencyProtocolsContent;
   } else if (post.slug === "why-every-senior-needs-sos-alarm-health-monitoring") {
     postContent = sosAlarmContent;
+  } else if (post.slug === "filing-itr-senior-citizens-simple-guide-tax-benefits") {
+    postContent = itrFilingContent;
   } else if (post.slug === "nri-guide-senior-care") {
     postContent = nriGuideContent;
   } else if (post.slug === "how-we-designed-care-sanctum-for-nris") {

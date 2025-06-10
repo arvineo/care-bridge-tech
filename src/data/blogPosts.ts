@@ -35,6 +35,16 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "3",
+    title: "Filing ITR for Senior Citizens: A Simple Guide to Tax Benefits",
+    category: "Wellness",
+    date: "June 8, 2025",
+    description: "A comprehensive guide to filing Income Tax Returns for senior citizens, including tax benefits, exemptions, and how CareSanctum's services can support your well-being during tax season.",
+    image: "/lovable-uploads/51fffb3d-2922-49c8-96a6-40d24de9796f.jpg",
+    icon: "wellness",
+    slug: "filing-itr-senior-citizens-simple-guide-tax-benefits"
+  },
+  {
+    id: "4",
     title: "NRI Guide to Long-Distance Senior Care",
     category: "Wellness",
     date: "May 18, 2024",
@@ -44,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     slug: "nri-guide-senior-care"
   },
   {
-    id: "4",
+    id: "5",
     title: "How We Designed Care Sanctum for NRIs",
     category: "Stories",
     date: "May 21, 2024",
