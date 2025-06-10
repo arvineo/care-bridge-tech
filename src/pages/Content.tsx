@@ -12,6 +12,22 @@ const Content = () => {
               Join Our Community
             </h1>
             
+            {/* Move the CTA button to the top */}
+            <div className="bg-purple-50 p-6 rounded-lg mb-8">
+              <h2 className="text-2xl font-semibold text-primary mb-4">
+                Ready to Get Started?
+              </h2>
+              <p className="mb-4">
+                Contact us to learn more about joining our community and how Care Sanctum can help you provide the best care for your loved ones.
+              </p>
+              <a 
+                href="https://chat.whatsapp.com/IMVCZjM0rVJCkmR4cs3nl4" 
+                className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+              >
+                Join Free Community
+              </a>
+            </div>
+            
             <div className="text-lg text-gray-600 space-y-6">
               <p>
                 Welcome to the Care Sanctum community! We're building a supportive network of families, caregivers, and seniors who believe in the power of technology to enhance senior care.
@@ -32,21 +48,6 @@ const Content = () => {
               <p>
                 Our community is a place where families can connect, share their experiences, and learn from one another. Whether you're an NRI looking after loved ones back home or a local caregiver seeking better solutions, you'll find valuable support and resources here.
               </p>
-              
-              <div className="bg-purple-50 p-6 rounded-lg mt-8">
-                <h2 className="text-2xl font-semibold text-primary mb-4">
-                  Ready to Get Started?
-                </h2>
-                <p className="mb-4">
-                  Contact us to learn more about joining our community and how Care Sanctum can help you provide the best care for your loved ones.
-                </p>
-                <a 
-                  href="https://chat.whatsapp.com/IMVCZjM0rVJCkmR4cs3nl4" 
-                  className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
-                >
-                  Join Free Community
-                </a>
-              </div>
             </div>
           </div>
         </div>
