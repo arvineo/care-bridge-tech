@@ -1,4 +1,3 @@
-
 import { useParams, Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
@@ -149,13 +148,9 @@ const BlogPost = () => {
     <p>Together, we can ensure that every senior has the tools they need to thrive. Your loved ones deserve the best, and with the right technology, you can help them achieve a safe and fulfilling life.</p>
   `;
 
-  // Content for the ITR Filing blog post with images
+  // Content for the ITR Filing blog post without images except CareSanctum health overview
   const itrFilingContent = `
     <p>Are you feeling intimidated by the thought of filing your Income Tax Return (ITR)? You're not alone! Many senior citizens find the process challenging, but it doesn't have to be. With a little knowledge about the benefits available to you, filing ITR for senior citizens can become straightforward.</p>
-    
-    <div class="my-8 rounded-lg overflow-hidden">
-      <img src="/lovable-uploads/1db71012-aaa3-4d8e-b3ee-5a955eadb071.png" alt="Senior citizen reviewing tax documents" class="w-full h-auto object-cover" />
-    </div>
     
     <p>In this blog, we'll simplify the ITR for senior citizens in India and show you how CareSanctum's services can improve your health and well-being during tax season.</p>
     
@@ -164,10 +159,6 @@ const BlogPost = () => {
     
     <h2>Benefits for Senior Citizens in Income Tax Filing</h2>
     <p>Senior citizens enjoy several tax benefits designed to reduce their tax burden and simplify the filing process:</p>
-    
-    <div class="my-8 rounded-lg overflow-hidden">
-      <img src="/lovable-uploads/7275f6a7-2f45-48a3-b6b0-0f5f29d1ca7c.png" alt="Tax benefits calculation for seniors" class="w-full h-auto object-cover" />
-    </div>
     
     <p><strong>Higher Income Tax Exemption Limits:</strong> For FY 2024-25, the exemption limit under the old regime for senior citizens is ₹300,000, compared to ₹250,000 for regular taxpayers. This means more of your income is tax-free.</p>
     
@@ -188,10 +179,6 @@ const BlogPost = () => {
     <p><strong>Tax-Free Withdrawals from National Savings Scheme (NSS):</strong> Starting August 29, 2024, withdrawals from NSS will be tax-free, providing additional financial relief.</p>
     
     <h2>Simple Steps to File Your ITR</h2>
-    
-    <div class="my-8 rounded-lg overflow-hidden">
-      <img src="/lovable-uploads/69165008-873b-4a06-900c-83f10a11d07d.png" alt="Step by step ITR filing process" class="w-full h-auto object-cover" />
-    </div>
     
     <p><strong>Pick the right income tax form for senior citizens</strong></p>
     <p>For most seniors, ITR-1 works if your income is from salary, pension, one house property, and interest.</p>
@@ -235,10 +222,6 @@ const BlogPost = () => {
     <p><strong>Community Support:</strong> Join a network of seniors and caregivers who share experiences, providing a sense of belonging.</p>
     
     <p><strong>Travel Companion:</strong> Our travel companions assist seniors during travel, ensuring safety and comfort.</p>
-    
-    <div class="my-8 rounded-lg overflow-hidden">
-      <img src="/lovable-uploads/c0e8a5eb-8a7c-47cd-8539-e8c485e65196.png" alt="Senior citizens using health technology and support services" class="w-full h-auto object-cover" />
-    </div>
     
     <h2>Conclusion</h2>
     <p>Filing your ITR as a senior citizen doesn't have to be stressful. By understanding the benefits available to you and following a few simple steps, you can follow the process with ease. Remember, we are here to support you with comprehensive care solutions that prioritize your well-being.</p>
