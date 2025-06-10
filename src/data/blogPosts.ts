@@ -39,7 +39,7 @@ export const blogPosts: BlogPost[] = [
     category: "Wellness",
     date: "June 8, 2025",
     description: "A comprehensive guide to filing Income Tax Returns for senior citizens, including tax benefits, exemptions, and how CareSanctum's services can support your well-being during tax season.",
-    image: "/lovable-uploads/51fffb3d-2922-49c8-96a6-40d24de9796f.jpg",
+    image: "https://images.unsplash.com/photo-1554224155-6726b3ff858f?ixlib=rb-4.0.3&auto=format&fit=crop&w=2070&q=80",
     icon: "wellness",
     slug: "filing-itr-senior-citizens-simple-guide-tax-benefits"
   },
