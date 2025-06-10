@@ -1,4 +1,3 @@
-
 import Navbar from "../components/Navbar";
 
 const Content = () => {
@@ -13,16 +12,16 @@ const Content = () => {
             </h1>
             
             {/* Move the CTA button to the top */}
-            <div className="bg-purple-50 p-6 rounded-lg mb-8">
+            <div className="bg-purple-50 p-6 rounded-lg mb-8 text-center">
               <h2 className="text-2xl font-semibold text-primary mb-4">
                 Ready to Get Started?
               </h2>
-              <p className="mb-4">
+              <p className="mb-6">
                 Contact us to learn more about joining our community and how Care Sanctum can help you provide the best care for your loved ones.
               </p>
               <a 
                 href="https://chat.whatsapp.com/IMVCZjM0rVJCkmR4cs3nl4" 
-                className="inline-block bg-primary text-white px-6 py-3 rounded-lg hover:bg-primary/90 transition-colors"
+                className="inline-block bg-primary text-white px-8 py-4 text-lg font-bold rounded-lg hover:bg-primary/90 transition-colors"
               >
                 Join Free Community
               </a>
