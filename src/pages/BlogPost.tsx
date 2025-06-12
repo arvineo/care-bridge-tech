@@ -148,7 +148,7 @@ const BlogPost = () => {
     <p>Together, we can ensure that every senior has the tools they need to thrive. Your loved ones deserve the best, and with the right technology, you can help them achieve a safe and fulfilling life.</p>
   `;
 
-  // Content for the ITR Filing blog post without images except CareSanctum health overview
+  // Content for the ITR Filing blog post with added internal links
   const itrFilingContent = `
     <p>Are you feeling intimidated by the thought of filing your Income Tax Return (ITR)? You're not alone! Many senior citizens find the process challenging, but it doesn't have to be. With a little knowledge about the benefits available to you, filing ITR for senior citizens can become straightforward.</p>
     
@@ -213,9 +213,9 @@ const BlogPost = () => {
     
     <p><strong>Care Manager Visits:</strong> Regular checkups and personalized care plans keep you organized and informed about your health.</p>
     
-    <p><strong>Emergency Response System:</strong> With our SOS alarm for elderly, you can get medical assistance within minutes, ensuring your safety.</p>
+    <p><strong>Emergency Response System:</strong> With our <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">SOS alarm for elderly</a>, you can get medical assistance within minutes, ensuring your safety.</p>
     
-    <p><strong>Health Monitoring Wearables:</strong> Our health devices for seniors, including a health monitor watch, help you track your vitals and prevent crises.</p>
+    <p><strong>Health Monitoring Wearables:</strong> Our <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring devices</a>, including a health monitor watch, help you track your vitals and prevent crises.</p>
     
     <p><strong>Concierge Assistance:</strong> We offer support for grocery shopping, travel arrangements, and lifestyle needs to make your daily life easier.</p>
     
@@ -226,7 +226,7 @@ const BlogPost = () => {
     <h2>Conclusion</h2>
     <p>Filing your ITR as a senior citizen doesn't have to be stressful. By understanding the benefits available to you and following a few simple steps, you can follow the process with ease. Remember, we are here to support you with comprehensive care solutions that prioritize your well-being.</p>
     
-    <p>We hope we were able to simplify the steps of tax filing. CareSactum is ready to support your well-being, focusing primarily on health, relaying correct and relevant information, and keeping you at ease.</p>
+    <p>We hope we were able to simplify the steps of tax filing. CareSactum is ready to support your well-being, focusing primarily on health, relaying correct and relevant information, and keeping you at ease with our advanced <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a>.</p>
     
     <p>Contact us today to learn more about our services and how we can support you in achieving a healthier, happier life!</p>
   `;
