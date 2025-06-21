@@ -1,4 +1,5 @@
 import { useParams, Link } from "react-router-dom";
+import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
 import { ArrowLeft } from "lucide-react";
@@ -9,6 +10,55 @@ import { blogPosts } from "@/data/blogPosts";
 const BlogPost = () => {
   const { slug } = useParams<{ slug: string }>();
   const post = blogPosts.find(post => post.slug === slug);
+
+  // Set meta title and description based on post slug
+  useEffect(() => {
+    if (!slug) return;
+
+    let metaTitle = "";
+    let metaDescription = "";
+
+    switch (slug) {
+      case "emergency-protocols-care-sanctum-reacts":
+        metaTitle = "Emergency Protocols | sos alarm for elderly | CareSanctum";
+        metaDescription = "Learn how CareSanctum emergency protocols and SOS Alarm for Elderly ensure fast, reliable help for elderly parents during health crises—24/7 protection at home.";
+        break;
+      case "why-every-senior-needs-sos-alarm-health-monitoring":
+        metaTitle = "Why Seniors Need SOS Alarm & Health Monitoring Devices";
+        metaDescription = "Discover how SOS alarms and health monitoring devices from CareSanctum protect seniors, offering 24/7 safety, peace of mind, and early health alerts.";
+        break;
+      case "filing-itr-senior-citizens-simple-guide-tax-benefits":
+        metaTitle = "Simple ITR Filing Guide for Senior Citizens | CareSanctum";
+        metaDescription = "A simple guide to ITR filing for senior citizens in India. Learn about tax benefits, exemptions & how to file returns with ease and clarity.";
+        break;
+      case "nri-guide-senior-care":
+        metaTitle = "NRI Guide to Senior Care in India | Care sanctum";
+        metaDescription = "Worried about aging parents in India? This Nri parents care India covers senior care tips, remote health monitoring, and how CareSanctum ensures 24/7 parent support.";
+        break;
+      case "how-we-designed-care-sanctum-for-nris":
+        metaTitle = "How Care Sanctum Helps NRI Parents Care India | Senior Care";
+        metaDescription = "Care Sanctum supports NRI families in caring for aging parents in India with health monitoring, SOS alarms, and personalized home-based senior care.";
+        break;
+      default:
+        metaTitle = post?.title || "Blog Post | CareSanctum";
+        metaDescription = post?.description || "Read our latest blog post about senior care and health monitoring.";
+    }
+
+    // Update document title
+    document.title = metaTitle;
+
+    // Update meta description
+    const metaDescriptionElement = document.querySelector('meta[name="description"]');
+    if (metaDescriptionElement) {
+      metaDescriptionElement.setAttribute('content', metaDescription);
+    } else {
+      // Create meta description if it doesn't exist
+      const newMetaDescription = document.createElement('meta');
+      newMetaDescription.name = 'description';
+      newMetaDescription.content = metaDescription;
+      document.head.appendChild(newMetaDescription);
+    }
+  }, [slug, post]);
 
   // Content for the Emergency Protocols post
   const emergencyProtocolsContent = `
