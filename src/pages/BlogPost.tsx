@@ -27,6 +27,10 @@ const BlogPost = () => {
         metaTitle = "Why Seniors Need SOS Alarm & Health Monitoring Devices";
         metaDescription = "Discover how SOS alarms and health monitoring devices from CareSanctum protect seniors, offering 24/7 safety, peace of mind, and early health alerts.";
         break;
+      case "why-every-senior-needs-sos-alarm-at-home":
+        metaTitle = "Why Every Senior Needs an SOS Alarm at Home | CareSanctum";
+        metaDescription = "Learn through Mrs. Patel's story why SOS alarms are essential for senior safety at home, providing immediate emergency assistance and peace of mind for families.";
+        break;
       case "filing-itr-senior-citizens-simple-guide-tax-benefits":
         metaTitle = "Simple ITR Filing Guide for Senior Citizens | CareSanctum";
         metaDescription = "A simple guide to ITR filing for senior citizens in India. Learn about tax benefits, exemptions & how to file returns with ease and clarity.";
@@ -196,6 +200,81 @@ const BlogPost = () => {
     <p>Visit <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">Caresanctum</a> now to learn more about our innovative <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a> and how we can help you create a safer, healthier environment for your loved ones.</p>
     
     <p>Together, we can ensure that every senior has the tools they need to thrive. Your loved ones deserve the best, and with the right technology, you can help them achieve a safe and fulfilling life.</p>
+  `;
+
+  // Content for the new SOS Alarm at Home blog post with images
+  const sosAlarmAtHomeContent = `
+    <p>Mrs. Patel, a spirited 75-year-old grandmother, went about her daily routine when she suddenly slipped in her kitchen. Unable to get up, she felt a wave of panic. Luckily, she had an <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">SOS alarm for elderly</a> installed. With a simple press of the button, she instantly alerted her family and emergency services. Within minutes, help arrived, ensuring her safety and peace of mind.</p>
+    
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/b6ba1f1a-506b-4e58-9dff-57be8769a6c8.jpg" alt="Emergency response system for seniors" class="w-full h-auto object-cover" />
+    </div>
+
+    <p>Stories like Mrs. Patel's are common and reflect a reality faced by millions of seniors living independently. As people age, their risk of falls and medical emergencies increases. Many seniors prefer to stay in their homes rather than move to assisted living facilities, valuing independence and familiarity. However, this independence also increases vulnerability because emergency help may not always be immediately available.</p>
+
+    <p>This is where an SOS alarm becomes indispensable for safe senior living. Today's advanced <a href="https://caresanctum.com/tech" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health devices for seniors</a> include SOS alarms as essential tools to provide immediate assistance during emergencies, improving response times and potentially saving lives.</p>
+
+    <h2>What Is an SOS Alarm and How Does It Work?</h2>
+    <p>An SOS alarm is a compact, easy-to-use device designed specifically to alert others in case of emergencies. The primary function is simple: with a push of a button, the device sends a distress signal to a pre-set list of contacts, emergency services, or monitoring centers. This instant alert lets caregivers or loved ones know help is needed, allowing them to respond quickly.</p>
+
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/6e367f26-4d44-4c31-b537-7010d8879134.jpg" alt="Advanced health monitoring technology for seniors" class="w-full h-auto object-cover" />
+    </div>
+
+    <p>SOS alarms come in various forms:</p>
+    <ul>
+      <li>Wearable pendants or wristbands,</li>
+      <li>Wall-mounted devices,</li>
+      <li>Mobile app versions linked to wearable tech.</li>
+    </ul>
+
+    <h2>Why SOS Alarms Are Essential for Seniors</h2>
+    
+    <h3>1. Immediate Emergency Assistance</h3>
+    <p>Time is critical during medical emergencies such as falls, heart attacks, or strokes. Many seniors can be immobilized or unconscious and unable to call for help. An SOS alarm ensures that all it takes is a button press to summon help instantly.</p>
+
+    <h3>2. Peace of Mind for Seniors and Their Families</h3>
+    <p>Knowing that help is just a button away provides immense peace of mind for both seniors and their families. Loved ones can feel reassured that even if they are not physically present, their senior family members have a reliable way to reach out in times of need.</p>
+
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/fdbaf9b0-d2ca-45f9-90e1-875563374166.jpg" alt="Senior using smart health monitoring device" class="w-full h-auto object-cover" />
+    </div>
+
+    <h3>3. Support for Independent Living</h3>
+    <p>Seniors cherish their independence, and an SOS alarm helps them maintain it safely. They don't need to rely on others constantly or feel trapped in their homes. This device enables seniors to live with confidence, knowing they have a lifeline in emergencies.</p>
+
+    <h2>What to Look for in a Good SOS Alarm for Elderly</h2>
+    <p>Choosing the right SOS alarm requires understanding the specific needs of the senior user and the features of each device. Here are key factors to consider:</p>
+
+    <p><strong>Ease of Use:</strong> The device should be simple to operate with a large, easy-to-press button, suitable for seniors with limited mobility or vision.</p>
+
+    <p><strong>Wearability:</strong> Many seniors prefer wearables such as pendants or wristbands that they can carry around all day and night.</p>
+
+    <p><strong>Automatic Fall Detection:</strong> This feature can detect a fall even if the senior cannot press the button manually.</p>
+
+    <p><strong>Two-way Communication:</strong> Some SOS alarms have built-in speakers and microphones to allow seniors to communicate directly with responders.</p>
+
+    <p><strong>Battery Life & Alerts:</strong> Long battery life and low battery alerts ensure the device is always ready in emergencies.</p>
+
+    <div class="my-8 rounded-lg overflow-hidden">
+      <img src="/lovable-uploads/42c4c59f-1f60-43d2-a4af-989e702b63f0.jpg" alt="Smart wearable devices for health monitoring" class="w-full h-auto object-cover" />
+    </div>
+
+    <h2>Trusted SOS Alarms and Health Monitoring Devices with CareSanctum</h2>
+    <p>At CareSanctum, we understand the crucial role that an SOS alarm for elderly plays in safeguarding seniors. Our devices are thoughtfully designed with simplicity, reliability, and safety at their core.</p>
+
+    <p>We offer a range of health devices for seniors, combining the best technology with user-friendly features made for everyday use.</p>
+
+    <p>Our <a href="https://caresanctum.com/services" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">health monitoring device</a> not only helps seniors stay connected during emergencies but also keeps caregivers updated on their loved ones' well-being.</p>
+
+    <h2>Final Thoughts</h2>
+    <p>Every senior deserves to feel safe and supported in their own home. An SOS alarm for elderly is more than just a gadget—it is a lifeline that connects them to immediate help when it matters most.</p>
+
+    <p>Alongside other health monitoring devices, SOS alarms form a vital safety net that protects dignity, promotes independence, and saves lives.</p>
+
+    <p>Waiting for an emergency before taking action could have devastating consequences. Investing in an SOS alarm today is the first step in creating a safer, more caring environment for the seniors you love.</p>
+
+    <p>Ready to protect your loved ones with trust? Visit <a href="https://caresanctum.com/" target="_blank" rel="noopener noreferrer" class="text-secondary hover:underline">CareSanctum</a> to explore our full range of services and plans. Give your family the priceless gift of safety and peace of mind.</p>
   `;
 
   // Content for the ITR Filing blog post with added internal links
@@ -396,6 +475,8 @@ const BlogPost = () => {
     postContent = emergencyProtocolsContent;
   } else if (post.slug === "why-every-senior-needs-sos-alarm-health-monitoring") {
     postContent = sosAlarmContent;
+  } else if (post.slug === "why-every-senior-needs-sos-alarm-at-home") {
+    postContent = sosAlarmAtHomeContent;
   } else if (post.slug === "filing-itr-senior-citizens-simple-guide-tax-benefits") {
     postContent = itrFilingContent;
   } else if (post.slug === "nri-guide-senior-care") {

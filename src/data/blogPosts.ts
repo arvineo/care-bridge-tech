@@ -35,6 +35,16 @@ export const blogPosts: BlogPost[] = [
   },
   {
     id: "3",
+    title: "Why Every Senior Needs an SOS Alarm at Home",
+    category: "Health",
+    date: "June 25, 2025",
+    description: "Learn through Mrs. Patel's story why SOS alarms are essential for senior safety at home, providing immediate emergency assistance and peace of mind for families.",
+    image: "/lovable-uploads/fdbaf9b0-d2ca-45f9-90e1-875563374166.jpg",
+    icon: "health",
+    slug: "why-every-senior-needs-sos-alarm-at-home"
+  },
+  {
+    id: "4",
     title: "Filing ITR for Senior Citizens: A Simple Guide to Tax Benefits",
     category: "Wellness",
     date: "June 8, 2025",
@@ -44,7 +54,7 @@ export const blogPosts: BlogPost[] = [
     slug: "filing-itr-senior-citizens-simple-guide-tax-benefits"
   },
   {
-    id: "4",
+    id: "5",
     title: "NRI Guide to Long-Distance Senior Care",
     category: "Wellness",
     date: "May 18, 2024",
@@ -54,7 +64,7 @@ export const blogPosts: BlogPost[] = [
     slug: "nri-guide-senior-care"
   },
   {
-    id: "5",
+    id: "6",
     title: "How We Designed Care Sanctum for NRIs",
     category: "Stories",
     date: "May 21, 2024",
