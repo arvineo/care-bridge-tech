@@ -16,7 +16,7 @@ const StatsSection = () => {
                 
                 <p className="text-xl md:text-2xl font-semibold text-gray-900 leading-relaxed">
                   That's where <span className="font-bold text-gray-900">CareSanctum</span> steps in and solves this through 
-                  <span className="font-bold text-gray-900">technology, love, and care.</span>
+                  <span className="font-bold text-gray-900"> technology, love, and care.</span>
                 </p>
               </div>
             </div>
