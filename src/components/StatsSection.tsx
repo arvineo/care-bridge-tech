@@ -1,5 +1,5 @@
 const StatsSection = () => {
-  return <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+  return <section className="py-20 bg-gradient-to-b from-white to-gray-50 bg-amber-100">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
