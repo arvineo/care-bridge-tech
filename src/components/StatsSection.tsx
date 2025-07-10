@@ -1,6 +1,5 @@
 const StatsSection = () => {
-  return (
-    <section className="py-20 bg-gradient-to-b from-white to-gray-50">
+  return <section className="py-20 bg-gradient-to-b from-white to-gray-50">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto">
           <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 md:p-12">
@@ -9,8 +8,8 @@ const StatsSection = () => {
                 <p className="text-lg md:text-xl text-gray-800 leading-relaxed">
                   In India, <span className="font-bold text-gray-900">over 100 million seniors</span> live with daily safety concerns. 
                   The concern increases when <span className="font-bold text-gray-900">seniors are staying alone</span>, away from their children. 
-                  <span className="font-bold text-gray-900">Families worry constantly.</span> The current system 
-                  <span className="font-bold text-gray-900">fails when it matters most.</span>
+                  <span className="font-bold text-gray-900"> Families worry constantly.</span> The current system 
+                  <span className="font-bold text-gray-900"> fails when it matters most.</span>
                 </p>
                 
                 <div className="w-24 h-1 bg-gradient-to-r from-primary to-secondary mx-auto rounded-full"></div>
@@ -24,8 +23,6 @@ const StatsSection = () => {
           </div>
         </div>
       </div>
-    </section>
-  );
+    </section>;
 };
-
 export default StatsSection;
