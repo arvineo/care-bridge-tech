@@ -14,6 +14,7 @@ import BlogPost from "./pages/BlogPost";
 import Partnership from "./pages/Partnership";
 import Contact from "./pages/Contact";
 import Content from "./pages/Content";
+import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Plans from "./pages/Plans";
 import Sitemap from "./components/Sitemap";
@@ -32,6 +33,7 @@ const App = () => (
             <Route path="/tech" element={<Technology />} />
             <Route path="/services" element={<Services />} />
             <Route path="/plans" element={<Plans />} />
+            <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
             <Route path="/blog" element={<Blog />} />
             <Route path="/blog/:slug" element={<BlogPost />} />

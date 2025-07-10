@@ -11,6 +11,7 @@ const Navbar = () => {
     { name: "Technology", path: "/tech" },
     { name: "Services", path: "/services" },
     { name: "Plans", path: "/plans" },
+    { name: "About Us", path: "/about" },
     { name: "Events", path: "/events" },
     { name: "Blog", path: "/blog" },
     { name: "Contact", path: "/contact" },
@@ -20,12 +21,15 @@ const Navbar = () => {
     <nav className="fixed w-full bg-white z-50 shadow-sm">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          <Link to="/" className="flex items-center space-x-2">
+          <Link to="/" className="flex items-center space-x-3">
             <img 
               src="/lovable-uploads/1db71012-aaa3-4d8e-b3ee-5a955eadb071.png" 
               alt="CareSanctum Logo" 
               className="h-16 py-2" 
             />
+            <span className="text-sm text-primary font-medium hidden sm:block">
+              Where Tech Meets Compassionate Care
+            </span>
           </Link>
 
           {/* Desktop Navigation */}

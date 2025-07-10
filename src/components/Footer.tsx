@@ -1,5 +1,5 @@
 
-import { Facebook, Instagram, Linkedin, Twitter } from "lucide-react";
+import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Separator } from "./ui/separator";
 
 const Footer = () => {
@@ -34,17 +34,17 @@ const Footer = () => {
           <div>
             <h3 className="font-semibold text-lg mb-4">Connect</h3>
             <div className="flex space-x-4">
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="https://www.facebook.com/people/CareSanctum/61575537791364/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                 <Facebook className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
-                <Twitter className="h-5 w-5" />
-              </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="https://www.instagram.com/caresanctum/" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                 <Instagram className="h-5 w-5" />
               </a>
-              <a href="#" className="text-gray-300 hover:text-white">
+              <a href="https://in.linkedin.com/company/care-sanctum" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
                 <Linkedin className="h-5 w-5" />
+              </a>
+              <a href="https://www.youtube.com/@CareSanctum" target="_blank" rel="noopener noreferrer" className="text-gray-300 hover:text-white">
+                <Youtube className="h-5 w-5" />
               </a>
             </div>
           </div>
