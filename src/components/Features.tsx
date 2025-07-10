@@ -94,19 +94,26 @@ const Features = () => {
                       {feature.description}
                     </p>
                     
-                    {/* Details that appear on hover */}
-                    <div className={`transition-all duration-300 ${
+                    {/* Details that appear on hover with fancy animation */}
+                    <div className={`transition-all duration-500 ease-in-out transform ${
                       hoveredFeature === feature.title 
-                        ? 'max-h-96 opacity-100' 
-                        : 'max-h-0 opacity-0'
+                        ? 'max-h-96 opacity-100 translate-y-0 scale-100' 
+                        : 'max-h-0 opacity-0 -translate-y-4 scale-95'
                     } overflow-hidden`}>
-                      <div className="bg-gray-50 p-4 rounded-lg">
-                        <h4 className="font-medium text-primary mb-2">Includes:</h4>
-                        <ul className="text-sm text-gray-600 space-y-1">
+                      <div className="bg-gradient-to-br from-gray-50 to-white p-5 rounded-xl border border-gray-100 shadow-sm mt-4">
+                        <div className="flex items-center gap-2 mb-3">
+                          <div className="w-2 h-2 rounded-full bg-gradient-to-r from-primary to-secondary animate-pulse"></div>
+                          <h4 className="font-semibold text-primary">What's Included:</h4>
+                        </div>
+                        <ul className="text-sm text-gray-700 space-y-2">
                           {feature.details.map((detail, index) => (
-                            <li key={index} className="flex items-start">
-                              <span className="text-secondary mr-2">•</span>
-                              {detail}
+                            <li 
+                              key={index} 
+                              className="flex items-start group-hover:translate-x-1 transition-transform duration-300"
+                              style={{ animationDelay: `${index * 50}ms` }}
+                            >
+                              <div className="w-1.5 h-1.5 rounded-full bg-secondary mt-2 mr-3 flex-shrink-0"></div>
+                              <span className="leading-relaxed">{detail}</span>
                             </li>
                           ))}
                         </ul>

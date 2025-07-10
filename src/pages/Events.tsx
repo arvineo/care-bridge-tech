@@ -4,26 +4,48 @@ import Navbar from "@/components/Navbar";
 import { Card, CardContent } from "@/components/ui/card";
 import { Calendar } from "@/components/ui/calendar";
 
-const upcomingEvents = [
-  {
-    title: "Healthy Aging Webinar",
-    date: "April 15, 2025",
-    time: "11:00 AM IST",
-    description: "Join our expert panel for insights on maintaining health in senior years.",
-  },
-  {
-    title: "Tech & Seniors Workshop",
-    date: "April 20, 2025",
-    time: "3:00 PM IST",
-    description: "Learn how to use smart devices for better health monitoring.",
-  },
-  {
-    title: "Community Wellness Session",
-    date: "April 25, 2025",
-    time: "10:00 AM IST",
-    description: "Group session focusing on mental wellness and social connection.",
-  },
-];
+// Generate future dates dynamically
+const generateUpcomingEvents = () => {
+  const today = new Date();
+  const events = [
+    {
+      title: "Healthy Aging Webinar",
+      daysFromNow: 7,
+      time: "11:00 AM IST",
+      description: "Join our expert panel for insights on maintaining health in senior years.",
+    },
+    {
+      title: "Tech & Seniors Workshop", 
+      daysFromNow: 14,
+      time: "3:00 PM IST",
+      description: "Learn how to use smart devices for better health monitoring.",
+    },
+    {
+      title: "Community Wellness Session",
+      daysFromNow: 21,
+      time: "10:00 AM IST", 
+      description: "Group session focusing on mental wellness and social connection.",
+    },
+  ];
+
+  return events.map(event => {
+    const eventDate = new Date(today);
+    eventDate.setDate(today.getDate() + event.daysFromNow);
+    
+    const formattedDate = eventDate.toLocaleDateString('en-US', {
+      month: 'long',
+      day: 'numeric',
+      year: 'numeric'
+    });
+
+    return {
+      ...event,
+      date: formattedDate
+    };
+  });
+};
+
+const upcomingEvents = generateUpcomingEvents();
 
 const Events = () => {
   useEffect(() => {
