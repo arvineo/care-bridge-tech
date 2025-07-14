@@ -1,7 +1,8 @@
 import { useEffect } from "react";
+import { Link } from "react-router-dom";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { Shield, Siren, Monitor, User, Phone, MapPin, AlertTriangle, Clock, Users, Headphones, Home, Zap, Wifi, Heart, ArrowRight, ArrowDown, Bell, Flame, Wind } from "lucide-react";
+import { Shield, Siren, Monitor, User, Phone, MapPin, AlertTriangle, Clock, Users, Headphones, Home, Zap, Wifi, Heart, ArrowRight, ArrowDown, Bell, Flame, Wind, Radar } from "lucide-react";
 const Technology = () => {
   useEffect(() => {
     document.title = "CareSanctum Safety Ecosystem | Advanced Technology";
@@ -34,6 +35,12 @@ const Technology = () => {
     location: "Wearable",
     color: "text-blue-600",
     bgColor: "bg-blue-100"
+  }, {
+    name: "Motion Sensor",
+    icon: Radar,
+    location: "Hallway",
+    color: "text-green-600",
+    bgColor: "bg-green-100"
   }];
   return <>
       <Navbar />
@@ -71,7 +78,7 @@ const Technology = () => {
                 </div>
 
                 {/* Devices Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
+                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
                   {devices.map((device, index) => <div key={device.name} className="relative">
                       <div className={`${device.bgColor} rounded-xl p-6 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
                         <div className="text-center">
@@ -88,10 +95,10 @@ const Technology = () => {
                         </div>
                       </div>
 
-                      {/* Arrow pointing to hub */}
-                      {index < 3 && <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2">
-                          <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
-                        </div>}
+                      {/* Arrow pointing down to hub - only show on last row */}
+                      <div className="flex justify-center mt-4">
+                        <ArrowDown className="h-6 w-6 text-primary animate-pulse" />
+                      </div>
                     </div>)}
                 </div>
 
@@ -123,66 +130,19 @@ const Technology = () => {
               </div>
 
               {/* Security Station Dashboard */}
-              <div className="bg-gray-900 rounded-3xl p-8 shadow-2xl">
+              <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
                 <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-white mb-2">Security Station Dashboard</h3>
-                  <p className="text-gray-300">Real-time emergency alert management system</p>
+                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Security Station Dashboard</h3>
+                  <p className="text-gray-600">Real-time emergency alert management system</p>
                 </div>
 
-                {/* Dashboard Interface */}
-                <div className="bg-gray-800 rounded-xl p-6 border-2 border-red-500 shadow-2xl">
-                  <div className="flex items-center justify-between mb-6">
-                    <div className="flex items-center gap-3">
-                      <div className="w-4 h-4 bg-red-500 rounded-full animate-pulse"></div>
-                      <span className="text-red-400 font-bold text-lg">EMERGENCY ALERT</span>
-                    </div>
-                    <div className="text-white text-sm">
-                      <Clock className="inline-block h-4 w-4 mr-1" />
-                      {new Date().toLocaleTimeString()}
-                    </div>
-                  </div>
-
-                  <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                    {/* Resident Details */}
-                    <div className="bg-gray-700 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                        <User className="h-5 w-5" />
-                        Resident Information
-                      </h4>
-                      <div className="space-y-2 text-gray-300">
-                        <p><span className="text-white font-medium">Name:</span> Rajesh Kumar</p>
-                        <p><span className="text-white font-medium">Flat:</span> A-401, Sunrise Apartments</p>
-                        <p><span className="text-white font-medium">Phone:</span> +91 98765 43210</p>
-                        <p><span className="text-white font-medium">Age:</span> 72 years</p>
-                      </div>
-                    </div>
-
-                    {/* Emergency Contacts */}
-                    <div className="bg-gray-700 rounded-lg p-4">
-                      <h4 className="text-white font-semibold mb-3 flex items-center gap-2">
-                        <Phone className="h-5 w-5" />
-                        Next of Kin (NOK)
-                      </h4>
-                      <div className="space-y-2 text-gray-300">
-                        <p><span className="text-white font-medium">Son:</span> Amit Kumar</p>
-                        <p><span className="text-white font-medium">Phone:</span> +91 98765 12345</p>
-                        <p><span className="text-white font-medium">Location:</span> Bangalore</p>
-                        <p><span className="text-white font-medium">Relation:</span> Primary Contact</p>
-                      </div>
-                    </div>
-                  </div>
-
-                  {/* Alert Details */}
-                  <div className="mt-6 bg-red-900/50 border border-red-500 rounded-lg p-4">
-                    <h4 className="text-red-400 font-semibold mb-2 flex items-center gap-2">
-                      <AlertTriangle className="h-5 w-5" />
-                      Alert Details
-                    </h4>
-                    <p className="text-white"><span className="text-red-400">Type:</span> Gas Leak Detected</p>
-                    <p className="text-white"><span className="text-red-400">Location:</span> Kitchen Area</p>
-                    <p className="text-white"><span className="text-red-400">Severity:</span> High Priority</p>
-                    <p className="text-white"><span className="text-red-400">Time:</span> {new Date().toLocaleString()}</p>
-                  </div>
+                {/* Dashboard Interface - Using the uploaded image */}
+                <div className="w-full max-w-5xl mx-auto">
+                  <img 
+                    src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" 
+                    alt="CareSanctum Emergency Response Dashboard" 
+                    className="w-full h-auto rounded-xl shadow-2xl border border-gray-300"
+                  />
                 </div>
 
                 {/* Response Actions */}
@@ -208,7 +168,7 @@ const Technology = () => {
                   Automated Escalation Process
                 </h3>
 
-                <div className="grid grid-cols-1 md:grid-cols-4 gap-6">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
                   {/* Step 1 */}
                   <div className="text-center">
                     <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -219,8 +179,6 @@ const Technology = () => {
                     <div className="text-xs text-blue-600 mt-2 font-medium">Response Time: 2 minutes</div>
                   </div>
 
-                  <ArrowRight className="hidden md:block h-6 w-6 text-primary mx-auto mt-8" />
-
                   {/* Step 2 */}
                   <div className="text-center">
                     <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
@@ -230,8 +188,6 @@ const Technology = () => {
                     <p className="text-sm text-gray-600">If no response within defined time</p>
                     <div className="text-xs text-orange-600 mt-2 font-medium">Trigger: 5 minutes</div>
                   </div>
-
-                  <ArrowRight className="hidden md:block h-6 w-6 text-primary mx-auto mt-8" />
 
                   {/* Step 3 */}
                   <div className="text-center">
@@ -276,9 +232,11 @@ const Technology = () => {
               Ready to Secure Your Loved Ones?
             </h2>
             <p className="text-purple-100 mb-8 max-w-2xl mx-auto">Experience the peace of mind that comes with CareSanctum's comprehensive safety and security ecosystem.</p>
-            <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg">
-              Get Started Today
-            </Button>
+            <Link to="/contact">
+              <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg">
+                Get Started Today
+              </Button>
+            </Link>
           </div>
         </section>
       </main>
