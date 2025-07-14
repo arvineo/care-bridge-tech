@@ -1,71 +1,41 @@
 import { useEffect } from "react";
 import Navbar from "@/components/Navbar";
 import { Button } from "@/components/ui/button";
-import { 
-  Shield, 
-  Siren, 
-  Monitor, 
-  User, 
-  Phone, 
-  MapPin, 
-  AlertTriangle, 
-  Clock,
-  Users,
-  Headphones,
-  Home,
-  Zap,
-  Wifi,
-  Heart,
-  ArrowRight,
-  ArrowDown,
-  Bell,
-  Flame,
-  Wind
-} from "lucide-react";
-
+import { Shield, Siren, Monitor, User, Phone, MapPin, AlertTriangle, Clock, Users, Headphones, Home, Zap, Wifi, Heart, ArrowRight, ArrowDown, Bell, Flame, Wind } from "lucide-react";
 const Technology = () => {
   useEffect(() => {
     document.title = "CareSanctum Safety Ecosystem | Advanced Technology";
-    
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
       metaDescription.setAttribute('content', 'Discover CareSanctum\'s integrated safety ecosystem - smart devices, real-time monitoring, and automated emergency response for senior safety.');
     }
   }, []);
-
-  const devices = [
-    {
-      name: "Gas Leak Detector",
-      icon: Wind,
-      location: "Kitchen",
-      color: "text-orange-600",
-      bgColor: "bg-orange-100"
-    },
-    {
-      name: "Smoke Detector", 
-      icon: Flame,
-      location: "Living Room",
-      color: "text-red-600",
-      bgColor: "bg-red-100"
-    },
-    {
-      name: "SOS Button",
-      icon: AlertTriangle,
-      location: "Bedroom",
-      color: "text-purple-600", 
-      bgColor: "bg-purple-100"
-    },
-    {
-      name: "Senior Smart Watch",
-      icon: Heart,
-      location: "Wearable",
-      color: "text-blue-600",
-      bgColor: "bg-blue-100"
-    }
-  ];
-
-  return (
-    <>
+  const devices = [{
+    name: "Gas Leak Detector",
+    icon: Wind,
+    location: "Kitchen",
+    color: "text-orange-600",
+    bgColor: "bg-orange-100"
+  }, {
+    name: "Smoke Detector",
+    icon: Flame,
+    location: "Living Room",
+    color: "text-red-600",
+    bgColor: "bg-red-100"
+  }, {
+    name: "SOS Button",
+    icon: AlertTriangle,
+    location: "Bedroom",
+    color: "text-purple-600",
+    bgColor: "bg-purple-100"
+  }, {
+    name: "Senior Smart Watch",
+    icon: Heart,
+    location: "Wearable",
+    color: "text-blue-600",
+    bgColor: "bg-blue-100"
+  }];
+  return <>
       <Navbar />
       <main className="pt-20">
         {/* Hero Section */}
@@ -102,8 +72,7 @@ const Technology = () => {
 
                 {/* Devices Grid */}
                 <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mt-12">
-                  {devices.map((device, index) => (
-                    <div key={device.name} className="relative">
+                  {devices.map((device, index) => <div key={device.name} className="relative">
                       <div className={`${device.bgColor} rounded-xl p-6 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
                         <div className="text-center">
                           <div className={`inline-flex items-center justify-center w-16 h-16 ${device.bgColor} rounded-full mb-4 border-2 border-white shadow-md`}>
@@ -120,13 +89,10 @@ const Technology = () => {
                       </div>
 
                       {/* Arrow pointing to hub */}
-                      {index < 3 && (
-                        <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2">
+                      {index < 3 && <div className="hidden lg:block absolute top-1/2 -right-3 transform -translate-y-1/2">
                           <ArrowRight className="h-6 w-6 text-primary animate-pulse" />
-                        </div>
-                      )}
-                    </div>
-                  ))}
+                        </div>}
+                    </div>)}
                 </div>
 
                 {/* Central Alarm Hub */}
@@ -309,17 +275,13 @@ const Technology = () => {
             <h2 className="text-3xl font-bold text-white mb-4">
               Ready to Secure Your Loved Ones?
             </h2>
-            <p className="text-purple-100 mb-8 max-w-2xl mx-auto">
-              Experience the peace of mind that comes with CareSanctum's comprehensive safety ecosystem.
-            </p>
+            <p className="text-purple-100 mb-8 max-w-2xl mx-auto">Experience the peace of mind that comes with CareSanctum's comprehensive safety and security ecosystem.</p>
             <Button className="bg-white text-primary hover:bg-gray-100 px-8 py-3 text-lg">
               Get Started Today
             </Button>
           </div>
         </section>
       </main>
-    </>
-  );
+    </>;
 };
-
 export default Technology;
