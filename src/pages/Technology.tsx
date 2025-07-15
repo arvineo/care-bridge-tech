@@ -13,31 +13,31 @@ const Technology = () => {
   }, []);
   const devices = [{
     name: "Gas Leak Detector",
-    icon: Wind,
+    image: "/lovable-uploads/edf55032-b429-437e-b9bc-8c545a69b946.png",
     location: "Kitchen",
     color: "text-orange-600",
     bgColor: "bg-orange-100"
   }, {
     name: "Smoke Detector",
-    icon: Flame,
+    image: "/lovable-uploads/c7b29839-f2c8-48b5-84ae-bb081580bb0c.png",
     location: "Living Room",
     color: "text-red-600",
     bgColor: "bg-red-100"
   }, {
     name: "SOS Button",
-    icon: AlertTriangle,
-    location: "Bedroom",
+    image: "/lovable-uploads/c2082bef-7a12-4b78-a8ca-dd9f990b7cfd.png",
+    location: "Bedroom, Washroom, Living Room, Kitchen",
     color: "text-purple-600",
     bgColor: "bg-purple-100"
   }, {
     name: "Senior Smart Watch",
-    icon: Heart,
-    location: "Wearable",
+    image: "/lovable-uploads/fd001da4-22b7-4188-98c3-63b7b6690585.png",
+    location: "Works inside or outside your home",
     color: "text-blue-600",
     bgColor: "bg-blue-100"
   }, {
     name: "Motion Sensor",
-    icon: Radar,
+    image: "/lovable-uploads/16efc6b1-cb11-4c73-867a-5a01d5141d25.png",
     location: "Hallway",
     color: "text-green-600",
     bgColor: "bg-green-100"
@@ -86,15 +86,15 @@ const Technology = () => {
                       {devices.map((device, index) => (
                         <div key={device.name} className="relative">
                           <div className={`${device.bgColor} rounded-xl p-4 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
-                            <div className="flex items-center gap-3">
-                              <div className={`inline-flex items-center justify-center w-12 h-12 ${device.bgColor} rounded-full border-2 border-white shadow-md`}>
-                                <device.icon className={`h-6 w-6 ${device.color}`} />
-                              </div>
-                              <div>
-                                <h4 className="font-bold text-gray-800 text-sm">{device.name}</h4>
-                                <p className="text-xs text-gray-600">{device.location}</p>
-                              </div>
-                            </div>
+                             <div className="flex items-center gap-3">
+                               <div className={`inline-flex items-center justify-center w-12 h-12 bg-white rounded-full border-2 border-white shadow-md overflow-hidden`}>
+                                 <img src={device.image} alt={device.name} className="w-8 h-8 object-contain" />
+                               </div>
+                               <div>
+                                 <h4 className="font-bold text-gray-800 text-sm">{device.name}</h4>
+                                 <p className="text-xs text-gray-600">{device.location}</p>
+                               </div>
+                             </div>
                             
                             {/* Alert Animation */}
                             <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse flex items-center justify-center">
@@ -120,16 +120,31 @@ const Technology = () => {
                     </div>
 
                     {/* Central Alarm Hub */}
-                    <div className="mb-8">
+                    <div className="mb-6">
                       <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-xl border-2 border-white">
                         <div className="text-center">
-                          <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-3 shadow-lg">
-                            <Shield className="h-8 w-8 text-primary" />
+                          <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-3 shadow-lg overflow-hidden">
+                            <img src="/lovable-uploads/b8cf7c01-6de8-47da-8cdd-e0ddd21a0386.png" alt="Central Alarm Hub" className="w-12 h-12 object-contain" />
                           </div>
                           <h4 className="text-lg font-bold text-white mb-2">Central Alarm Hub</h4>
                           <div className="flex items-center justify-center gap-2 bg-white/20 rounded-lg py-1 px-3">
                             <Siren className="h-4 w-4 text-yellow-300 animate-pulse" />
                             <span className="text-white text-sm font-medium">SIREN ACTIVE</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Security Guard Response */}
+                    <div className="mb-6">
+                      <div className="bg-white rounded-xl p-4 shadow-md border border-gray-200">
+                        <div className="flex items-center gap-3">
+                          <div className="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center">
+                            <User className="h-5 w-5 text-blue-600" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 text-sm">Security Guard Response</h4>
+                            <p className="text-xs text-gray-600">First responder - 2 min</p>
                           </div>
                         </div>
                       </div>
@@ -142,7 +157,7 @@ const Technology = () => {
                         <img 
                           src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" 
                           alt="CareSanctum Emergency Response Dashboard" 
-                          className="w-full h-24 object-cover transition-all duration-500 group-hover:h-64 group-hover:object-contain group-hover:bg-white group-hover:p-2"
+                          className="w-full h-24 object-cover transition-all duration-500 group-hover:h-96 group-hover:object-contain group-hover:bg-white group-hover:p-2"
                         />
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300"></div>
                         <div className="absolute bottom-2 left-2 text-xs text-white bg-black/50 px-2 py-1 rounded group-hover:hidden">
@@ -169,18 +184,6 @@ const Technology = () => {
                     <div className="space-y-6">
                       <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
                         <div className="flex items-center gap-3 mb-3">
-                          <div className="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center">
-                            <User className="h-5 w-5 text-blue-600" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-800 text-sm">Security Guard Response</h4>
-                            <p className="text-xs text-gray-600">First responder - 2 min</p>
-                          </div>
-                        </div>
-                      </div>
-
-                      <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
-                        <div className="flex items-center gap-3 mb-3">
                           <div className="bg-orange-100 rounded-full w-10 h-10 flex items-center justify-center">
                             <Clock className="h-5 w-5 text-orange-600" />
                           </div>
@@ -198,7 +201,7 @@ const Technology = () => {
                           </div>
                           <div>
                             <h4 className="font-semibold text-gray-800 text-sm">Emergency Services</h4>
-                            <p className="text-xs text-gray-600">NOK + Backend Team</p>
+                            <p className="text-xs text-gray-600">Next of Kin + Backend Team</p>
                           </div>
                         </div>
                       </div>
