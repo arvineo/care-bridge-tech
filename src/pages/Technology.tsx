@@ -60,7 +60,7 @@ const Technology = () => {
           </div>
         </section>
 
-        {/* Ecosystem Overview */}
+        {/* Three-Section Ecosystem Overview */}
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
@@ -68,135 +68,153 @@ const Technology = () => {
                 How Our Safety Ecosystem Works
               </h2>
 
-              {/* Home Layout with Devices */}
-              <div className="relative bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 mb-16 border-2 border-gray-200">
-                <div className="absolute top-4 left-4 bg-white px-4 py-2 rounded-lg shadow-sm">
-                  <div className="flex items-center gap-2">
-                    <Home className="h-5 w-5 text-primary" />
-                    <span className="font-semibold text-primary">Senior's Home</span>
-                  </div>
-                </div>
+              {/* Three Column Layout */}
+              <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
+                
+                {/* Column 1: Senior's Home */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-gray-50 to-gray-100 rounded-3xl p-8 border-2 border-gray-200 h-full">
+                    <div className="text-center mb-8">
+                      <div className="flex items-center justify-center gap-2 mb-4">
+                        <Home className="h-6 w-6 text-primary" />
+                        <h3 className="text-xl font-bold text-primary">Senior's Home</h3>
+                      </div>
+                    </div>
 
-                {/* Devices Grid */}
-                <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-6 mt-12">
-                  {devices.map((device, index) => <div key={device.name} className="relative">
-                      <div className={`${device.bgColor} rounded-xl p-6 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
-                        <div className="text-center">
-                          <div className={`inline-flex items-center justify-center w-16 h-16 ${device.bgColor} rounded-full mb-4 border-2 border-white shadow-md`}>
-                            <device.icon className={`h-8 w-8 ${device.color}`} />
+                    {/* Devices */}
+                    <div className="space-y-6">
+                      {devices.map((device, index) => (
+                        <div key={device.name} className="relative">
+                          <div className={`${device.bgColor} rounded-xl p-4 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
+                            <div className="flex items-center gap-3">
+                              <div className={`inline-flex items-center justify-center w-12 h-12 ${device.bgColor} rounded-full border-2 border-white shadow-md`}>
+                                <device.icon className={`h-6 w-6 ${device.color}`} />
+                              </div>
+                              <div>
+                                <h4 className="font-bold text-gray-800 text-sm">{device.name}</h4>
+                                <p className="text-xs text-gray-600">{device.location}</p>
+                              </div>
+                            </div>
+                            
+                            {/* Alert Animation */}
+                            <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse flex items-center justify-center">
+                              <Bell className="h-2 w-2 text-white" />
+                            </div>
                           </div>
-                          <h3 className="font-bold text-gray-800 mb-2">{device.name}</h3>
-                          <p className="text-sm text-gray-600">{device.location}</p>
                         </div>
-                        
-                        {/* Alert Animation */}
-                        <div className="absolute -top-2 -right-2 w-6 h-6 bg-red-500 rounded-full animate-pulse flex items-center justify-center">
-                          <Bell className="h-3 w-3 text-white" />
+                      ))}
+                    </div>
+                  </div>
+                  
+                  {/* Arrow to Security Station */}
+                  <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden lg:block">
+                    <ArrowRight className="h-8 w-8 text-primary animate-pulse" />
+                  </div>
+                </div>
+
+                {/* Column 2: Security Station */}
+                <div className="relative">
+                  <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200 h-full">
+                    <div className="text-center mb-8">
+                      <h3 className="text-xl font-bold text-primary">Security Station</h3>
+                    </div>
+
+                    {/* Central Alarm Hub */}
+                    <div className="mb-8">
+                      <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-xl border-2 border-white">
+                        <div className="text-center">
+                          <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-3 shadow-lg">
+                            <Shield className="h-8 w-8 text-primary" />
+                          </div>
+                          <h4 className="text-lg font-bold text-white mb-2">Central Alarm Hub</h4>
+                          <div className="flex items-center justify-center gap-2 bg-white/20 rounded-lg py-1 px-3">
+                            <Siren className="h-4 w-4 text-yellow-300 animate-pulse" />
+                            <span className="text-white text-sm font-medium">SIREN ACTIVE</span>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                    {/* Dashboard Preview */}
+                    <div className="group">
+                      <h4 className="text-sm font-semibold text-gray-800 mb-3 text-center">Security Dashboard</h4>
+                      <div className="relative overflow-hidden rounded-lg border border-gray-300 cursor-pointer">
+                        <img 
+                          src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" 
+                          alt="CareSanctum Emergency Response Dashboard" 
+                          className="w-full h-24 object-cover transition-all duration-500 group-hover:h-64 group-hover:object-contain group-hover:bg-white group-hover:p-2"
+                        />
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300"></div>
+                        <div className="absolute bottom-2 left-2 text-xs text-white bg-black/50 px-2 py-1 rounded group-hover:hidden">
+                          Hover to enlarge
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  
+                  {/* Arrow to Backend */}
+                  <div className="absolute -right-4 top-1/2 transform -translate-y-1/2 z-10 hidden lg:block">
+                    <ArrowRight className="h-8 w-8 text-primary animate-pulse" />
+                  </div>
+                </div>
+
+                {/* Column 3: CareSanctum Backend */}
+                <div className="relative">
+                  <div className="bg-gradient-to-br from-purple-50 to-purple-100 rounded-3xl p-8 border-2 border-purple-200 h-full">
+                    <div className="text-center mb-8">
+                      <h3 className="text-xl font-bold text-primary">CareSanctum Backend</h3>
+                    </div>
+
+                    {/* Escalation Process */}
+                    <div className="space-y-6">
+                      <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="bg-blue-100 rounded-full w-10 h-10 flex items-center justify-center">
+                            <User className="h-5 w-5 text-blue-600" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 text-sm">Security Guard Response</h4>
+                            <p className="text-xs text-gray-600">First responder - 2 min</p>
+                          </div>
                         </div>
                       </div>
 
-                      {/* Arrow pointing down to hub - only show on last row */}
-                      <div className="flex justify-center mt-4">
-                        <ArrowDown className="h-6 w-6 text-primary animate-pulse" />
+                      <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="bg-orange-100 rounded-full w-10 h-10 flex items-center justify-center">
+                            <Clock className="h-5 w-5 text-orange-600" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 text-sm">Auto Escalation</h4>
+                            <p className="text-xs text-gray-600">If no response - 5 min</p>
+                          </div>
+                        </div>
                       </div>
-                    </div>)}
-                </div>
 
-                {/* Central Alarm Hub */}
-                <div className="mt-12 flex justify-center">
-                  <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-8 shadow-2xl border-4 border-white max-w-sm">
-                    <div className="text-center">
-                      <div className="inline-flex items-center justify-center w-20 h-20 bg-white rounded-full mb-4 shadow-lg">
-                        <Shield className="h-10 w-10 text-primary" />
+                      <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
+                        <div className="flex items-center gap-3 mb-3">
+                          <div className="bg-red-100 rounded-full w-10 h-10 flex items-center justify-center">
+                            <Users className="h-5 w-5 text-red-600" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 text-sm">Emergency Services</h4>
+                            <p className="text-xs text-gray-600">NOK + Backend Team</p>
+                          </div>
+                        </div>
                       </div>
-                      <h3 className="text-xl font-bold text-white mb-2">Central Alarm Hub</h3>
-                      <p className="text-purple-100 text-sm mb-4">
-                        Receives alerts from all devices
-                      </p>
-                      
-                      {/* Siren Indicator */}
-                      <div className="flex items-center justify-center gap-2 bg-white/20 rounded-lg py-2 px-4">
-                        <Siren className="h-5 w-5 text-yellow-300 animate-pulse" />
-                        <span className="text-white font-medium">SIREN ACTIVATED</span>
+
+                      <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
+                        <div className="flex items-center gap-3">
+                          <div className="bg-green-100 rounded-full w-10 h-10 flex items-center justify-center">
+                            <Headphones className="h-5 w-5 text-green-600" />
+                          </div>
+                          <div>
+                            <h4 className="font-semibold text-gray-800 text-sm">Emergency Management</h4>
+                            <p className="text-xs text-gray-600">Coordinate response</p>
+                          </div>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                </div>
-
-                {/* Arrow to Dashboard */}
-                <div className="flex justify-center mt-8">
-                  <ArrowDown className="h-8 w-8 text-primary animate-bounce" />
-                </div>
-              </div>
-
-              {/* Security Station Dashboard */}
-              <div className="bg-white rounded-3xl p-8 shadow-2xl border border-gray-200">
-                <div className="text-center mb-8">
-                  <h3 className="text-2xl font-bold text-gray-800 mb-2">Security Station Dashboard</h3>
-                  <p className="text-gray-600">Real-time emergency alert management system</p>
-                </div>
-
-                {/* Dashboard Interface - Using the uploaded image */}
-                <div className="w-full max-w-5xl mx-auto">
-                  <img 
-                    src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" 
-                    alt="CareSanctum Emergency Response Dashboard" 
-                    className="w-full h-auto rounded-xl shadow-2xl border border-gray-300"
-                  />
-                </div>
-
-                {/* Response Actions */}
-                <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4">
-                  <Button className="bg-green-600 hover:bg-green-700 text-white py-3">
-                    <User className="h-5 w-5 mr-2" />
-                    Security Guard Response
-                  </Button>
-                  <Button className="bg-blue-600 hover:bg-blue-700 text-white py-3">
-                    <Phone className="h-5 w-5 mr-2" />
-                    Call NOK
-                  </Button>
-                  <Button className="bg-purple-600 hover:bg-purple-700 text-white py-3">
-                    <Headphones className="h-5 w-5 mr-2" />
-                    Backend Team Alert
-                  </Button>
-                </div>
-              </div>
-
-              {/* Escalation Flow */}
-              <div className="mt-16">
-                <h3 className="text-2xl font-bold text-center text-primary mb-12">
-                  Automated Escalation Process
-                </h3>
-
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-                  {/* Step 1 */}
-                  <div className="text-center">
-                    <div className="bg-blue-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <User className="h-8 w-8 text-blue-600" />
-                    </div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Security Guard</h4>
-                    <p className="text-sm text-gray-600">First responder receives alert</p>
-                    <div className="text-xs text-blue-600 mt-2 font-medium">Response Time: 2 minutes</div>
-                  </div>
-
-                  {/* Step 2 */}
-                  <div className="text-center">
-                    <div className="bg-orange-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Clock className="h-8 w-8 text-orange-600" />
-                    </div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Auto Escalation</h4>
-                    <p className="text-sm text-gray-600">If no response within defined time</p>
-                    <div className="text-xs text-orange-600 mt-2 font-medium">Trigger: 5 minutes</div>
-                  </div>
-
-                  {/* Step 3 */}
-                  <div className="text-center">
-                    <div className="bg-purple-100 rounded-full w-16 h-16 flex items-center justify-center mx-auto mb-4">
-                      <Users className="h-8 w-8 text-purple-600" />
-                    </div>
-                    <h4 className="font-semibold text-gray-800 mb-2">Full Escalation</h4>
-                    <p className="text-sm text-gray-600">NOK + Backend Response Team</p>
-                    <div className="text-xs text-purple-600 mt-2 font-medium">Emergency Services</div>
                   </div>
                 </div>
               </div>
