@@ -83,8 +83,7 @@ const Technology = () => {
 
                     {/* Devices */}
                     <div className="space-y-6">
-                      {devices.map((device, index) => (
-                        <div key={device.name} className="relative">
+                      {devices.map((device, index) => <div key={device.name} className="relative">
                           <div className={`${device.bgColor} rounded-xl p-4 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
                              <div className="flex items-center gap-3">
                                <div className={`inline-flex items-center justify-center w-12 h-12 bg-white rounded-full border-2 border-white shadow-md overflow-hidden`}>
@@ -101,8 +100,7 @@ const Technology = () => {
                               <Bell className="h-2 w-2 text-white" />
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        </div>)}
                     </div>
                   </div>
                   
@@ -154,11 +152,7 @@ const Technology = () => {
                     <div className="group">
                       <h4 className="text-sm font-semibold text-gray-800 mb-3 text-center">Security Dashboard</h4>
                       <div className="relative overflow-hidden rounded-lg border border-gray-300 cursor-pointer">
-                        <img 
-                          src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" 
-                          alt="CareSanctum Emergency Response Dashboard" 
-                          className="w-full h-24 object-cover transition-all duration-500 group-hover:h-96 group-hover:object-contain group-hover:bg-white group-hover:p-2"
-                        />
+                        <img src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" alt="CareSanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:h-96 group-hover:object-contain group-hover:bg-white group-hover:p-2" />
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300"></div>
                         <div className="absolute bottom-2 left-2 text-xs text-white bg-black/50 px-2 py-1 rounded group-hover:hidden">
                           Hover to enlarge
@@ -188,8 +182,8 @@ const Technology = () => {
                             <Clock className="h-5 w-5 text-orange-600" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-gray-800 text-sm">Auto Escalation</h4>
-                            <p className="text-xs text-gray-600">If no response - 5 min</p>
+                            <h4 className="font-semibold text-gray-800 text-sm">Auto Escalation To Our Backend Operations Team</h4>
+                            <p className="text-xs text-gray-600">If no response - 5 min or if there is a critical issue validated by security guard</p>
                           </div>
                         </div>
                       </div>
@@ -200,8 +194,8 @@ const Technology = () => {
                             <Users className="h-5 w-5 text-red-600" />
                           </div>
                           <div>
-                            <h4 className="font-semibold text-gray-800 text-sm">Emergency Services</h4>
-                            <p className="text-xs text-gray-600">Next of Kin + Backend Team</p>
+                            <h4 className="font-semibold text-gray-800 text-sm">Emergency Services Coordination</h4>
+                            <p className="text-xs text-gray-600">Next of Kin informed + Backend Team coordinates with ambulance or fire station, etc</p>
                           </div>
                         </div>
                       </div>
