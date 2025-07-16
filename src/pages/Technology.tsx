@@ -183,7 +183,7 @@ const Technology = () => {
                           </div>
                           <div>
                             <h4 className="font-semibold text-gray-800 text-sm">Auto Escalation To Our Backend Operations Team</h4>
-                            <p className="text-xs text-gray-600">If no response - 5 min or if there is a critical issue validated by security guard</p>
+                            <p className="text-xs text-gray-600">If no response in 5 min or if there is a critical issue validated by security guard</p>
                           </div>
                         </div>
                       </div>
