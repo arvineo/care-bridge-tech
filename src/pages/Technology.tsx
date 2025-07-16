@@ -84,16 +84,16 @@ const Technology = () => {
                     {/* Devices */}
                     <div className="space-y-6">
                       {devices.map((device, index) => <div key={device.name} className="relative">
-                          <div className={`${device.bgColor} rounded-xl p-4 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl`}>
-                             <div className="flex items-center gap-3">
-                               <div className={`inline-flex items-center justify-center w-12 h-12 bg-white rounded-full border-2 border-white shadow-md overflow-hidden`}>
-                                 <img src={device.image} alt={device.name} className="w-8 h-8 object-contain" />
-                               </div>
-                               <div>
-                                 <h4 className="font-bold text-gray-800 text-sm">{device.name}</h4>
-                                 <p className="text-xs text-gray-600">{device.location}</p>
-                               </div>
+                        <div className={`${device.bgColor} rounded-xl p-4 shadow-lg border-2 border-white transition-all hover:scale-105 hover:shadow-xl group`}>
+                           <div className="flex items-center gap-3">
+                             <div className={`inline-flex items-center justify-center w-12 h-12 bg-white rounded-full border-2 border-white shadow-md overflow-hidden relative cursor-pointer`}>
+                               <img src={device.image} alt={device.name} className="w-8 h-8 object-contain transition-all duration-500 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-48 group-hover:h-48 group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary" />
                              </div>
+                             <div>
+                               <h4 className="font-bold text-gray-800 text-sm">{device.name}</h4>
+                               <p className="text-xs text-gray-600">{device.location}</p>
+                             </div>
+                           </div>
                             
                             {/* Alert Animation */}
                             <div className="absolute -top-1 -right-1 w-4 h-4 bg-red-500 rounded-full animate-pulse flex items-center justify-center">
@@ -119,11 +119,11 @@ const Technology = () => {
 
                     {/* Central Alarm Hub */}
                     <div className="mb-6">
-                      <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-xl border-2 border-white">
-                        <div className="text-center">
-                          <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-3 shadow-lg overflow-hidden">
-                            <img src="/lovable-uploads/b8cf7c01-6de8-47da-8cdd-e0ddd21a0386.png" alt="Central Alarm Hub" className="w-12 h-12 object-contain" />
-                          </div>
+                       <div className="bg-gradient-to-br from-primary to-secondary rounded-xl p-6 shadow-xl border-2 border-white group">
+                         <div className="text-center">
+                           <div className="inline-flex items-center justify-center w-16 h-16 bg-white rounded-full mb-3 shadow-lg overflow-hidden relative cursor-pointer">
+                             <img src="/lovable-uploads/b8cf7c01-6de8-47da-8cdd-e0ddd21a0386.png" alt="Central Alarm Hub" className="w-12 h-12 object-contain transition-all duration-500 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-48 group-hover:h-48 group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary" />
+                           </div>
                           <h4 className="text-lg font-bold text-white mb-2">Central Alarm Hub</h4>
                           <div className="flex items-center justify-center gap-2 bg-white/20 rounded-lg py-1 px-3">
                             <Siren className="h-4 w-4 text-yellow-300 animate-pulse" />
@@ -152,7 +152,7 @@ const Technology = () => {
                     <div className="group">
                       <h4 className="text-sm font-semibold text-gray-800 mb-3 text-center">Security Dashboard</h4>
                       <div className="relative overflow-hidden rounded-lg border border-gray-300 cursor-pointer">
-                        <img src="/lovable-uploads/f3387bbc-9d19-417d-8dd9-7d9694337d12.png" alt="CareSanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:h-96 group-hover:object-contain group-hover:bg-white group-hover:p-2" />
+                        <img src="/lovable-uploads/6051146c-9732-4c2d-93eb-935c1df06056.png" alt="CareSanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:h-96 group-hover:object-contain group-hover:bg-white group-hover:p-2" />
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300"></div>
                         <div className="absolute bottom-2 left-2 text-xs text-white bg-black/50 px-2 py-1 rounded group-hover:hidden">
                           Hover to enlarge
@@ -200,17 +200,6 @@ const Technology = () => {
                         </div>
                       </div>
 
-                      <div className="bg-white rounded-xl p-4 shadow-md border border-purple-200">
-                        <div className="flex items-center gap-3">
-                          <div className="bg-green-100 rounded-full w-10 h-10 flex items-center justify-center">
-                            <Headphones className="h-5 w-5 text-green-600" />
-                          </div>
-                          <div>
-                            <h4 className="font-semibold text-gray-800 text-sm">Emergency Management</h4>
-                            <p className="text-xs text-gray-600">Coordinate response</p>
-                          </div>
-                        </div>
-                      </div>
                     </div>
                   </div>
                 </div>
