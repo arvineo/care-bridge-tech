@@ -152,7 +152,7 @@ const Technology = () => {
                     <div className="group">
                       <h4 className="text-sm font-semibold text-gray-800 mb-3 text-center">Security Dashboard</h4>
                       <div className="relative overflow-hidden rounded-lg border border-gray-300 cursor-pointer">
-                        <img src="/lovable-uploads/4496320f-0d11-4572-9131-e251d52f705c.png" alt="CareSanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-[800px] group-hover:h-[500px] group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary group-hover:object-contain" />
+                        <img src="/lovable-uploads/004983ea-1187-4263-b07f-9ac461c5182e.png" alt="CareSanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-[800px] group-hover:h-[500px] group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary group-hover:object-contain" />
                         <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300"></div>
                         <div className="absolute bottom-2 left-2 text-xs text-white bg-black/50 px-2 py-1 rounded group-hover:hidden">
                           Hover to enlarge
