@@ -156,11 +156,10 @@ const Technology = () => {
                       <h4 className="text-sm font-semibold text-gray-800 mb-3 text-center">Security Dashboard</h4>
                       <div className="relative overflow-hidden rounded-lg border border-gray-300 cursor-pointer">
                         <img 
-                          src="/lovable-uploads/e2fc5292-f0fa-4e65-a487-5ae4a16b1856.png" 
+                          src="/lovable-uploads/000510bb-072a-4b23-a8dd-3f5ccd80db8d.png" 
                           alt="Care Sanctum Emergency Response Dashboard" 
-                          className="w-full h-32 object-contain bg-gray-50 transition-all duration-300 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-auto group-hover:h-auto group-hover:max-w-[90vw] group-hover:max-h-[90vh] group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary group-hover:object-contain" 
+                          className="w-full h-32 object-contain bg-gray-50 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-auto group-hover:h-auto group-hover:max-w-[90vw] group-hover:max-h-[90vh] group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary group-hover:object-contain" 
                         />
-                        <div className="absolute inset-0 bg-black/5 group-hover:bg-black/20 group-hover:backdrop-blur-sm transition-all duration-300 pointer-events-none"></div>
                       </div>
                     </div>
                   </div>
