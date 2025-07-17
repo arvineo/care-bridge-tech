@@ -64,9 +64,12 @@ const Technology = () => {
         <section className="py-20 bg-white">
           <div className="container mx-auto px-4">
             <div className="max-w-7xl mx-auto">
-              <h2 className="text-3xl font-bold text-center text-primary mb-16">
+              <h2 className="text-3xl font-bold text-center text-primary mb-8">
                 How Our Safety Ecosystem Works
               </h2>
+              <p className="text-lg text-gray-600 text-center max-w-4xl mx-auto mb-16">
+                We integrate IoT and health tracking devices into a seamless ecosystem that monitors for abnormalities and triggers instant alerts. With real-time monitoring and an automated emergency response system, we ensure timely intervention, delivering help in under 4 minutes.
+              </p>
 
               {/* Three Column Layout */}
               <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 items-start">
@@ -152,11 +155,8 @@ const Technology = () => {
                     <div className="group">
                       <h4 className="text-sm font-semibold text-gray-800 mb-3 text-center">Security Dashboard</h4>
                       <div className="relative overflow-hidden rounded-lg border border-gray-300 cursor-pointer">
-                        <img src="/lovable-uploads/004983ea-1187-4263-b07f-9ac461c5182e.png" alt="CareSanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-[800px] group-hover:h-[500px] group-hover:z-50 group-hover:bg-white group-hover:p-4 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary group-hover:object-contain" />
-                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300"></div>
-                        <div className="absolute bottom-2 left-2 text-xs text-white bg-black/50 px-2 py-1 rounded group-hover:hidden">
-                          Hover to enlarge
-                        </div>
+                        <img src="/lovable-uploads/e2fc5292-f0fa-4e65-a487-5ae4a16b1856.png" alt="Care Sanctum Emergency Response Dashboard" className="w-full h-24 object-cover transition-all duration-500 group-hover:fixed group-hover:top-1/2 group-hover:left-1/2 group-hover:transform group-hover:-translate-x-1/2 group-hover:-translate-y-1/2 group-hover:w-[90vw] group-hover:h-[90vh] group-hover:max-w-[1200px] group-hover:max-h-[800px] group-hover:z-50 group-hover:bg-white group-hover:p-6 group-hover:rounded-lg group-hover:shadow-2xl group-hover:border-4 group-hover:border-primary group-hover:object-contain" />
+                        <div className="absolute inset-0 bg-black/10 group-hover:bg-transparent transition-all duration-300 pointer-events-none"></div>
                       </div>
                     </div>
                   </div>
