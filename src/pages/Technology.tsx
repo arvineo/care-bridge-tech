@@ -50,7 +50,7 @@ const Technology = () => {
           <div className="container mx-auto px-4">
             <div className="text-center mb-12">
               <h1 className="text-4xl md:text-5xl font-bold text-primary mb-6">
-                CareSanctum Safety Ecosystem
+                Care Sanctum Safety Ecosystem
               </h1>
               <p className="text-xl text-gray-600 max-w-3xl mx-auto">
                 A comprehensive network of smart devices working together to ensure senior safety, 
