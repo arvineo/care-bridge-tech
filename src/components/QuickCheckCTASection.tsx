@@ -3,7 +3,7 @@ import { ArrowRight } from "lucide-react";
 
 const QuickCheckCTASection = () => {
   return (
-    <section className="py-16 bg-gradient-to-b from-purple-50 to-white">
+    <section className="py-16 bg-gradient-to-b from-accent/20 to-background">
       <div className="container mx-auto px-4">
         <div className="max-w-5xl mx-auto rounded-2xl border bg-background p-8 md:p-12 text-center shadow-sm">
           <h3 className="text-2xl md:text-3xl font-bold text-primary">

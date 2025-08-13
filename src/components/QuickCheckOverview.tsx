@@ -3,7 +3,7 @@ import { Zap, HandHeart, Wallet, Globe } from "lucide-react";
 
 const QuickCheckOverview = () => {
   return (
-    <section id="quickcheck" className="py-20 bg-gradient-to-b from-white to-purple-50 scroll-mt-24">
+    <section id="quickcheck" className="py-20 bg-gradient-to-b from-background to-secondary/30 scroll-mt-24">
       <div className="container mx-auto px-4">
         <div className="max-w-4xl mx-auto text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-primary mb-4">

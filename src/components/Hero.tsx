@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 
 const Hero = () => {
   return (
-    <div className="relative overflow-hidden bg-gradient-to-b from-white to-purple-50 pt-32 pb-20">
+    <div className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-accent/30 pt-32 pb-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col text-left space-y-6 animate-fade-in">
@@ -45,7 +45,7 @@ const Hero = () => {
                       <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
                       <span className="text-sm font-medium">Active check-in alert</span>
                     </div>
-                    <div className="rounded-xl border bg-purple-50 p-4">
+                    <div className="rounded-xl border bg-gradient-to-br from-secondary/30 to-accent/20 p-4">
                       <div className="font-semibold text-primary mb-1">Welfare Check</div>
                       <p className="text-xs text-gray-600">We’re verifying their well‑being. You’ll get an update within 30 seconds.</p>
                     </div>
