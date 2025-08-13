@@ -16,10 +16,14 @@ const Hero = () => {
               When they can’t reach you, we step in to ensure they’re safe — so you can focus on what matters without the worry.
             </p>
 
+            <div className="bg-primary/10 rounded-lg p-3 mb-4 text-center">
+              <p className="text-sm font-medium text-primary">🎉 Limited Time: Get your first QuickCheck FREE!</p>
+            </div>
+
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button size="lg" className="w-full sm:w-auto" asChild>
                 <a href="#quickcheck">
-                  Get QuickCheck
+                  Get QuickCheck Trial Pack @ INR 50 Only
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>

@@ -39,7 +39,7 @@ const QuickCheckOverview = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" asChild>
-            <a href="#quickcheck">Start with QuickCheck Today</a>
+            <a href="#quickcheck">Get QuickCheck Trial Pack @ INR 50 Only</a>
           </Button>
         </div>
       </div>

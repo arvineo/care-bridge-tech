@@ -14,7 +14,7 @@ const QuickCheckCTASection = () => {
           </p>
           <Button size="lg" asChild>
             <a href="#quickcheck">
-              Get QuickCheck
+              Get QuickCheck Trial Pack @ INR 50 Only
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>
           </Button>
