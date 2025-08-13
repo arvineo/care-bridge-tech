@@ -1,65 +1,65 @@
 
 import { ArrowRight } from "lucide-react";
-import { Link } from "react-router-dom";
 import { Button } from "./ui/button";
-import { useState } from "react";
 
 const Hero = () => {
-  const [isExpanded, setIsExpanded] = useState(false);
-
-  const toggleContent = () => {
-    setIsExpanded(!isExpanded);
-  };
-
   return (
     <div className="relative overflow-hidden bg-gradient-to-b from-white to-purple-50 pt-32 pb-20">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
-          <div className="flex flex-col text-left space-y-8 animate-fade-in">
+          <div className="flex flex-col text-left space-y-6 animate-fade-in">
             <h1 className="text-4xl md:text-6xl font-bold text-primary">
-              Revolutionizing Senior Care with Technology
+              Peace of Mind in 30 Seconds – QuickCheck for Your Loved Ones
             </h1>
-            <div className="text-gray-600 animate-slide-up">
-              <p className="text-base">
-                At CareSanctum, we lead the senior care revolution with a tech-first, responsive approach, ensuring seniors' safety, independence, and wellness while giving families peace of mind.
-              </p>
-              
-              <div className={`overflow-hidden transition-all duration-300 ${
-                isExpanded ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-              }`}>
-                <p className="mt-4 text-base">
-                  We combine advanced technology with personalized care to address seniors' needs and offer a seamless experience. Our solutions empower seniors to lead enriched lives while staying connected with their loved ones. By anticipating challenges and delivering proactive care, we ensure the well-being of those who matter most, earning us the title of "Advanced 911 Service."
-                </p>
-                <p className="mt-4 text-base">
-                  Driven by a dedicated team of doctors, care providers, and tech innovators, Care Sanctum is committed to making this vision a reality. We ensure that every senior feels safe, valued, and cherished, delivering care with both heart and innovation.
-                </p>
-              </div>
-              
-              <button 
-                className="mt-3 text-secondary hover:text-primary transition-colors text-sm font-medium"
-                onClick={toggleContent}
-              >
-                {isExpanded ? '← Read less' : 'Read more →'}
-              </button>
-            </div>
-            
-            <div className="flex flex-col sm:flex-row gap-4">
-              <Link to="/contact">
-                <Button size="lg" className="w-full sm:w-auto">
-                  Book a Free Consultation Call
+            <p className="text-sm text-muted-foreground">Where Tech Meets Compassionate Care</p>
+            <p className="text-gray-600 text-base">
+              When they can’t reach you, we step in to ensure they’re safe — so you can focus on what matters without the worry.
+            </p>
+
+            <div className="flex flex-col sm:flex-row gap-4 pt-2">
+              <Button size="lg" className="w-full sm:w-auto" asChild>
+                <a href="#quickcheck">
+                  Get QuickCheck
                   <ArrowRight className="ml-2 h-4 w-4" />
-                </Button>
-              </Link>
-              <Link to="/content">
-                <Button variant="outline" size="lg" className="w-full sm:w-auto">
-                  Join Our Community
-                </Button>
-              </Link>
+                </a>
+              </Button>
+              <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
+                <a href="#quickcheck">How It Works</a>
+              </Button>
             </div>
           </div>
 
-          <div className="relative h-[400px] rounded-lg overflow-hidden shadow-xl">
-            <img alt="Senior Care Technology" className="w-full h-full object-cover" src="/lovable-uploads/6e367f26-4d44-4c31-b537-7010d8879134.jpg" />
+          <div className="relative h-[420px] rounded-lg overflow-hidden shadow-xl">
+            <div className="grid grid-cols-2 gap-3 h-full">
+              {/* App mockup */}
+              <div className="flex items-center justify-center bg-background p-4">
+                <div className="w-56 h-[360px] rounded-[2rem] border shadow-lg bg-white relative overflow-hidden">
+                  <div className="absolute inset-x-0 top-0 h-6 bg-muted/40" />
+                  <div className="p-4 pt-8">
+                    <div className="text-xs text-muted-foreground mb-1">QuickCheck</div>
+                    <div className="flex items-center gap-2 mb-3">
+                      <span className="inline-block h-2 w-2 rounded-full bg-primary animate-pulse" />
+                      <span className="text-sm font-medium">Active check-in alert</span>
+                    </div>
+                    <div className="rounded-xl border bg-purple-50 p-4">
+                      <div className="font-semibold text-primary mb-1">Welfare Check</div>
+                      <p className="text-xs text-gray-600">We’re verifying their well‑being. You’ll get an update within 30 seconds.</p>
+                    </div>
+                    <div className="mt-4 grid grid-cols-2 gap-2 text-xs">
+                      <button className="rounded-md border bg-background px-3 py-2">Remind me</button>
+                      <button className="rounded-md bg-primary text-primary-foreground px-3 py-2">View status</button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              {/* Emotional photo */}
+              <img
+                alt="Family welfare check in progress"
+                className="w-full h-full object-cover"
+                src="/lovable-uploads/6e367f26-4d44-4c31-b537-7010d8879134.jpg"
+              />
+            </div>
           </div>
         </div>
       </div>

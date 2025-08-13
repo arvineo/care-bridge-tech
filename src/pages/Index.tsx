@@ -4,15 +4,18 @@ import Hero from "../components/Hero";
 import Features from "../components/Features";
 import Navbar from "../components/Navbar";
 import StatsSection from "../components/StatsSection";
+import QuickCheckOverview from "../components/QuickCheckOverview";
+import QuickCheckCoreMuted from "../components/QuickCheckCoreMuted";
+import QuickCheckCTASection from "../components/QuickCheckCTASection";
 
 const Index = () => {
   useEffect(() => {
-    document.title = "Buy best Health Devices for Seniors | Caresanctum";
+    document.title = "QuickCheck by CareSanctum | 30‑second welfare checks";
     
     // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Discover smart health devices for seniors in India. Caresanctum helps NRI families stay connected to aging parents with remote care and monitoring solutions.');
+      metaDescription.setAttribute('content', 'QuickCheck offers 30‑second human‑verified welfare check‑ins for seniors. Just ₹7 per check. Peace of mind for busy families. NRI support coming soon.');
     }
   }, []);
 
@@ -21,8 +24,11 @@ const Index = () => {
       <Navbar />
       <main>
         <Hero />
+        <QuickCheckOverview />
+        <QuickCheckCoreMuted />
         <StatsSection />
         <Features />
+        <QuickCheckCTASection />
       </main>
     </>
   );
