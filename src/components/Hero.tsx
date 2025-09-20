@@ -1,8 +1,12 @@
 
 import { ArrowRight } from "lucide-react";
 import { Button } from "./ui/button";
+import { useState } from "react";
+import HowItWorksModal from "./HowItWorksModal";
 
 const Hero = () => {
+  const [showHowItWorks, setShowHowItWorks] = useState(false);
+
   return (
     <div className="relative overflow-hidden bg-gradient-to-br from-background via-secondary/20 to-accent/30 pt-32 pb-20">
       <div className="container mx-auto px-4">
@@ -22,13 +26,18 @@ const Hero = () => {
 
             <div className="flex flex-col sm:flex-row gap-4 pt-2">
               <Button size="lg" className="w-full sm:w-auto" asChild>
-                <a href="#quickcheck">
+                <a href="https://play.google.com/store/apps/details?id=com.lucitang.QuickCheck" target="_blank" rel="noopener noreferrer">
                   Get QuickCheck Trial Pack @ INR 50 Only
                   <ArrowRight className="ml-2 h-4 w-4" />
                 </a>
               </Button>
-              <Button variant="outline" size="lg" className="w-full sm:w-auto" asChild>
-                <a href="#quickcheck">How It Works</a>
+              <Button 
+                variant="outline" 
+                size="lg" 
+                className="w-full sm:w-auto"
+                onClick={() => setShowHowItWorks(true)}
+              >
+                How It Works
               </Button>
             </div>
           </div>
@@ -67,6 +76,11 @@ const Hero = () => {
           </div>
         </div>
       </div>
+      
+      <HowItWorksModal 
+        open={showHowItWorks} 
+        onOpenChange={setShowHowItWorks} 
+      />
     </div>
   );
 };
