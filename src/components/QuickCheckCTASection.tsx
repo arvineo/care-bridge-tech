@@ -13,7 +13,7 @@ const QuickCheckCTASection = () => {
             Get human‑verified welfare check‑ins in under 30 seconds.
           </p>
           <Button size="lg" asChild>
-            <a href="#quickcheck">
+            <a href="https://play.google.com/store/apps/details?id=com.lucitang.QuickCheck" target="_blank" rel="noopener noreferrer">
               Get QuickCheck Trial Pack @ INR 50 Only
               <ArrowRight className="ml-2 h-4 w-4" />
             </a>

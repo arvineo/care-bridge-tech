@@ -39,7 +39,7 @@ const QuickCheckOverview = () => {
 
         <div className="text-center mt-12">
           <Button size="lg" asChild>
-            <a href="#quickcheck">Get QuickCheck Trial Pack @ INR 50 Only</a>
+            <a href="https://play.google.com/store/apps/details?id=com.lucitang.QuickCheck" target="_blank" rel="noopener noreferrer">Get QuickCheck Trial Pack @ INR 50 Only</a>
           </Button>
         </div>
       </div>
