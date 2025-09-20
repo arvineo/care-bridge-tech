@@ -18,7 +18,7 @@ const HowItWorksModal = ({ open, onOpenChange }: HowItWorksModalProps) => {
           <img
             src="/how-quickcheck-works.png"
             alt="How QuickCheck Works - 4 step process showing: 1) You miss the call during an important meeting, 2) Tap QuickCheck for that person, 3) We call them to check urgency, 4) Get notified if truly urgent"
-            className="w-full max-w-3xl h-auto rounded-lg shadow-lg"
+            className="w-full h-auto"
           />
         </div>
       </DialogContent>
