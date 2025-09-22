@@ -22,18 +22,20 @@ const HowItWorksModal = ({ open, onOpenChange }: HowItWorksModalProps) => {
               className="w-full h-auto"
             />
           </div>
-          <div className="flex justify-center">
-            <iframe
-              width="560"
-              height="315"
-              src="https://www.youtube.com/embed/LFP3iRSMa5U"
-              title="QuickCheck Demo Video"
-              frameBorder="0"
-              allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-              allowFullScreen
-              className="rounded-lg max-w-full"
-            ></iframe>
-          </div>
+          {open && (
+            <div className="flex justify-center">
+              <iframe
+                width="560"
+                height="315"
+                src="https://www.youtube.com/embed/LFP3iRSMa5U?autoplay=1&mute=1&playsinline=1"
+                title="QuickCheck Demo Video"
+                frameBorder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                allowFullScreen
+                className="rounded-lg max-w-full"
+              ></iframe>
+            </div>
+          )}
         </div>
       </DialogContent>
     </Dialog>
