@@ -27,7 +27,7 @@ const HowItWorksModal = ({ open, onOpenChange }: HowItWorksModalProps) => {
               <iframe
                 width="560"
                 height="315"
-                src="https://www.youtube.com/embed/LFP3iRSMa5U?autoplay=1&mute=1&playsinline=1"
+                src="https://www.youtube.com/embed/LFP3iRSMa5U?autoplay=1&playsinline=1"
                 title="QuickCheck Demo Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
