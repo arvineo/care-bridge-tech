@@ -45,7 +45,8 @@ const ImageCarousel = ({
             <img
               src={image.src}
               alt={image.alt}
-              className="w-full h-full object-contain"
+              loading="lazy"
+              className="max-w-full max-h-full w-auto h-auto object-contain"
             />
           </div>
         ))}
