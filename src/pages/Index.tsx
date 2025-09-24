@@ -7,6 +7,7 @@ import StatsSection from "../components/StatsSection";
 import QuickCheckOverview from "../components/QuickCheckOverview";
 import QuickCheckCoreMuted from "../components/QuickCheckCoreMuted";
 import QuickCheckCTASection from "../components/QuickCheckCTASection";
+import WatchOnlyPlanHero from "../components/WatchOnlyPlanHero";
 
 const Index = () => {
   useEffect(() => {
@@ -23,6 +24,7 @@ const Index = () => {
     <>
       <Navbar />
       <main>
+        <WatchOnlyPlanHero />
         <Hero />
         <QuickCheckOverview />
         <QuickCheckCoreMuted />

@@ -17,6 +17,7 @@ import Content from "./pages/Content";
 import About from "./pages/About";
 import NotFound from "./pages/NotFound";
 import Plans from "./pages/Plans";
+import WatchOnlyPlan from "./pages/WatchOnlyPlan";
 import Sitemap from "./components/Sitemap";
 
 const queryClient = new QueryClient();
@@ -31,7 +32,7 @@ const App = () => (
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/tech" element={<Technology />} />
-            
+            <Route path="/watch-only" element={<WatchOnlyPlan />} />
             <Route path="/plans" element={<Plans />} />
             <Route path="/about" element={<About />} />
             <Route path="/events" element={<Events />} />
