@@ -37,15 +37,15 @@ const ImageCarousel = ({
   return (
     <div className={`relative overflow-hidden ${className}`}>
       <div 
-        className="flex transition-transform duration-500 ease-in-out"
+        className="flex h-full transition-transform duration-500 ease-in-out"
         style={{ transform: `translateX(-${currentIndex * 100}%)` }}
       >
         {images.map((image, index) => (
-          <div key={index} className="min-w-full flex items-center justify-center bg-muted">
+          <div key={index} className="min-w-full h-full flex items-center justify-center bg-muted">
             <img
               src={image.src}
               alt={image.alt}
-              className="h-full w-auto max-h-full object-contain"
+              className="w-full h-full object-contain"
             />
           </div>
         ))}
