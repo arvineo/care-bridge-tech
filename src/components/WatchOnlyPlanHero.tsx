@@ -6,16 +6,11 @@ import ImageCarousel from "./ImageCarousel";
 const WatchOnlyPlanHero = () => {
   // Images for the carousel - including smartwatch mockups and happy customers
   const carouselImages = [
-    {
-      src: "/lovable-uploads/happy-kids-with-smartwatches.jpg",
-      alt: "Happy children using CareSanctum smartwatches with their families"
-    },
-    {
-      src: "/lovable-uploads/happy-kids-with-smartwatches-2.jpg",
-      alt: "Children showing off their CareSanctum smartwatches"
-    },
-    // Note: Additional smartwatch and customer images will be added here
-    // when they become available in the project
+    { src: "/lovable-uploads/watch-01.png", alt: "CareSanctum kids smartwatch product render - mint and lilac" },
+    { src: "/lovable-uploads/watch-02.png", alt: "CareSanctum kids smartwatch product render - blue and red with SIM" },
+    { src: "/lovable-uploads/kids-01.jpg", alt: "Happy kids wearing CareSanctum smartwatches" },
+    { src: "/lovable-uploads/customer-01.png", alt: "CareSanctum family at event with smartwatch" },
+    { src: "/lovable-uploads/booth-01.png", alt: "CareSanctum booth with visitors" },
   ];
 
   return (
@@ -33,42 +28,32 @@ const WatchOnlyPlanHero = () => {
               </p>
             </div>
 
-            {/* Key Features - 4 compact badges */}
-            <div className="grid grid-cols-2 gap-3">
-              <div className="flex items-center gap-2 text-sm">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Check className="w-3 h-3 text-primary" />
+            {/* Key Features - compact badges */}
+            <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3">
+              {[
+                "One-Tap SOS with 24x7 Backup",
+                "Live GPS Tracking & Safe Zone Alerts",
+                "Two-Way Video Calling & Voice Chat",
+                "SIM Included & Managed by CareSanctum",
+                "Lifetime Warranty & Free Replacements",
+                "Free Hardware & Software Upgrades",
+              ].map((text, idx) => (
+                <div key={idx} className="flex items-center gap-2 text-sm">
+                  <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
+                    <Check className="w-3 h-3 text-primary" />
+                  </div>
+                  <span>{text}</span>
                 </div>
-                <span>Live check-ins and SOS routing</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Shield className="w-3 h-3 text-primary" />
-                </div>
-                <span>SIM included and managed by us</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                  <RotateCcw className="w-3 h-3 text-primary" />
-                </div>
-                <span>Device support and quick replacements</span>
-              </div>
-              <div className="flex items-center gap-2 text-sm">
-                <div className="w-5 h-5 rounded-full bg-primary/10 flex items-center justify-center">
-                  <Zap className="w-3 h-3 text-primary" />
-                </div>
-                <span>Upgrade-ready hardware and software</span>
-              </div>
+              ))}
             </div>
 
             {/* Pricing */}
             <div className="space-y-2">
-              <div className="text-4xl lg:text-5xl font-bold text-primary">
-                ₹399/month
+              <div className="flex items-baseline gap-3">
+                <span className="text-2xl lg:text-3xl text-muted-foreground line-through">₹599/month</span>
+                <span className="text-4xl lg:text-5xl font-bold text-primary">Starts at ₹351/month</span>
               </div>
-              <p className="text-sm text-muted-foreground">
-                Billed monthly. Security deposit applies.
-              </p>
+              <p className="text-sm text-secondary-foreground">Offer for limited time.</p>
             </div>
 
             {/* CTA Buttons */}
