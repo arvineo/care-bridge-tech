@@ -10,7 +10,8 @@ const WatchOnlyPlanHero = () => {
     { src: "/lovable-uploads/watch-02.png", alt: "CareSanctum kids smartwatch product render - blue and red with SIM" },
     { src: "/lovable-uploads/kids-01.jpg", alt: "Happy kids wearing CareSanctum smartwatches" },
     { src: "/lovable-uploads/customer-01.png", alt: "CareSanctum family at event with smartwatch" },
-    { src: "/lovable-uploads/booth-01.png", alt: "CareSanctum booth with visitors" },
+    { src: "/lovable-uploads/customer-watch-event.png", alt: "Customer showcasing CareSanctum smartwatch at event" },
+    { src: "/lovable-uploads/happy-kids-with-smartwatches-3.jpg", alt: "Happy kids wearing CareSanctum smartwatches together" },
   ];
 
   return (
@@ -21,7 +22,7 @@ const WatchOnlyPlanHero = () => {
           <div className="space-y-8">
             <div className="space-y-4">
               <h1 className="text-4xl lg:text-5xl xl:text-6xl font-bold tracking-tight">
-                Watch Only Plan
+                CareSanctum Safety Net For Kids & Seniors
               </h1>
               <p className="text-xl lg:text-2xl text-muted-foreground max-w-lg">
                 Safety for your child or parent with a simple smartwatch plan
@@ -59,7 +60,7 @@ const WatchOnlyPlanHero = () => {
             {/* CTA Buttons */}
             <div className="flex flex-col sm:flex-row gap-4">
               <Button asChild size="lg" className="text-lg px-8">
-                <Link to="/watch-only">Get Watch Only Plan</Link>
+                <Link to="/watch-only">Get More Details</Link>
               </Button>
               <Button asChild variant="outline" size="lg" className="text-lg px-8">
                 <Link to="/contact">
