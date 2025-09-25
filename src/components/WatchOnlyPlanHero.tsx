@@ -10,7 +10,7 @@ const WatchOnlyPlanHero = () => {
     { src: "/lovable-uploads/watch-02.png", alt: "CareSanctum kids smartwatch product render - blue and red with SIM" },
     { src: "/lovable-uploads/kids-01.jpg", alt: "Happy kids wearing CareSanctum smartwatches" },
     { src: "/lovable-uploads/customer-01.png", alt: "CareSanctum family at event with smartwatch" },
-    { src: "/lovable-uploads/customer-watch-event.png", alt: "Customer showcasing CareSanctum smartwatch at event" },
+    { src: "/lovable-uploads/customer-02.png", alt: "Customer showcasing CareSanctum smartwatch at event" },
     { src: "/lovable-uploads/happy-kids-with-smartwatches-3.jpg", alt: "Happy kids wearing CareSanctum smartwatches together" },
   ];
 
