@@ -1,10 +1,7 @@
-
 import { Facebook, Instagram, Linkedin, Youtube } from "lucide-react";
 import { Separator } from "./ui/separator";
-
 const Footer = () => {
-  return (
-    <footer className="bg-primary text-white py-12 mt-auto">
+  return <footer className="bg-primary text-white py-12 mt-auto">
       <div className="container mx-auto px-4">
         <div className="grid grid-cols-1 md:grid-cols-4 gap-8 mb-8">
           <div>
@@ -53,11 +50,9 @@ const Footer = () => {
         <Separator className="bg-gray-700" />
         
         <div className="mt-8 text-center text-sm text-gray-300">
-          <p>&copy; 2025 CareSanctum. All rights reserved.</p>
+          <p>© 2025 SanctEye Private Limited. All rights reserved.</p>
         </div>
       </div>
-    </footer>
-  );
+    </footer>;
 };
-
 export default Footer;
